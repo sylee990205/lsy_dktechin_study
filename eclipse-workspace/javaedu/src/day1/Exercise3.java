@@ -7,7 +7,7 @@ public class Exercise3 {
 		char name2 = '소';
 		char name3 = '영';
 		
-//		System.out.println(name1);
+//		System.out.println(name1); 각 행에 하나씩으로 잘못봤다.
 //		System.out.println(name2);
 //		System.out.println(name3);
 		
