@@ -1,7 +1,7 @@
 package day1;
 public class TypeTest1 {
 	public static void main(String[] args) {
-		byte var1 = -128;
+		byte var1 = -128; // byte 변소 0 2048년
 		byte var2 = -30;
 		byte var3 = 0;
 		byte var4 = 30;

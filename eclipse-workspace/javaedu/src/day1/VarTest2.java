@@ -13,7 +13,7 @@ public class VarTest2 {
 		System.out.print(munja); 
 		munja += 1;
 		System.out.print(munja); 
-		munja = (char)(munja+1); 
+//		munja = munja+1; 
 		System.out.println(munja);  
 	}
 }
