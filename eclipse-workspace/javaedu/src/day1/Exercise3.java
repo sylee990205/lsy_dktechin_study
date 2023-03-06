@@ -7,9 +7,13 @@ public class Exercise3 {
 		char name2 = '소';
 		char name3 = '영';
 		
-		System.out.println(name1);
-		System.out.println(name2);
-		System.out.println(name3);
+//		System.out.println(name1);
+//		System.out.println(name2);
+//		System.out.println(name3);
+		
+		System.out.print(name1);
+		System.out.print(name2);
+		System.out.print(name3);
 	}
 
 }
