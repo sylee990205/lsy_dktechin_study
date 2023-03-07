@@ -1,4 +1,4 @@
-package day1;
+package day2;
 public class OperTest5 {
 	public static void main(String[] args) {
 		int num = (int)(Math.random() * 10) + 1; // 1~10

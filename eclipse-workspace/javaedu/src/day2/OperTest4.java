@@ -1,4 +1,4 @@
-package day1;
+package day2;
 public class OperTest4 {
 	public static void main(String[] args) {
 		int num=10;

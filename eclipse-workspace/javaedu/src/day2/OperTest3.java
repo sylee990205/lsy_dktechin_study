@@ -1,4 +1,4 @@
-package day1;
+package day2;
 public class OperTest3 {
 	public static void main(String[] args) {
 		double r_num = Math.random(); 
