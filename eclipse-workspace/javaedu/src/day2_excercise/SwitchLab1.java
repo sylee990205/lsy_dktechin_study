@@ -14,7 +14,7 @@ public class SwitchLab1 {
 			case 4:
 			case 5:
 			case 6:
-				System.out.println(grade + "학년은 고학년입니다.");
+				System.out.println(grade + "학년은 고학년입니다."); //4,5,6 말고 default로 해도 됨.
 		
 		}
 	}
