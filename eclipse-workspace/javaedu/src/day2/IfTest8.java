@@ -1,6 +1,6 @@
 package day2;
 
-public class OperTest10 {
+public class IfTest8 {
 	public static void main(String[] args) {
 		int charCode = 'A';
 		//int charCode = 'a';
