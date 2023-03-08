@@ -16,7 +16,7 @@ public class WhileLab3 {
 			}
 			else {
 				alpha += ran_num - 1;
-				System.out.printf("%d-%c, %d, 0x%X\n",ran_num,alpha,(int)alpha, (int)alpha);
+				System.out.printf("%d-%c, %d, %#x\n",ran_num,alpha,(int)alpha, (int)alpha);
 				repeat_time++;
 			}
 				
