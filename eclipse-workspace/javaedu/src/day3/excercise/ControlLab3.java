@@ -6,7 +6,7 @@ public class ControlLab3 {
 		
 		int ran_num;
 		String string1 = "";
-		String string2;
+		String string2; 
 		
 		while(true) {
 			ran_num = (int)(Math.random()*120)+1;
@@ -14,7 +14,7 @@ public class ControlLab3 {
 			if(ran_num < 50) {
 				string1 = ran_num + " : 50 미만";
 				if(ran_num % 10 == 3) 
-					string2 = ran_num + " : *듀크팀*\n";
+					string2 = ran_num + " : *듀크팀*\n"; //듀크팀을 string2에 넣어줘도 되지만 +=로 해결해도 됨.
 			}
 			else if(ran_num >= 50 && ran_num <= 80) {
 				string1 = ran_num + " : 50 이상 80 이하";
