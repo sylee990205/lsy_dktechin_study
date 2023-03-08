@@ -5,29 +5,28 @@ public class ControlLab3 {
 	public static void main(String[] args) {
 		
 		int ran_num;
-		String string = "";
+		String string1 = "";
+		String string2;
 		
 		while(true) {
 			ran_num = (int)(Math.random()*120)+1;
-			
+			string2 = ""; // 듀크팀과 턱시팀을 출력하는 string은 나올수도 안나올수도 있기에 초기화를 해야함
 			if(ran_num < 50) {
+				string1 = ran_num + " : 50 미만";
 				if(ran_num % 10 == 3) 
-					string = ran_num + " : *듀크팀*";
-				else
-					string = ran_num + " : 50 미만";
+					string2 = ran_num + " : *듀크팀*\n";
 			}
 			else if(ran_num >= 50 && ran_num <= 80) {
+				string1 = ran_num + " : 50 이상 80 이하";
 				if(ran_num >= 70 && ran_num <= 79)
-					string = ran_num + " : *턱시팀*";
-				else
-					string = ran_num + " : 50 이상 80 이하";
+					string2 = ran_num + " : *턱시팀*\n";
 			}
 			else if(ran_num >= 81 && ran_num <= 100)
 				continue;
 			else
 				break;
 			
-			System.out.printf("%s\n",string);
+			System.out.printf("%s\n%s",string1,string2);
 		}
 		
 
