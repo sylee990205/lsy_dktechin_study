@@ -19,7 +19,7 @@ public class BreakContinueTest1 {
 				factNum *= i;
 			System.out.println(num+"! --> "+factNum);
 		}
-		input.close();
+		input.close(); // 더 사용하지 않을 땐 close
 		System.out.println("수행 끝!!");
 	}	
 }

@@ -4,7 +4,7 @@ public class WhileTest2 {
 
 	public static void main(String[] args) {
 		int lottoNum;
-		while(true) {
+		while(true) { //무한루프
 			lottoNum = (int)(Math.random()*6)+1;
 			if(lottoNum == 3) {
 				System.out.println("당첨!! ㅋㅋㅋ : "+lottoNum);
