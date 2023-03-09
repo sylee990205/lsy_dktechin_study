@@ -14,7 +14,7 @@ public class TwoArrayTest4 {
 		
 		int sumRow=0, sumCol=0;
 		// 마지막 행의 데이터만 합산하여 sumRow에 저장
-		for(int col=0; col < nums[2].length; col++)
+		for(int col=0; col < nums[2].length; col++) // 2대신 nums.length-1 써도 됨.
 			sumRow += nums[2][col];
 		// 두번째 열의 데이터만 합산하여 sumCol에 저장
 		for(int row=0; row < nums.length; row++)

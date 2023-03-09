@@ -2,13 +2,14 @@ package day4;
 
 public class TwoArrayTest3 {
 	public static void main(String[] args) {
-		int[][] twoA = { {1,2,3}, 
+		int[][] twoA = { {1,2,3}, //4행 3열 [4][3]
 				         {4,5,6}, 
 				         {7,8,9}, 
 				         {0,0,0} };		
 		System.out.println(twoA); // 행의 배열의 참조값
 		System.out.println(twoA[0]); // 첫 번째 행이 참조하는 열의 배열의 참조값
-		System.out.println(twoA[0][0]); // 1행 1열의 값
+		System.out.println(twoA[0][0]); // 1행 1열의 값 1
+		System.out.println(twoA[3][2]); // 4행 3열의 값 0
 		
 		for(int row=0; row < twoA.length; row++) {
 			for(int col=0; col < twoA[row].length; col++) {
