@@ -10,7 +10,7 @@ public class ArrayTest4 {
 		for(int i=0; i < nums.length; i++)
 			nums[i] = (int)(Math.random()*45) + 1;
 		
-		for(int i=0; i < nums.length; i++)
+		for(int i=0; i < nums.length; i++) // for
 			System.out.print(nums[i]+ " ");
 		System.out.println();
 		for(int data : nums)  // foreach
@@ -19,7 +19,7 @@ public class ArrayTest4 {
 		// nums 라는 배열 변수가 참조하는 배열에서  최대값을 추출하여 출력해 보자.
 		int bigNum = nums[0];
 		int minNum = nums[0];
-		for(int i=1; i < nums.length;i++) {
+		for(int i=1; i < nums.length;i++) { // 최소, 최대값을 뽑는 api가 있다고함.
 			if (bigNum < nums[i])
 				bigNum = nums[i];
 			if (minNum > nums[i])
