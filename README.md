@@ -1,8 +1,28 @@
 # lsy_dktechin_study
 디케이테크인 채용확정형 교육 MSA 기반 Full-stack 개발자 양성 과정을 수강하며 배운 내용을 정리합니다.
+## 기술 스택
+<img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
+<!-- <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+<img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
+<img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">
+<img src="https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white">
+<img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white">
+<img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=Kubernetes&logoColor=white"> -->
+
+---
 
 ## 커리큘럼
-- 자바 <span style='color: #fff5b1'>230306 ~ </span>
+- 컴퓨터 기초
+  - 리눅스 230227
+  - 네트워크 230228
+  - SQL & noSQL 230302
+  - Git & Git Hub 230303
+- 자바 230306 ~ 
 - DB와 SQL
 - JDBC
 - Web Client - HTML5, CSS3, JavaScript(AJAX)
