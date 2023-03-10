@@ -4,10 +4,10 @@ public class TwoArrayLab2 {
 
 	public static void main(String[] args) {
 		char[][] cTwoArray = {
-				{'B','C','A','A'},
-				{'C','C','B','B'},
-				{'D','A','A','D'}
-							 };
+								{'B','C','A','A'},
+								{'C','C','B','B'},
+								{'D','A','A','D'}
+							};
 		int[] count = new int[4];
 		
 		
@@ -18,7 +18,8 @@ public class TwoArrayLab2 {
 				// 이중 포문을 돌리면서 이미 해당 배열의 칸에 어떤 값이 들어가있는지를 알 수 있음
 				// 값을 사용해서 그 값이 만약 B라면 ASCII 66에 해당하고 이는 count 배열 index 1에 들어감
 				// 따라서 ASCII 'A'에 해당하는 65를 빼주면 66 - 65 = 1 count index 1의 위치에 1을 추가할 수 있음
-				// 값을 사용할 수 있음을 생각하자
+				// 배열의 인덱스에 i나 j말고 뽑아온 값을 사용할 수 있음을 생각하자
+				// if 사용해도 됐나부다...ㅎ
 				
 //				if (cTwoArray[i][j] == 'A')
 //					count[0] += 1;
@@ -32,7 +33,7 @@ public class TwoArrayLab2 {
 		}
 		
 		for(int i = 0; i < count.length; i++) {
-			System.out.println((char)('A'+ i) + " 는 " + count[i] + "개 입니다.");
+			System.out.println((char)('A' + i) + " 는 " + count[i] + "개 입니다.");
 		}
 
 	}

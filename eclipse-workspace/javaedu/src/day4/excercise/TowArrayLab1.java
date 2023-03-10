@@ -3,12 +3,28 @@ package day4.excercise;
 public class TowArrayLab1 {
 
 	public static void main(String[] args) {
-		int[][] twoArr = {
-							{10, 12, 14, 16},
-							{18, 20, 22, 24},
-							{26, 28, 30, 32},
-							{34, 36, 38, 40}
-						};
+//   (*) 이 실습 문제를 해결할 때 제시된 배열은 4행 4열이지만 3행 3열 또는 5행 5열 등
+//      사이즈가 다른 정방행열인 경우에도 요구사항이 처리될 수 있게 구현한다.    
+// 	 문제 풀이시 위 조건이 있었고, 배열에 들어간 값이 규칙이 있었기에 for문으로 처리해야했음. 	
+		int size = 4;
+		int[][] twoArr = new int[size][size];
+		int num = 0;
+		
+		for(int i = 0; i<size; i++) {
+			for (int j = 0; j<size; j++) {
+				twoArr[i][j] = 10 + (num * 2);
+				num++;
+			}
+		}
+		
+		
+//		int[][] twoArr = {
+//							{10, 12, 14, 16},
+//							{18, 20, 22, 24},
+//							{26, 28, 30, 32},
+//							{34, 36, 38, 40}
+//						};
+		
 		System.out.println("1행 1열의 데이터 : " + twoArr[0][0]);
 		System.out.println("3행 4열의 데이터 : " + twoArr[2][3]);
 		System.out.println("행의 갯수 : " + twoArr.length);
@@ -21,12 +37,12 @@ public class TowArrayLab1 {
 		
 		System.out.print("2열의 데이터들 : ");
 		for(int i = 0; i < twoArr.length; i++)
-			System.out.print(twoArr[i][2] + " ");
+			System.out.print(twoArr[i][1] + " ");
 		System.out.println();
 		
 		System.out.print("왼쪽 대각선 데이터들 : ");
 		for(int i = 0; i < twoArr.length; i++)
-		System.out.print(twoArr[i][i] + " ");
+			System.out.print(twoArr[i][i] + " ");
 		System.out.println();
 		
 		System.out.print("오른쪽 대각선 데이터들 : ");

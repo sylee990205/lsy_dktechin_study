@@ -24,12 +24,19 @@ public class TwoArrayLab5 {
 //		
 //		}
 		// 순서도를 사용한 식 
+//		for(int j = 0; j < twoArr[0].length; j++) {
+//			for (int i = j; i < twoArr.length - j ; i++)
+//				twoArr[i][j] = i + 1 + j * (twoArr.length - j);
+//		}
+		
+		int num = 0;
 		for(int j = 0; j < twoArr[0].length; j++) {
-			for (int i = j; i < twoArr.length - j ; i++)
-				twoArr[i][j] = i + 1 + j * (twoArr.length - j);
-				}
+			for (int i = j; i < twoArr.length ; i++)
+				twoArr[i][j] = ++num;
+		}
 		
 		System.out.println();
+		
 		for(int i = 0; i < twoArr.length; i++) {
 			for(int j = 0; j < twoArr[0].length ; j++) {
 				System.out.print(twoArr[i][j] + "\t");
