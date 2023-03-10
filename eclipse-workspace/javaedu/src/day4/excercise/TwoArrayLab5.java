@@ -25,13 +25,13 @@ public class TwoArrayLab5 {
 //		}
 		// 순서도를 사용한 식 
 //		for(int j = 0; j < twoArr[0].length; j++) {
-//			for (int i = j; i < twoArr.length - j ; i++)
+//			for (int i = j; i < twoArr.length - j ; i++)  //twoArr.length - j를 한다는 것은 0일땐 비우는칸 없음, 1일땐 위아래로 1칸씩, 2일땐 위아래로 2칸씩 이런 의미
 //				twoArr[i][j] = i + 1 + j * (twoArr.length - j);
 //		}
 		
 		int num = 0;
 		for(int j = 0; j < twoArr[0].length; j++) {
-			for (int i = j; i < twoArr.length ; i++)
+			for (int i = j; i < twoArr.length - j ; i++)
 				twoArr[i][j] = ++num;
 		}
 		
