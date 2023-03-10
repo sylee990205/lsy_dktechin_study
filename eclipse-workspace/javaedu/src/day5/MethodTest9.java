@@ -20,8 +20,8 @@ public class MethodTest9 {
 	
 	static int[] updateArray1(int[] p2) { //p2에겐 int 배열 값의 참조값이 전달된다.
 		System.out.println("p2 변수의 값 : "+p2); 
-		int[] result = new int[p2.length];
-		for(int i=0; i < result.length;i++)
+		int[] result = new int[p2.length]; // p2에 전달받은 배열의 길이인 새로운 배열 생성
+		for(int i=0; i < result.length;i++) // 새로운 배열에 값 복사
 			result[i] = p2[i] * 2;
 		return result; // 새로운 배열을 만들어 return 하기에 p1 배열에는 변화가 없음
 	} //메소드 호출이 종료되면 p2 메모리는 사라짐
