@@ -16,13 +16,28 @@ public class MethodTest5 {
 		System.out.println("main() 수행종료");
 	}	
 	static int operate(int num1, int num2) { // 메서드 오버로딩
-		return num1+num2;
+		return num1+num2;					 // return 값을 만약 여러개 전달하고 싶으면 배열을 사용해야함. int[] 를 리턴값타입으로
 	}
+	static int[] operate(int num) { // 메서드 오버로딩
+		int[] array = new int[num]; // return 값을 만약 여러개 전달하고 싶으면 배열을 사용해야함. int[] 를 리턴값타입으로
+		for(int i = 0; i < num ; i++) {
+			array[i] = num++;
+		}
+		return array;					 
+	}
+	
+	static int operate(int num1, int num2, int num3, int num4) {
+		if (num1 > 0)
+			return num1+num2+num3+num4;
+		else
+			return 0;
+	}
+	
 	static int operate(int num1, int num2, int num3) {
 		return num1+num2+num3;
 	}
 	static String getName() {
-		return "김정현";
+		return "이소영";
 	}
 }
 

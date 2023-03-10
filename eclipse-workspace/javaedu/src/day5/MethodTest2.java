@@ -7,6 +7,6 @@ public class MethodTest2 {
 	}	
 	static void printMyName(int num) {
 		for(int i=1; i <= num; i++)
-			System.out.println("유니코");
+			System.out.println("소영");
 	}
 }

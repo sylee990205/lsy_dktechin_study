@@ -11,7 +11,7 @@ public class MethodTest4 {
 	}	
 	static void printMyName(int num, char deco) {
 		for(int i=1; i <= num; i++)
-			System.out.println(deco+"유니코"+deco);
+			System.out.println(deco+"소영"+deco);
 	}
 	static void printMyNameStr(String name, char deco) {
 		System.out.println(deco+name+deco);
