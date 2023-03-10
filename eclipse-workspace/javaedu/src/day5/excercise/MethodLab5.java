@@ -42,9 +42,10 @@ public class MethodLab5 {
 			smallNum = n1;
 		}else {
 			bigNum = n1;
+			smallNum = n1;
 		}
 		
-		return (int)(Math.random() * (n2 - n1 + 1)) + 1;
+		return (int)(Math.random() * (bigNum - smallNum + 1)) + 1;
 	}
 
 }
