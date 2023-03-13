@@ -5,7 +5,7 @@ class SalaryExpr {
 	int bonus;
 	
 	SalaryExpr(){
-		bonus = 0;
+		//bonus = 0; 생략가능, 객체 생성시 자동으로 0으로 초기화 되기때문
 	}
 	
 	SalaryExpr(int bonus){
@@ -36,21 +36,21 @@ class SalaryExpr {
 public class SalaryExam {
 
 	public static void main(String[] args) {
-		int month = MethodLab5.getRandom(1,12);
-		int grade = MethodLab5.getRandom(1, 4);
-		int sal;
-		SalaryExpr salary = new SalaryExpr();
+		int month = MethodLab5.getRandom(12);
+		int grade = MethodLab5.getRandom(4);
+		//int sal;
+		SalaryExpr salary;
 		
 		if (month % 2 == 0) {
 			salary = new SalaryExpr(100);
-			sal = salary.getSalary(grade);
+			//sal = salary.getSalary(grade);
 		}
 		else {
 			salary = new SalaryExpr();
-			sal = salary.getSalary(grade);
+			//sal = salary.getSalary(grade);
 		}
 		
-		System.out.printf("%d월 %d등급의 월급은 %d 입니다.", month,grade, sal);
+		System.out.printf("%d월 %d등급의 월급은 %d 입니다.", month,grade, salary.getSalary(grade));
 		
 	}
 
