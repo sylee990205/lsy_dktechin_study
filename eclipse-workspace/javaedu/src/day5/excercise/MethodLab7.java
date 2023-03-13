@@ -3,11 +3,12 @@ package day5.excercise;
 public class MethodLab7 {
 
 	public static void main(String[] args) {
-		int[] powerArr;
+		//int[] powerArr; 변수를 생성하지 않아도 괜찮음
 		
 		for(int i = 2; i <= 4; i++) {
-			powerArr = powerArray(i);
-			printArray(powerArr);
+//			powerArr = powerArray(i);
+//			printArray(powerArr);
+			printArray(powerArray(i));
 		}
 
 	}

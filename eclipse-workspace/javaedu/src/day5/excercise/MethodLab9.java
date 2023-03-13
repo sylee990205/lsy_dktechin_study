@@ -9,7 +9,7 @@ public class MethodLab9 {
 
 	}
 	
-	static boolean isRightTriangle(int width, int height, int hypo) {
+	static boolean isRightTriangle(int width, int height, int hypo) { //메서드 이름이 is로 시작 --> 무조건 boolean
 		int pytha = (hypo * hypo) - (width * width) - (height * height);
 		if (pytha == 0)
 			return true;

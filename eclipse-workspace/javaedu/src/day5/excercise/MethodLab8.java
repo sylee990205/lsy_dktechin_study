@@ -22,7 +22,7 @@ public class MethodLab8 {
 		if(p.length == 0) {
 			return -1;
 		}
-		for(int i = 0 ; i < p.length; i++) {
+		for(int i = 0 ; i < p.length; i++) { //전달된 배열의 값을 읽기만 하기에 foreach문을 사용해도 된다.
 			if(p[i] % 2 == 0)
 				sum += p[i];
 		}

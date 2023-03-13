@@ -11,16 +11,29 @@ public class MethodLab6 {
 		System.out.printf("가장 큰 값은 %d 입니다.\n",maxNumArray(arr1));
 		System.out.printf("가장 큰 값은 %d 입니다.\n",maxNumArray(arr2));
 		System.out.printf("가장 큰 값은 %d 입니다.",maxNumArray(arr3));
-			
+		
+		int[] result = new int[3]; // 값을 배열에 넣으면 출력 시 반복문 사용 가능
+		result[0] = maxNumArray(arr1);
+		result[1] = maxNumArray(arr2);
+		result[2] = maxNumArray(arr3);
+		
+		for(int i = 0; i < result.length; i++) {
+			System.out.printf("가장 큰 값은 %d 입니다.\n",result[i]);
+		}
+		
 	}
 	
 	static int maxNumArray(int[] arr) {
-		int max = 0, temp;
+		//int max = 0, temp;
+		int max = arr[0]; // 첫 값을 넣으면
 		
-		for(int i = 0; i < arr.length ; i++) {
-			temp = arr[i];
-			if (max < temp)
-				max = temp;
+		for(int i = 1; i < arr.length ; i++) { // index 1부터 시작하면 된다.
+			if(arr[i] > max)
+				max = arr[i];
+			
+//			temp = arr[i];
+//			if (max < temp)
+//				max = temp;
 		}
 		
 		return max;
