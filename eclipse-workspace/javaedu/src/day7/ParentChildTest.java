@@ -17,6 +17,7 @@ class Child extends Parent {
 		System.out.println(super.y);	//  2	
 		//System.out.println(z);
 	}
+	@Override // 
 	public String toString() { //Object class의 toString을 오버라이딩한것
 		return "Child 클래스의 객체 입니당";
 	}
