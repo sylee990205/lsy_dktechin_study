@@ -4,7 +4,7 @@ public class CardTest2{
 	public static void main(String args[]) throws Exception{	
 		System.out.println("CardTest 수행이 시작었습니다.");
 		Thread.sleep(10000);
-		Card c1 = new Card();		
+		Card c1 = new Card(); // 이 때 card class가 로딩됨
 		c1.kind = "Heart";
 		c1.number = 7;	
 		System.out.println("첫 번째 Card 객체가 생성됨");

@@ -6,12 +6,13 @@ class A{
 	}
 }
 class B extends A{
-	B() {		
+	B(int num) {		
 		System.out.println("B클래스의 객체 생성!");
 	}
 }
 class C extends B{
-	C() {		
+	C() {
+		super(10);
 		System.out.println("C클래스의 객체 생성!");
 	}
 }
