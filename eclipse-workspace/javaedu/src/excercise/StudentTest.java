@@ -1,3 +1,4 @@
+// day7 excercise
 package excercise;
 
 public class StudentTest {
