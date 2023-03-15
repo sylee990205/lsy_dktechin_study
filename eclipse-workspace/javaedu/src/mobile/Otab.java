@@ -12,15 +12,19 @@ public class Otab extends Mobile{
 	
 	@Override
 	public void operate(int time) {
-		int useBattery;
-		useBattery = super.getBatterySize() - (time * 12);
-		super.setBatterySize(useBattery);
+//		int useBattery;
+//		useBattery = super.getBatterySize() - (time * 12);
+//		super.setBatterySize(useBattery);
+		
+		super.setBatterySize(getBatterySize() - (time * 12));
 	}
 	
 	@Override
 	public void charge(int time) {
-		int chargeBattery;
-		chargeBattery = super.getBatterySize() + (time * 8);
-		super.setBatterySize(chargeBattery);
+//		int chargeBattery;
+//		chargeBattery = super.getBatterySize() + (time * 8);
+//		super.setBatterySize(chargeBattery);
+		
+		super.setBatterySize(getBatterySize() + (time * 8)); 
 	}
 }

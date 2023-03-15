@@ -15,7 +15,6 @@ abstract class Mobile {
 	}
 	
 	public abstract void operate(int time);
-	
 	public abstract void charge(int time);
 
 	public String getMobileName() {
