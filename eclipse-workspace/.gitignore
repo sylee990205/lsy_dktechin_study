@@ -2,3 +2,5 @@
 javaedu/.project
 javaedu/.classpath
 javaedu/bin/
+javaedu/.gitignore
+.gitignore
