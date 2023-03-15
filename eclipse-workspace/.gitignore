@@ -1,6 +1,5 @@
 /.metadata/
-javaedu/.project
-javaedu/.classpath
-javaedu/bin/
-javaedu/.gitignore
+.project
+.classpath
+bin/
 .gitignore
