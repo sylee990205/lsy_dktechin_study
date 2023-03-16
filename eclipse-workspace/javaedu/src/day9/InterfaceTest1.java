@@ -1,6 +1,7 @@
 package day9;
 
 interface Printable {
+	//명시적 초기화가 default
 	public static final int PRINT_TYPE1 = 1;
 	static final int PRINT_TYPE2 = 2;
 	final int PRINT_TYPE3 = 3;
@@ -60,11 +61,20 @@ public class InterfaceTest1 {
 	public static void main(String args[]) {
 		printOut(new Circle3());
 		//printOut(new Rectangle3()); // 컴파일 오류가 발생하는 행
+		// rectangle은 printable 객체를 가질 수 없다
 	}
 
 	static void printOut(Printable prt) {
 		prt.setPage(100);
-		((Shape3) prt).setColor("파란색");
+		// 접근 시마다 형변환해서 사용
+		((Circle3)prt).draw();
+		((Circle3) prt).setColor("파란색");
+		
+		// 객체에 담아 사용
+		Circle3 cobj = (Circle3)prt;
+		cobj.draw();
+		cobj.setColor("노란색");
+		
 		if (prt.isAvailable())
 			prt.print(Printable.PRINT_TYPE2);
 	}
