@@ -1,4 +1,4 @@
-package day9;
+package day10;
 class Account {
 	private String account;
 	private double balance;

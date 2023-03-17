@@ -1,4 +1,4 @@
-package day9.case3;
+package day10.case3;
 
 public class TVFactory {
 	public static TV getTV(String beanName){

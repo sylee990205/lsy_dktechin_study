@@ -1,10 +1,12 @@
-package day9.case1;
+package day10.case2;
+
 public class TVUser {
 	public static void main(String[] args) {
-		SamsungTV tv = new SamsungTV();
+		TV tv = new LgTV();
 		tv.powerOn();
 		tv.volumnUp();
 		tv.volumnDown();
 		tv.powerOff();
 	}
+
 }

@@ -1,4 +1,4 @@
-package day9.case1;
+package day10.case1;
 
 public class SamsungTV {
 	public void powerOn(){
