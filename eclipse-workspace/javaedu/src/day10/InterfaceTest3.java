@@ -6,11 +6,11 @@ interface InterCalculator {
 
 	int sub(int x, int y);
 
-	default int mul(int x, int y) {
+	default int mul(int x, int y) { //default 메서드 자손에 의해 오버라이딩이 선택 - 해도되고 안해도되고
 		return x * y;
 	}
 	
-	static void print() {		 
+	static void print() {		 // static 메서드는 인터페이스거 / 자식 이름으로 접근 불가
         System.out.println("사칙 연산 처리");
     }
 }

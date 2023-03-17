@@ -2,7 +2,7 @@ package day10;
 import java.util.Random;
 class TestException extends Exception {
 	TestException(String message){
-		super(message);
+		super(message); 
 	}
 }
 public class ExceptionTest3 {
@@ -17,6 +17,7 @@ public class ExceptionTest3 {
 			b();
 		} catch (TestException e){	
 			System.out.println("오류 발생 : "+e.getMessage());
+			return; // a() 수행종료를 출력하지않고 main으로 돌아감.
 		}
 		System.out.println("a()수행종료");
 	}
@@ -29,7 +30,7 @@ public class ExceptionTest3 {
 		System.out.println("c()수행시작");
 		boolean flag = new Random().nextBoolean();
 		if(flag){
-			throw new TestException("<<:::::테스트로 예외발생시킴:::::>>");
+			throw new TestException("<<:::::테스트로 예외발생시킴:::::>>"); //error message가 된다 -> TestException 생성자 초기화를 해뒀음
 		}else {
 			System.out.println("ㅋㅋㅋㅋ");
 		}	
