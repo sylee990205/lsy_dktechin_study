@@ -18,7 +18,7 @@ public class GenericTestNew {
 		System.out.println();
 
 		for (String value : list) {
-			System.out.println(value);
+			System.out.println(value); // 형변환안해도됨
 		}
 		System.out.println();
 
