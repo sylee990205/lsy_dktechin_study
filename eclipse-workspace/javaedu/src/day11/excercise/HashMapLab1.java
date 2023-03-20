@@ -25,6 +25,7 @@ public class HashMapLab1 {
 			}
 			else {
 				map.put(country, population);
+				System.out.println("*저장되었습니다.*");
 			}
 		}
 		
