@@ -4,7 +4,7 @@
 ---
 
 ## :books:STACKS
-<img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <!-- <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+<img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=white"> <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <!-- <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
 <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
@@ -18,12 +18,21 @@
 
 ## :computer:CURRICULUM
 - 컴퓨터 기초
-  - 리눅스 230227
-  - 네트워크 230228
-  - SQL & noSQL 230302
-  - Git & Git Hub 230303
-- 자바 230306 ~ 
-- DB와 SQL
+
+| 과목           | 수강기간   | TIL |
+| ------------ | ------ | --- |
+| 리눅스          | 230227 | :heavy_check_mark:     |
+| 네트워크         | 230228 | :hourglass_flowing_sand:     |
+| SQL & noSQL  | 230302 | :heavy_check_mark:    |
+| Git & GitHub | 230303 | :heavy_check_mark:
+- 자바
+   
+| 과목       | 수강기간            | TIL |
+| -------- | --------------- | --- |
+| Java 기초  | 230306 - 230310 | :heavy_check_mark:    |
+| Java OOP | 230313 - 230317 | :heavy_check_mark:     |
+| Java API | 230320 -        | :hourglass_flowing_sand:
+<!-- - DB와 SQL
 - JDBC
 - Web Client - HTML5, CSS3, JavaScript(AJAX)
 - MVC 기반의 Servlet&JSP
@@ -36,6 +45,6 @@
 ------------------------------ 2차 미니 프로젝트
 Docker 를 활용한 컨테이너 기반 웹 애플리케이션 구현(MSA)
 클라우드 기반 운영 환경 - 쿠버네티스, CICD
------------------------------- 최종 프로젝트
+------------------------------ 최종 프로젝트 -->
 
 ---
