@@ -11,7 +11,7 @@ public class FileReaderTest2 {
 		BufferedReader br = null;
 		try {
 			reader = new FileReader("c:/iotest/output.txt");
-			br = new BufferedReader(reader);
+			br = new BufferedReader(reader); //행 단위로 읽는건 BufferedReader가 갖고 있음
 			while (true) {
 				String data = br.readLine();
 				if (data == null)

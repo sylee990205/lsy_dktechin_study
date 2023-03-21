@@ -5,6 +5,8 @@ import java.io.IOException;
 
 public class FileWriterTest2 {
 	public static void main(String args[]) {
+		// try catch with resource
+		// close를 생략할 수 있음, 자동으로 close가 되기 때문
 		try (FileWriter writer = new FileWriter("c:/iotest/output2.txt");) { // 자동으로 close
 			char arr[] = { '객', '체', '지', '향', '언', '어', 'J', 'a', 'v', 'a' };
 			for (int cnt = 0; cnt < arr.length; cnt++)

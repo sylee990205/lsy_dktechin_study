@@ -13,7 +13,8 @@ public class FileWriterTest {
 			isDir.mkdirs();
 		}
 		try {
-			writer = new FileWriter("c:/iotest/output.txt"); // overwrite
+			writer = new FileWriter("c:/iotest/output.txt"); // FileWriter는 dir를 만들어주지않음, path 입력에 오류가 있으면 출력 불가
+			// overwrite
 			char arr[] = { '객', '체', '지', '향', '언', '어', ' ',  'J', 'a', 'v', 'a' };
 			for (int cnt = 0; cnt < arr.length; cnt++)
 				writer.write(arr[cnt]);
@@ -27,7 +28,8 @@ public class FileWriterTest {
 		} catch (IOException ioe) {
 			System.out.println("파일로 출력할 수 없습니다.");
 		} finally {
-			try {
+			try { 
+				// close 사용 시 예외처리를 반드시 해야함
 				if (writer != null)
 					writer.close();
 			} catch (Exception e) {

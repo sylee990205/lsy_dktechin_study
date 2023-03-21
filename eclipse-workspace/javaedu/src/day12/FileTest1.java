@@ -12,7 +12,7 @@ public class FileTest1 {
 		if (f.exists()) {
 			System.out.println(dirName + "명의 디렉토리가 존재합니다.");
 		} else {
-			if (f.mkdirs()) {
+			if (f.mkdirs()) { //mkdir은 1개의 dir만 만들기때문에 서브 디렉토리까지 생성하려면 mkdirs
 				System.out.println(dirName + "명의 디렉토리가 생성되었습니다.");
 			} else {
 				System.out.println(dirName + "명의 디렉토리 생성에 실패했습니다.");
