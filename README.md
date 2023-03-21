@@ -1,5 +1,4 @@
 # lsy_dktechin_study
-
 <div align="center">
 
 ![dk 로고](./TIL/image/2023-03-21-12-28-07.png)
@@ -23,18 +22,20 @@
 ---
 
 ## :computer:CURRICULUM
+> :heavy_check_mark: 클릭 시 해당 TIL로 이동
   ### 컴퓨터 기초
 
 | 과목           | 수강기간   | TIL |
 | ------------ | ------ | --- |
-| 리눅스          | 230227 | :heavy_check_mark:     |
+| 리눅스          | 230227 | [:heavy_check_mark:](https://github.com/sylee990205/lsy_dktechin_study/blob/main/TIL/01.%20%EC%BB%B4%ED%93%A8%ED%84%B0%20%EA%B8%B0%EC%B4%88/230227_Linux.md)     |
 | 네트워크         | 230228 | :hourglass_flowing_sand:     |
-| SQL & noSQL  | 230302 | :heavy_check_mark:    |
-| Git & GitHub | 230303 | :heavy_check_mark:
-### 자바
-   
-| 과목       | 수강기간            | TIL |
-| -------- | --------------- | --- |
+| SQL & noSQL  | 230302 | [:heavy_check_mark:](https://github.com/sylee990205/lsy_dktechin_study/blob/main/TIL/01.%20%EC%BB%B4%ED%93%A8%ED%84%B0%20%EA%B8%B0%EC%B4%88/230302_SQL%26NoSQL.md)    |
+| Git & GitHub | 230303 | [:heavy_check_mark:](https://github.com/sylee990205/lsy_dktechin_study/blob/main/TIL/01.%20%EC%BB%B4%ED%93%A8%ED%84%B0%20%EA%B8%B0%EC%B4%88/230303_Git%26GitHub.md)
+### JAVA
+> :heavy_check_mark: 클릭 시 해당 기간 TIL 폴더로 이동
+> 
+| 과목       | 수강기간            | TIL | 소스 | 
+| -------- | --------------- | --- | ---- |
 | Java 기초  | 230306 - 230310 | :heavy_check_mark:    |
 | Java OOP | 230313 - 230317 | :heavy_check_mark:     |
 | Java API | 230320 -        | :hourglass_flowing_sand:
