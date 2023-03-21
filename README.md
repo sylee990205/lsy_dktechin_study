@@ -33,11 +33,13 @@
 | Git & GitHub | 230303 | [:heavy_check_mark:](https://github.com/sylee990205/lsy_dktechin_study/blob/main/TIL/01.%20%EC%BB%B4%ED%93%A8%ED%84%B0%20%EA%B8%B0%EC%B4%88/230303_Git%26GitHub.md)
 ### JAVA
 > :heavy_check_mark: 클릭 시 해당 기간 TIL 폴더로 이동
-> 
+
+> 소스 숫자 클릭시 해당 일자 소스로 이동
+
 | 과목       | 수강기간            | TIL | 소스 | 
 | -------- | --------------- | --- | ---- |
-| Java 기초  | 230306 - 230310 | :heavy_check_mark:    |
-| Java OOP | 230313 - 230317 | :heavy_check_mark:     |
+| Java 기초  | 230306 - 230310 | [:heavy_check_mark:](https://github.com/sylee990205/lsy_dktechin_study/tree/main/TIL/02.%20Java%20%EA%B8%B0%EC%B4%88)    | [:one:](https://github.com/sylee990205/lsy_dktechin_study/tree/main/eclipse-workspace/javaedu/src/day1) [:two:](https://github.com/sylee990205/lsy_dktechin_study/tree/main/eclipse-workspace/javaedu/src/day2)[:three:](https://github.com/sylee990205/lsy_dktechin_study/tree/main/eclipse-workspace/javaedu/src/day3)[:four:](/eclipse-workspace/javaedu/src/day4/)
+| Java OOP | 230313 - 230317 | [:heavy_check_mark:](https://github.com/sylee990205/lsy_dktechin_study/tree/main/TIL/03.%20Java%20OOP)     |
 | Java API | 230320 -        | :hourglass_flowing_sand:
 <!-- - DB와 SQL
 - JDBC
