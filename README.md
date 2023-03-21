@@ -27,10 +27,10 @@
 
 | 과목           | 수강기간   | TIL |
 | ------------ | ------ | --- |
-| 리눅스          | 230227 | [:heavy_check_mark:](https://github.com/sylee990205/lsy_dktechin_study/blob/main/TIL/01.%20%EC%BB%B4%ED%93%A8%ED%84%B0%20%EA%B8%B0%EC%B4%88/230227_Linux.md)     |
+| 리눅스          | 230227 | [:heavy_check_mark:](/TIL/01.%20컴퓨터%20기초/230227_Linux.md)     |
 | 네트워크         | 230228 | :hourglass_flowing_sand:     |
-| SQL & noSQL  | 230302 | [:heavy_check_mark:](https://github.com/sylee990205/lsy_dktechin_study/blob/main/TIL/01.%20%EC%BB%B4%ED%93%A8%ED%84%B0%20%EA%B8%B0%EC%B4%88/230302_SQL%26NoSQL.md)    |
-| Git & GitHub | 230303 | [:heavy_check_mark:](https://github.com/sylee990205/lsy_dktechin_study/blob/main/TIL/01.%20%EC%BB%B4%ED%93%A8%ED%84%B0%20%EA%B8%B0%EC%B4%88/230303_Git%26GitHub.md)
+| SQL & noSQL  | 230302 | [:heavy_check_mark:](/TIL/01.%20컴퓨터%20기초/230302_SQL&NoSQL.md)    |
+| Git & GitHub | 230303 | [:heavy_check_mark:](/TIL/01.%20컴퓨터%20기초/230303_Git&GitHub.md)
 ### JAVA
 > :heavy_check_mark: 클릭 시 해당 기간 TIL 폴더로 이동
 
@@ -38,8 +38,8 @@
 
 | 과목       | 수강기간            | TIL | 소스 | 
 | -------- | --------------- | --- | ---- |
-| Java 기초  | 230306 - 230310 | [:heavy_check_mark:](https://github.com/sylee990205/lsy_dktechin_study/tree/main/TIL/02.%20Java%20%EA%B8%B0%EC%B4%88)    | [:one:](https://github.com/sylee990205/lsy_dktechin_study/tree/main/eclipse-workspace/javaedu/src/day1) [:two:](https://github.com/sylee990205/lsy_dktechin_study/tree/main/eclipse-workspace/javaedu/src/day2)[:three:](https://github.com/sylee990205/lsy_dktechin_study/tree/main/eclipse-workspace/javaedu/src/day3)[:four:](/eclipse-workspace/javaedu/src/day4/)
-| Java OOP | 230313 - 230317 | [:heavy_check_mark:](https://github.com/sylee990205/lsy_dktechin_study/tree/main/TIL/03.%20Java%20OOP)     |
+| Java 기초  | 230306 - 230310 | [:heavy_check_mark:](/TIL/02.%20Java%20기초/)    | [:one:](/eclipse-workspace/javaedu/src/day1/)[:two:](/eclipse-workspace/javaedu/src/day2/)[:three:](/eclipse-workspace/javaedu/src/day3/)[:four:](/eclipse-workspace/javaedu/src/day4/)[:five:](/eclipse-workspace/javaedu/src/day5/)
+| Java OOP | 230313 - 230317 | [:heavy_check_mark:](/TIL/03.%20Java%20OOP/)     | [:one:](/eclipse-workspace/javaedu/src/day6/)[:two:](/eclipse-workspace/javaedu/src/day7/)[:three:](/eclipse-workspace/javaedu/src/day8/)[:four:](/eclipse-workspace/javaedu/src/day9/)[:five:](/eclipse-workspace/javaedu/src/day10/)
 | Java API | 230320 -        | :hourglass_flowing_sand:
 <!-- - DB와 SQL
 - JDBC
