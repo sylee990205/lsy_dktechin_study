@@ -1,4 +1,4 @@
-package day11;
+package day12;
 
 class Member1 {
 	private int id;
