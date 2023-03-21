@@ -13,7 +13,7 @@ class Member3 {
 		this.name = name;
 		this.password = password;
 	}
-
+	@Override
 	public boolean equals(Object o) {
 		if (this == o)
 			return true;
@@ -24,11 +24,11 @@ class Member3 {
 		}
 		return false;
 	}
-
+	@Override
 	public String toString() {
 		return "(" + id + ":" + name + ":" + password + ")";
 	}
-
+	@Override
 	public int hashCode() {
 		return Objects.hash(id, name, password);
 	}

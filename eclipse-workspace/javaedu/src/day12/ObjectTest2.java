@@ -10,7 +10,8 @@ class Member2 {
 		this.name = name;
 		this.password = password;
 	}
-
+	
+	@Override
 	public boolean equals(Object o) {
 		if (this == o)
 			return true;
@@ -28,10 +29,10 @@ public class ObjectTest2 {
 		Member2 obj1 = new Member2(10, "자바", "duke");
 		Member2 obj2 = new Member2(10, "자바", "duke");
 		Member2 obj3 = new Member2(20, "자바", "duke");
-		System.out.println(obj1.equals(obj2));
-		System.out.println(obj1 == obj2);
-		System.out.println(obj1.equals(null));
-		System.out.println(obj1.equals(new java.util.Date()));
-		System.out.println(obj1.equals(obj3));
+		System.out.println(obj1.equals(obj2));	//t
+		System.out.println(obj1 == obj2);		//f
+		System.out.println(obj1.equals(null));	//f
+		System.out.println(obj1.equals(new java.util.Date())); 	//f
+		System.out.println(obj1.equals(obj3));	//f
 	}
 }

@@ -22,11 +22,11 @@ public class ObjectTest1 {
 		Member1 obj1 = new Member1(10, "자바", "duke");
 		Member1 obj2 = new Member1(10, "자바", "duke");
 
-		System.out.println(obj1.equals(obj2));
-		System.out.println(obj1 == obj2);
+		System.out.println(obj1.equals(obj2));  //f
+		System.out.println(obj1 == obj2);		//f
 
 		Member1 obj3 = obj2;
-		System.out.println(obj3.equals(obj2));
-		System.out.println(obj3 == obj2);
+		System.out.println(obj3.equals(obj2));	//t
+		System.out.println(obj3 == obj2);		//t
 	}
 }
