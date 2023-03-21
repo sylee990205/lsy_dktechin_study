@@ -1,5 +1,5 @@
 // day7 excercise
-package excercise;
+package day7.excercise.excercise;
 
 public class Human {
 	private String name;

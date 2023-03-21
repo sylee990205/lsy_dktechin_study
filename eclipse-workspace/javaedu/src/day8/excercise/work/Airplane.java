@@ -1,5 +1,5 @@
 // java Day8 excercise
-package work;
+package day8.excercise.work;
 
 public class Airplane extends Plane{
 	public Airplane(){

@@ -1,5 +1,5 @@
 //Java Day9 Excercise
-package emp;
+package day9.excercise.emp;
 
 public class Company {
 

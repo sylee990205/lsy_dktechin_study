@@ -1,5 +1,5 @@
 // java Day8 excercise
-package mobile;
+package day8.excercise.mobile;
 
 public class Ltab extends Mobile{
 	public Ltab(){
