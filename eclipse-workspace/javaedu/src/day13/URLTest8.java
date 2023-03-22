@@ -28,12 +28,12 @@ public class URLTest8 {
 			
 			JSONObject obj = null;
 			
-			try {
+			//try {
 				obj = new JSONObject(bf.toString());
-			} catch (Exception e) {
-				System.out.println("파싱 오류");
-				e.printStackTrace();
-			}
+			//} catch (Exception e) {
+			//	System.out.println("파싱 오류");
+			//	e.printStackTrace();
+			//}
 
 			System.out.println(obj.toString());
 			System.out.println(obj.keySet());

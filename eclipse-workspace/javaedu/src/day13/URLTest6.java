@@ -16,7 +16,7 @@ public class URLTest6 {
 			DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
 			Document document = documentBuilder.parse("http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1171062000");
 			
-			System.out.println(document.getElementsByTagName("title").item(0).getTextContent());
+			System.out.println(document.getElementsByTagName("title").item(0).getTextContent()); //title tag의 값을 가져와라
 			NodeList nameList = document.getElementsByTagName("wfKor");
 			Node name = nameList.item(0);
 			String textContent = name.getTextContent();

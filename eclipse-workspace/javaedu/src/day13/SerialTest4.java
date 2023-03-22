@@ -9,7 +9,7 @@ public class SerialTest4 {
       FileInputStream fis = 
     		  new FileInputStream("c:/iotest/test2.ser"); 
       ObjectInputStream ois = new ObjectInputStream(fis); 
-      Date value1 = (Date)ois.readObject();
+      Date value1 = (Date)ois.readObject(); 
       Date value2 = (Date)ois.readObject();
       Student2 st = (Student2)ois.readObject();
       System.out.println("Date객체 데이터 : " + value1); 

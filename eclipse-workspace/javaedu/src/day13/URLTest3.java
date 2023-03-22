@@ -16,7 +16,7 @@ public class URLTest3 {
 		BufferedReader reader = null;
 		BufferedWriter fw = null;
 		try {
-			URL req = new URL("http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1171062000");
+			URL req = new URL("http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=4413354000"); // zone == 지역num
 			is = req.openStream();
 			reader = new BufferedReader(new InputStreamReader(is));
 			fw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("c:/iotest/weather.xml")));

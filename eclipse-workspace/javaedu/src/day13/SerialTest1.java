@@ -7,7 +7,7 @@ public class SerialTest1 {
       FileOutputStream fos = 
     		  new FileOutputStream("c:/iotest/test1.ser"); 
       ObjectOutputStream oos = 
-    		  new ObjectOutputStream(fos);
+    		  new ObjectOutputStream(fos); // 생성자를 통해서 전달한 FileOutputStream 객체의 file로 출력
       oos.writeObject(new Date());
       Thread.sleep(3000);
       oos.writeObject(new Date());      
