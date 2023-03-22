@@ -2,7 +2,7 @@ package day13;
 enum SeasonInit{
    SPRING("봄"), SUMMER("여름"), FALL("가을"), WINTER("겨울");
    private final String name;
-   SeasonInit(String name){
+   SeasonInit(String name){ // enum에 정의되는 상수의 초기화 값을 변경할 수 있음
       this.name = name;
    }
    String returnName(){
