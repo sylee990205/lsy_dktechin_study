@@ -32,15 +32,13 @@
 | SQL & noSQL  | 230302 | [:heavy_check_mark:](/TIL/01.%20컴퓨터%20기초/230302_SQL&NoSQL.md)    |
 | Git & GitHub | 230303 | [:heavy_check_mark:](/TIL/01.%20컴퓨터%20기초/230303_Git&GitHub.md)
 ### JAVA
-> :heavy_check_mark: 클릭 시 해당 기간 TIL 폴더로 이동
+> :one::two::three::four::five: 숫자 클릭 시 해당 일자 TIL, 예제, 실습으로 이동
 
-> 소스 숫자 클릭시 해당 일자 예제 및 실습으로 이동
-
-| 과목       | 수강기간            | TIL | 소스 | 
-| -------- | --------------- | --- | ---- |
-| Java 기초  | 230306 - 230310 | [:heavy_check_mark:](/TIL/02.%20Java%20기초/)    | [:one:](/eclipse-workspace/javaedu/src/day1/)[:two:](/eclipse-workspace/javaedu/src/day2/)[:three:](/eclipse-workspace/javaedu/src/day3/)[:four:](/eclipse-workspace/javaedu/src/day4/)[:five:](/eclipse-workspace/javaedu/src/day5/)
-| Java OOP | 230313 - 230317 | [:heavy_check_mark:](/TIL/03.%20Java%20OOP/)     | [:one:](/eclipse-workspace/javaedu/src/day6/)[:two:](/eclipse-workspace/javaedu/src/day7/)[:three:](/eclipse-workspace/javaedu/src/day8/)[:four:](/eclipse-workspace/javaedu/src/day9/)[:five:](/eclipse-workspace/javaedu/src/day10/)
-| Java API | 230320 -        | :hourglass_flowing_sand: | [:one:](/eclipse-workspace/javaedu/src/day11/)[:two:](/eclipse-workspace/javaedu/src/day12/)[:three:](/eclipse-workspace/javaedu/src/day13/)
+| 과목       | 수강기간            | TIL | 예제 | 실습
+| -------- | --------------- | --- | ---- | --- |
+| Java 기초  | 230306 - 230310 | [:one:](/TIL/02.%20Java%20기초/230306_Java_day1.md)[:two:](/TIL/02.%20Java%20%EA%B8%B0%EC%B4%88/230307_Java_day2.md)[:three:](/TIL/02.%20Java%20%EA%B8%B0%EC%B4%88/230308_Java_day3.md)[:four:](/TIL/02.%20Java%20%EA%B8%B0%EC%B4%88/230309_Java_day4.md)[:five:](/TIL/02.%20Java%20%EA%B8%B0%EC%B4%88/230310_Java_day5.md)    | [:one:](/eclipse-workspace/javaedu/src/day1/)[:two:](/eclipse-workspace/javaedu/src/day2/)[:three:](/eclipse-workspace/javaedu/src/day3/)[:four:](/eclipse-workspace/javaedu/src/day4/)[:five:](/eclipse-workspace/javaedu/src/day5/) | [:one:](/eclipse-workspace/javaedu/src/day1/excercise/)[:two:](/eclipse-workspace/javaedu/src/day2/excercise/)[:three:](/eclipse-workspace/javaedu/src/day3/excercise/)[:four:](/eclipse-workspace/javaedu/src/day4/excercise/)[:five:](/eclipse-workspace/javaedu/src/day5/excercise/)
+| Java OOP | 230313 - 230317 | [:one:](/TIL/03.%20Java%20OOP/230313_Java_day6.md)[:two:](/TIL/03.%20Java%20OOP/230314_Java_day7.md)[:three:](/TIL/03.%20Java%20OOP/230315_Java_day8.md)[:four:](/TIL/03.%20Java%20OOP/230316_Java_day9.md)[:five:](/TIL/03.%20Java%20OOP/230317_Java_day10.md)     | [:one:](/eclipse-workspace/javaedu/src/day6/)[:two:](/eclipse-workspace/javaedu/src/day7/)[:three:](/eclipse-workspace/javaedu/src/day8/)[:four:](/eclipse-workspace/javaedu/src/day9/)[:five:](/eclipse-workspace/javaedu/src/day10/) | [:one:](/eclipse-workspace/javaedu/src/day6/excercise/)[:two:](/eclipse-workspace/javaedu/src/day7/excercise/)[:three:](/eclipse-workspace/javaedu/src/day8/excercise/)[:four:](/eclipse-workspace/javaedu/src/day9/excercise/)[:five:](/eclipse-workspace/javaedu/src/day10/excercise/)
+| Java API | 230320 -        | [:one:](/TIL/04.%20Java%20API/230320_Java_day11.md)[:two:](/TIL/04.%20Java%20API/230321_Java_day12.md)[:three:](/TIL/04.%20Java%20API/230322_Java_day13.md) | [:one:](/eclipse-workspace/javaedu/src/day11/)[:two:](/eclipse-workspace/javaedu/src/day12/)[:three:](/eclipse-workspace/javaedu/src/day13/) | [:one:](/eclipse-workspace/javaedu/src/day11/excercise/)[:two:](/eclipse-workspace/javaedu/src/day12/excercise/)[:three:](/eclipse-workspace/javaedu/src/day13/excercise/)
 <!-- - DB와 SQL
 - JDBC
 - Web Client - HTML5, CSS3, JavaScript(AJAX)
