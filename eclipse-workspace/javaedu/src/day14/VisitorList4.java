@@ -11,9 +11,10 @@ public class VisitorList4 {
 		String sql = "SELECT id, name, DATE_FORMAT(writedate, '%Y년 %m월 %d일') writedate, memo FROM visitor";
 		try (Connection conn = DriverManager.getConnection(url, user, passwd);
 				Statement stmt = conn.createStatement();			
-				ResultSet rs = stmt.executeQuery(sql);) {			
+				ResultSet rs = stmt.executeQuery(sql);) {	
+			// if에서 이미 next를 했기때문에
 			if(rs.next() ) {				
-				do {
+				do { // do가 없이 while을 하면 첫행을 건너뛰게되기에 반드시 do while을 사용해야함
 					System.out.print(rs.getString("id")+"\t");
 					System.out.print(rs.getString("name")+"\t");
 					System.out.print(rs.getString("writedate")+"\t");

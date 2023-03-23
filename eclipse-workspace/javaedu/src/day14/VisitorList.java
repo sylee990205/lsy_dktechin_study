@@ -10,6 +10,7 @@ public class VisitorList {
 		String passwd = "jdbctest";
 		Connection conn = DriverManager.getConnection(url,user,passwd);
 		Statement stmt = conn.createStatement();
+		// 컬럼명은 직접 나열하는게 좋음 *은 되도록 쓰지말자
 		String sql = "SELECT id, name, writedate, memo FROM visitor";
 		ResultSet rs = stmt.executeQuery(sql);		
 		while(rs.next()) {

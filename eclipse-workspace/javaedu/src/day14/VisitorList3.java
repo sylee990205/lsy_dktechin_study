@@ -11,6 +11,7 @@ public class VisitorList3 {
 		String user = "jdbctest";
 		String passwd = "jdbctest";
 		String sql = "SELECT id, name, writedate, memo FROM visitor";
+		// try-catch with resource
 		try (Connection conn = DriverManager.getConnection(url, user, passwd);
 				Statement stmt = conn.createStatement();
 				ResultSet rs = stmt.executeQuery(sql);) {
