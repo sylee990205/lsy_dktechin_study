@@ -24,7 +24,9 @@ public class CheckEmpLab {
 			while(keep.equalsIgnoreCase("Y")) {
 				System.out.print("검색하려는 직원의 이름을 입력해주세요: ");
 				inputName = sc.next();
+				// 만약 쿼리에서 문자열 출력 시 "를 사용하려면 \" 의 형식으로 사용해야함
 				sql = "SELECT ename, DATE_FORMAT(hiredate, '%Y년 %m월') hiredate, deptno FROM emp WHERE ename LIKE '" + inputName + "'";
+				
 				rs = stmt.executeQuery(sql);
 				
 				if(rs.next()) {
