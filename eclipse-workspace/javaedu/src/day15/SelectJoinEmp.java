@@ -12,8 +12,8 @@ public class SelectJoinEmp {
 		String passwd = "jdbctest";
 		Connection conn = DriverManager.getConnection(url, user, passwd);
 		Statement stmt = conn.createStatement();
-		// INNER 조인 시 null 제외
-		ResultSet rs = stmt.executeQuery("SELECT ename, dname FROM emp INNER JOIN dept USING (deptno)");// ANSI JOIN
+		// INNER 조인 시 null 제외 left outer join 왼쪽 테이블의 null 허용, right는 오른쪽
+		ResultSet rs = stmt.executeQuery("SELECT ename, dname FROM emp OUTER JOIN dept USING (deptno)");// ANSI JOIN
 		System.out.printf("%-8s%-8s\n", "성명", "부서명");
 		System.out.println("-----------------------------------");
 		while (rs.next()) {

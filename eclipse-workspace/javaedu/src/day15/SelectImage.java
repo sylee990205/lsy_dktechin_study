@@ -29,7 +29,11 @@ public class SelectImage {
 			pstmt.setString(1, name);
 			ResultSet rs = pstmt.executeQuery();
 			if (rs.next()) {
-				String imgName[] = rs.getString("filename").split("\\.");	
+				String imgName[] = rs.getString("filename").split("\\."); 
+				// 파일 경로 split 시 왜 .만 작성하지않고 \\.이라고 작성했을까?
+				// split 메소드는 정규표현식을 우선으로 인식하기때문에 .을 우리가 아는 .으로 인식하지 못함
+				// 정규표현식이 아닌 문자의 고유내용을 인식하고자하면 \\를 붙여야함
+				
 				File imgFile = new File("c:/Temp/"+imgName[0]+new Date().getTime()+"."+imgName[1]);
 				InputStream is = rs.getBinaryStream("imgcontent");
 				FileOutputStream fos = new FileOutputStream(imgFile);

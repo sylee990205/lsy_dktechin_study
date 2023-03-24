@@ -22,6 +22,7 @@ public class InsertData1 {
 			conn = DriverManager.getConnection(url, user, passwd);	
 			System.out.println("데이터베이스에 접속했습니다.");
 			stmt = conn.createStatement();		
+			// insert 사용 시 테이블에 정의되어있는 모든 컬럼에 대하여 값을 그 순서대로 줬다면 컬럼명 list 생략 가능
 			stmt.executeUpdate("insert into student values ('둘리', 100)");
 			stmt.executeUpdate("insert into student values ('또치', 90)");
 			stmt.executeUpdate("insert into student values ('도우너', 95)");
