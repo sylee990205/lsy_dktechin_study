@@ -1,4 +1,4 @@
-package day13;
+package day14;
 
 class Outer {
 	void pr() {
@@ -12,7 +12,11 @@ class Outer {
 	}
 
 	static class Static_Inner {
-		void pr() {
+		static void pr() {
+			System.out.println("Static_Inner's pr() Method !!");
+		}
+		
+		void prNstatic() {
 			System.out.println("Static_Inner's pr() Method !!");
 		}
 	}
@@ -20,10 +24,16 @@ class Outer {
 
 public class InnerTest1 {
 	public static void main(String args[]) {
-		new Outer.Static_Inner().pr();
+		// 내부 멤버를 static으로 설정한 경우
+		Outer.Static_Inner.pr();
+		// static으로 설정하지 않은 경우
+		new Outer.Static_Inner().prNstatic();
+		
 		Outer o = new Outer();
 		o.pr();
 		Outer.Inner i = o.new Inner();
 		i.pr();
+		
 	}
+	
 }

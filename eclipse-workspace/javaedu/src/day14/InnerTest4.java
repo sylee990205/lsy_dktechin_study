@@ -1,7 +1,7 @@
-package day13;
+package day14;
 
-interface Testable {
-	final static String fs = "Interface Test";
+interface Testable { // 기존의 인터페이스
+	final static String FS = "Interface Test";
 
 	abstract void output(String s);
 }
@@ -9,7 +9,7 @@ interface Testable {
 public class InnerTest4 {
 	void pr(Testable o) {
 		o.output("Test");
-		System.out.println(Testable.fs);
+		System.out.println(Testable.FS);
 		// System.out.println(o.su); // 자손에서 추가된 멤버는 접근할 수 없다.
 	}
 
@@ -17,7 +17,7 @@ public class InnerTest4 {
 		System.out.println("Main start !!");
 		InnerTest4 n = new InnerTest4();
 		// 이 이름 없는 Inner 클래스는 Testable 와 Object 의 자손이 된다.
-		n.pr(new Testable() {
+		n.pr(new Testable() { //Object 클래스를 부모 클래스로 갖고 Testable interface를 추가 상속 받는 객체가 생성
 			int su = 100;
 
 			public void output(String s) {

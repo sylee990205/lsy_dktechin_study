@@ -1,4 +1,4 @@
-package day13;
+package day14;
 
 abstract class Test {
 	Test() {
@@ -16,7 +16,7 @@ public class InnerTest3 {
 	public static void main(String args[]) {
 		System.out.println("Main start !!");
 		InnerTest3 n = new InnerTest3();
-		n.pr(new Test() {
+		n.pr(new Test() { // Test()의 자식이 되는 클래스를 생성함과 동시에 객체 생성
 			int su = 100;
 
 			public void output(String s) {

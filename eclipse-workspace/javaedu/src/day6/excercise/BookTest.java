@@ -1,32 +1,5 @@
 package day6.excercise;
 
-class Book {
-	
-	String title;
-	String author;
-	int price;
-	
-	Book(){
-		this("이것이 자바다","신용권,임경균",36000); //this 메서드를 사용해 한줄로 정리 가능		
-//		title = "이것이 자바다";
-//		author = "신용권, 임경균";
-//		price = 35000;
-	}
-	
-	Book(String title, String author, int price){
-		this.title = title;
-		this.author = author;
-		this.price = price;
-	}
-	
-	String getBookInfo() {
-		String info = "책 제목: " + title + "/ 저자: " + author + "/ 가격: " + price;
-		
-		return info;
-	}
-	
-}
-
 public class BookTest {
 
 	public static void main(String[] args) { //배열로 풀어도 됐다고함...
@@ -57,6 +30,8 @@ public class BookTest {
 //		for(String e: info) {
 //			System.out.println(e);
 //		}
+		
+	
 //		
 
 	}
