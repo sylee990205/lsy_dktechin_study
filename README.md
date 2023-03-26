@@ -28,7 +28,7 @@
 | 과목           | 수강기간   | TIL |
 | ------------ | ------ | --- |
 | 리눅스          | 230227 | [:heavy_check_mark:](/TIL/01.%20컴퓨터%20기초/230227_Linux.md)     |
-| 네트워크         | 230228 | :hourglass_flowing_sand:     |
+| 네트워크         | 230228 | [:heavy_check_mark:](/TIL/01.%20%EC%BB%B4%ED%93%A8%ED%84%B0%20%EA%B8%B0%EC%B4%88/230228_network_web.md)     |
 | SQL & noSQL  | 230302 | [:heavy_check_mark:](/TIL/01.%20컴퓨터%20기초/230302_SQL&NoSQL.md)    |
 | Git & GitHub | 230303 | [:heavy_check_mark:](/TIL/01.%20컴퓨터%20기초/230303_Git&GitHub.md)
 ### JAVA
