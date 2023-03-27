@@ -36,25 +36,25 @@ public class SelectBookLab {
 				menu = Integer.parseInt(sc.nextLine());
 				
 				switch(menu) {
-				case(1):
+				case 1:
 					rs = stmt.executeQuery("SELECT id, title, price, kind FROM book");
 					break;
-				case(2):
+				case 2:
 					rs = stmt.executeQuery("SELECT id, title, price, kind FROM book ORDER BY price DESC");
 					break;
-				case(3):
+				case 3:
 					rs = stmt.executeQuery("SELECT title, price FROM book WHERE price >= 20000");
 					break;
-				case(4):
+				case 4:
 					rs = stmt.executeQuery("SELECT title, price FROM book WHERE kind LIKE '%2'");
 					break;
-				case(5):
+				case 5:
 					rs = stmt.executeQuery("SELECT title, price FROM book WHERE kind LIKE '%4' || kind LIKE '%5'");
 					break;
-				case(6):
+				case 6:
 					rs = stmt.executeQuery("SELECT title, price FROM book WHERE title LIKE '%자바%'");
 					break;
-				case(7):
+				case 7:
 					rs = stmt.executeQuery("SELECT RIGHT(kind, 1) kind, AVG(price) avg FROM book GROUP BY kind");
 					break;
 				default:
@@ -62,7 +62,7 @@ public class SelectBookLab {
 					continue;
 				}
 				
-				if(menu >= 1 && menu <= 2) {
+				if(menu == 1 && menu == 2) {
 					if(rs.next()) {
 						do {
 							id = rs.getInt("id");

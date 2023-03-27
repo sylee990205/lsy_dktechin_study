@@ -14,11 +14,10 @@ public class InsertBookLab {
 		String passwd = "jdbctest";
 		int count = 0;
 		try (Connection conn = DriverManager.getConnection(url, user, passwd);
-				PreparedStatement pstmt = conn.prepareStatement("INSERT INTO book (title, price, kind) "
-						+ "VALUES (?, ?, ?)");
+				PreparedStatement pstmt = conn.prepareStatement("INSERT INTO book (title, price, kind) VALUES (?, ?, ?)");
 				Scanner sc = new Scanner(System.in);){
 			String title;
-			int price, num;
+			int price, kind;
 			String keep = "Y";
 			while(keep.equalsIgnoreCase("Y")) {
 				System.out.print("도서명을 입력하세요 : ");
@@ -33,8 +32,8 @@ public class InsertBookLab {
 				System.out.println("\t 5. 인프라");
 				while(true) {
 					System.out.print("선택(1~5) : ");
-					num = Integer.parseInt(sc.nextLine());
-					if(num < 1 || num > 5 ) {
+					kind = Integer.parseInt(sc.nextLine());
+					if(kind < 1 || kind > 5 ) {
 						System.out.println("잘못된 번호를 입력했습니다. 1~5 중 입력해주세요.");
 					}
 					else {
@@ -44,7 +43,7 @@ public class InsertBookLab {
 				
 				pstmt.setString(1, title);
 				pstmt.setInt(2, price);
-				pstmt.setString(3, "b0" + num);
+				pstmt.setString(3, "b0" + kind);
 				pstmt.executeUpdate();
 				
 				System.out.println("정보가 입력되었습니다.");

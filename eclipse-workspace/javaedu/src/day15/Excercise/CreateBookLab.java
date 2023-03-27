@@ -14,8 +14,11 @@ public class CreateBookLab {
 		
 		try(Connection conn = DriverManager.getConnection(url,user,passwd);
 				Statement stmt = conn.createStatement();){
-				stmt.executeUpdate("CREATE TABLE book (id int primary key auto_increment, "
-						+ "title varchar(90), price int, kind char(3))");
+				stmt.executeUpdate("CREATE TABLE book "
+						+ "(id int primary key auto_increment, "
+						+ "title varchar(90), "
+						+ "price int, "
+						+ "kind char(3))");
 				
 				System.out.println("book 테이블 생성 완료!");
 			
