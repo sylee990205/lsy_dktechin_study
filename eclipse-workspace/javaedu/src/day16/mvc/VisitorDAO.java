@@ -43,7 +43,7 @@ public class VisitorDAO {
 		Connection conn = MySQLConnect.connect();
 		List<VisitorDTO> vlist = null;
 		try (Statement stmt = conn.createStatement()) {
-			ResultSet rs = stmt.executeQuery(
+			ResultSet rs = stmt.executeQuery( // ResultSet은 DAO 에서만 -> DB에 넘겨주는 역할을 DAO가 하니까!
 					"select id, name, date_format(writedate, '%Y년 %m월 %d일') writedate, memo from visitor order by writedate desc");
 			vlist = new ArrayList<VisitorDTO>();
 			while (rs.next()) {

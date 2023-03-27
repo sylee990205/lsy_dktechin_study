@@ -9,10 +9,10 @@ public class VisitorMain {
 		Scanner scan = new Scanner(System.in);
 		loop: while (true) {
 			System.out.println("[ DB 연동 메뉴 선택 ]");
-			System.out.println("1. 방명록 작성");
-			System.out.println("2. 방명록 읽기");
-			System.out.println("3. 방명록 수정");
-			System.out.println("4. 방명록 삭제");
+			System.out.println("1. 방명록 작성"); //C
+			System.out.println("2. 방명록 읽기"); //R
+			System.out.println("3. 방명록 수정"); //U
+			System.out.println("4. 방명록 삭제"); //D
 			System.out.println("5. 방명록 종료");
 			System.out.print("입력 : ");
 			String aws = "";
