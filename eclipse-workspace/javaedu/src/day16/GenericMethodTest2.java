@@ -3,6 +3,8 @@ package day16;
 public class GenericMethodTest2 {
 	//제네릭 메소드
 	public static <T extends Number> T whichBig(T t1, T t2) {
+		// Number 객체만 가능 -> String 불가
+		// Double -> Int, long 가능 반대는 불가능이라 double 객체 호출
 		if (t1.doubleValue() > t2.doubleValue())
 			return t1;
 		else 

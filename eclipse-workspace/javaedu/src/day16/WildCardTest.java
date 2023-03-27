@@ -13,7 +13,7 @@ class HighStudent extends Student {
 class MiddleStudent extends Student{
 }
 
-class My<T> {
+class My<T> { //제네릭 타입 클래스
 	T obj;
 	My(T obj) {
 		this.obj = obj;
@@ -42,6 +42,7 @@ public class WildCardTest {
 		m1(new My<HighStudent>(new HighStudent()));
 		m1(new My<MiddleStudent>(new MiddleStudent()));
 		System.out.println("-----------------------");
+		// m2는 Student의 자식만 가능함
 		m2(new My<Student>(new Student()));
 		m2(new My<HighStudent>(new HighStudent()));
 		m2(new My<MiddleStudent>(new MiddleStudent()));
@@ -49,6 +50,7 @@ public class WildCardTest {
 		//m2(new My<>(new Person()));
 		//m2(new My<>(new Worker()));
 		System.out.println("-----------------------");		
+		// m3는 Worker의 조상만 가능함
 		m3(new My<Person>(new Person()));
 		m3(new My<Worker>(new Worker()));
 		m3(new My<Object>(new Object()));
