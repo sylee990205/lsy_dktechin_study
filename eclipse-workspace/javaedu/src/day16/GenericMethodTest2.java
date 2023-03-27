@@ -20,7 +20,7 @@ public class GenericMethodTest2 {
 		System.out.println(whichBig(100, 200));
 		System.out.println(whichBig(100, 20));
 		System.out.println(whichBig(100.0, 20.0));
-		//System.out.println(whichBig("100", "20"));
+		//System.out.println(whichBig("100", "20")); 
 		System.out.println(equalValue(100, 100));
 		System.out.println(equalValue(200, 100));
 	}
