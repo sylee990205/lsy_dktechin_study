@@ -36,8 +36,8 @@
 
 | 과목       | 수강기간            | TIL | 예제 | 실습
 | -------- | --------------- | --- | ---- | --- |
-| Java 기초  | 230306 - 230310 |  [:heavy_check_mark:](/TIL/02.%20Java%20%EA%B8%B0%EC%B4%88/)  
-| Java OOP | 230313 - 230317 | [:one:](/TIL/03.%20Java%20OOP/230313_Java_day6.md)[:two:](/TIL/03.%20Java%20OOP/230314_Java_day7.md)[:three:](/TIL/03.%20Java%20OOP/230315_Java_day8.md)[:four:](/TIL/03.%20Java%20OOP/230316_Java_day9.md)[:five:](/TIL/03.%20Java%20OOP/230317_Java_day10.md)     | [:one:](/eclipse-workspace/javaedu/src/day6/)[:two:](/eclipse-workspace/javaedu/src/day7/)[:three:](/eclipse-workspace/javaedu/src/day8/)[:four:](/eclipse-workspace/javaedu/src/day9/)[:five:](/eclipse-workspace/javaedu/src/day10/) | [:one:](/eclipse-workspace/javaedu/src/day6/excercise/)[:two:](/eclipse-workspace/javaedu/src/day7/excercise/)[:three:](/eclipse-workspace/javaedu/src/day8/excercise/)[:four:](/eclipse-workspace/javaedu/src/day9/excercise/)[:five:](/eclipse-workspace/javaedu/src/day10/excercise/)
+| Java 기초  | 230306 - 230310 |  [:heavy_check_mark:](/TIL/02.%20Java%20%EA%B8%B0%EC%B4%88/)  |
+| Java OOP | 230313 - 230317 | [:heavy_check_mark:](/TIL/03.%20Java%20OOP/)  |
 | Java API | 230320 - 230323 | [:one:](/TIL/04.%20Java%20API/230320_Java_day11.md)[:two:](/TIL/04.%20Java%20API/230321_Java_day12.md)[:three:](/TIL/04.%20Java%20API/230322_Java_day13.md)[:four:](/TIL/04.%20Java%20API/230323_Java_day14.md) | [:one:](/eclipse-workspace/javaedu/src/day11/)[:two:](/eclipse-workspace/javaedu/src/day12/)[:three:](/eclipse-workspace/javaedu/src/day13/)[:four:](/eclipse-workspace/javaedu/src/day14/) | [:one:](/eclipse-workspace/javaedu/src/day11/excercise/)[:two:](/eclipse-workspace/javaedu/src/day12/excercise/)[:three:](/eclipse-workspace/javaedu/src/day13/excercise/)[:four:](/eclipse-workspace/javaedu/src/day14/excercise/) |
 | JDBC | 230323 -  | [:one:](/TIL/05.%20JDBC/230323_Java_day14.md)[:two:](/TIL/05.%20JDBC/230324_Java_day15.md) | [:one:](/eclipse-workspace/javaedu/src/day14/)[:two:](/eclipse-workspace/javaedu/src/day15/) | [:one:](/eclipse-workspace/javaedu/bin/day14/excercise/)[:two:](/eclipse-workspace/javaedu/src/day15/Excercise/)
 <!-- - DB와 SQL
