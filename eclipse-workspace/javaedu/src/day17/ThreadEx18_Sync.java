@@ -20,6 +20,7 @@ class FamilyThread2 extends Thread {
 }
 
 class Washroom2 {
+	//synchronized만 해주면 JVM이 알아서 한 스레드가 실행되면 다른 스레드들을 대기 상태로 변경
 	public synchronized void openDoor(String name) throws InterruptedException {
 		System.out.println(name + "님이 입장");
 		for (int i = 0; i < 50000; i++) {

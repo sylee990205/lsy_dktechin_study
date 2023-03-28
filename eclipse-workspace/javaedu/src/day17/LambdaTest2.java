@@ -20,6 +20,7 @@ public class LambdaTest2 {
 		});
 
 		exec((int a, int b) -> {
+			
 			return a + b;
 		});
 		
