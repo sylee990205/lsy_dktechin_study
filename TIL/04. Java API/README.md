@@ -15,6 +15,6 @@
 | 230322 | 표준 입출력<br>객체 직렬화<br>URL 프로그래밍<br>Enum  |  [:heavy_check_mark:](230322_Java_day13.md)| [:pencil2:](/eclipse-workspace/javaedu/src/day13/) | [:bulb:](/eclipse-workspace/javaedu/src/day13/excercise/)
 | 230323 | 내부 클래스 |  [:heavy_check_mark:](230323_Java_day14.md)| [:pencil2:](/eclipse-workspace/javaedu/src/day14/) | [:bulb:](/eclipse-workspace/javaedu/src/day14/excercise/)
 | 230327 | 제네릭 타입<br>멀티스레드 프로그래밍  |  [:heavy_check_mark:](230327_Java_day16.md)| [:pencil2:](/eclipse-workspace/javaedu/src/day16/) | [:bulb:](/eclipse-workspace/javaedu/src/day16/excercise/mvclab/)
-| 230328 | | [:heavy_check_mark:](230327_Java_day17.md)| [:pencil2:](/eclipse-workspace/javaedu/src/day17/) | [:bulb:](/eclipse-workspace/javaedu/src/day17/excercise/)
+| 230328 | 멀티스레드 프로그래밍<br>스레드 상태<br> 데몬스레드<br>동기화<br>람다 | [:heavy_check_mark:](230327_Java_day17.md)| [:pencil2:](/eclipse-workspace/javaedu/src/day17/) | [:bulb:](/eclipse-workspace/javaedu/src/day17/excercise/)
 
 </div>
