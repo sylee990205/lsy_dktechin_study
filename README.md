@@ -36,8 +36,8 @@
 | -------- | --------------- | --- | 
 | Java 기초  | 230306 - 230310 |  [:heavy_check_mark:](/TIL/02.%20Java%20%EA%B8%B0%EC%B4%88/)  |
 | Java OOP | 230313 - 230317 | [:heavy_check_mark:](/TIL/03.%20Java%20OOP/)  |
-| Java API | 230320 - 230323 | [:heavy_check_mark:](/TIL/04.%20Java%20API/) |
-| Java Generics & Thread | 230327 - | [:hourglass_flowing_sand:](/TIL/06.%20Java%20Generics%20%26%20Thread/)
+| Java API | 230320 - 230323<br>230327 -  | [:hourglass_flowing_sand:](/TIL/04.%20Java%20API/) |
+
 
 
 ### DB와 SQL - **JDBC**
