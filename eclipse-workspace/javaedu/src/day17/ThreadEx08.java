@@ -49,6 +49,7 @@ class ThreadB extends Thread {
 }
 
 class ThreadC extends Thread {
+	// 이름 생성x -> JVM이 자동으로 이름 부여
 	public void run() {
 		for (int i = 0; i < 2; i++) {
 			System.out.println(getName() + "가 출력한 내용");

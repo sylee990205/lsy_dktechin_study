@@ -5,7 +5,7 @@ class ThreadEx15 implements Runnable {
 
 	public static void main(String[] args) {
 		Thread t = new Thread(new ThreadEx15());
-		t.setDaemon(true); // 이 부분이 없으면 종료되지 않는다.
+		t.setDaemon(true); // 이 부분이 없으면 종료되지 않는다. 기동 시키기 전에 해야함
 		t.start();
 
 		for (int i = 1; i <= 20; i++) {
