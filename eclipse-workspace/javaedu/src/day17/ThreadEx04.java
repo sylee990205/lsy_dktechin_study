@@ -1,4 +1,4 @@
-package day16;
+package day17;
 
 class ThreadEx04 {
 	public static void main(String args[]) throws InterruptedException {

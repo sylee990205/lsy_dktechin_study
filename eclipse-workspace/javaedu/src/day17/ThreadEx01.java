@@ -1,4 +1,4 @@
-package day16;
+package day17;
 
 class ThreadEx01 {
 	public static void main(String args[]) {
@@ -11,7 +11,7 @@ class ThreadEx01 {
 		t2.start();
 	}
 }
-
+//java.lang.Thread를 상속
 class ThreadEx1_1 extends Thread {
 	public void run() {
 		for (int i = 0; i < 5; i++) {
@@ -20,11 +20,12 @@ class ThreadEx1_1 extends Thread {
 	}
 }
 
+// 먼저 수행됨
 class ThreadEx1_2 implements Runnable {
 	public void run() {
 		for (int i = 0; i < 5; i++) {
 			// Thread.currentThread() - 현재 실행중인 Thread를 반환한다.
-			System.out.println(Thread.currentThread().getName());
+			System.out.println(Thread.currentThread().getName()); 
 		}
 	}
 }

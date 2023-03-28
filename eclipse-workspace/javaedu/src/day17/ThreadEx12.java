@@ -1,12 +1,8 @@
-package day16;
+package day17;
 
-class NewThread implements Runnable {
-	Thread t;
-
-	NewThread() {
-		t = new Thread(this, "Demo Thread");
-		System.out.println("Child thread: " + t);
-		t.start();
+class NewThread2 extends Thread {
+	NewThread2() {
+		System.out.println("Child thread: " + this);
 	}
 
 	public void run() {
@@ -16,18 +12,21 @@ class NewThread implements Runnable {
 				Thread.sleep(500);
 			}
 		} catch (InterruptedException e) {
-			System.out.println("Child interrupted.");
+			System.out.println("**** Child interrupted.****");
 		}
 		System.out.println("Exiting child thread.");
 	}
 }
 
-class THreadEx11 {
+class ThreadEx12 {
 	public static void main(String args[]) {
-		new NewThread();
+		NewThread2 nt = new NewThread2();
+		nt.start();
 		try {
 			for (int i = 5; i > 0; i--) {
 				System.out.println("Main Thread: " + i);
+				if (i == 3)
+					nt.interrupt();
 				Thread.sleep(1000);
 			}
 		} catch (InterruptedException e) {
