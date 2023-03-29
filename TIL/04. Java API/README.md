@@ -1,7 +1,7 @@
 # Java API
 [메인으로](https://github.com/sylee990205/lsy_dktechin_study)
 ## 230320 ~ 230323  
-
+## 230327 ~
 <div align = "center"> 
 
 > :heavy_check_mark: 클릭 시 TIL 바로보기  
@@ -16,5 +16,6 @@
 | 230323 | 내부 클래스 |  [:heavy_check_mark:](230323_Java_day14.md)| [:pencil2:](/eclipse-workspace/javaedu/src/day14/) | [:bulb:](/eclipse-workspace/javaedu/src/day14/excercise/)
 | 230327 | 제네릭 타입<br>멀티스레드 프로그래밍  |  [:heavy_check_mark:](230327_Java_day16.md)| [:pencil2:](/eclipse-workspace/javaedu/src/day16/) | [:bulb:](/eclipse-workspace/javaedu/src/day16/excercise/mvclab/)
 | 230328 | 멀티스레드 프로그래밍<br>스레드 상태<br> 데몬스레드<br>동기화<br>람다 | [:heavy_check_mark:](230327_Java_day17.md)| [:pencil2:](/eclipse-workspace/javaedu/src/day17/) | [:bulb:](/eclipse-workspace/javaedu/src/day17/excercise/)
+| 230329 | 메소드에서 람다<br>Stream API<br>외부 반복자와 내부 반복자<br>스트림 파이프라인<br>스트림 인터페이스<br>네트워크 프로그램 | [:heavy_check_mark:](230327_Java_day18.md)| [:pencil2:](/eclipse-workspace/javaedu/src/day18/) | [:bulb:](/eclipse-workspace/javaedu/src/day18/excercise/)
 
 </div>
