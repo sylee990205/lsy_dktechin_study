@@ -19,7 +19,7 @@ public class LambdaTest10 {
 
 		fi = str -> str.length();
 		System.out.println(fi.method6("CSS"));
-
+		
 		fi =  String::length;
 		System.out.println(fi.method6("AJAX"));		
 	}
