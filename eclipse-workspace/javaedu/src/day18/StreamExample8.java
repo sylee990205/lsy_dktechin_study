@@ -19,7 +19,7 @@ public class StreamExample8 {
 		list.stream().distinct().forEach(System.out::println);
 		System.out.println();
 
-		// 신으로 시작하는 요소만 필터링
+		// 고으로 시작하는 요소만 필터링
 		list.stream().filter(n -> n.startsWith("고")).forEach(n -> System.out.println(n));
 		System.out.println();
 

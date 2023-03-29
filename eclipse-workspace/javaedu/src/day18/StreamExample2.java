@@ -15,6 +15,7 @@ public class StreamExample2 {
 
 		// 객체 스트림 얻기
 		Stream<Product> stream = list.stream();
+		// 만약 출력되는 데이터를 수정하고 싶다면 println에서 수정해야함. 근데 그게 아니라면 그냥 ::으로
 		stream.forEach(p -> System.out.println(p));
 		System.out.println("-----------------------------------------------------");
 		stream = list.stream();

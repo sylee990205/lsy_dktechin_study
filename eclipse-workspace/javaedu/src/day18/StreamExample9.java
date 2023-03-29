@@ -10,6 +10,7 @@ public class StreamExample9 {
 		List<String> list1 = new ArrayList<>();
 		list1.add("this is java");
 		list1.add("i am a best developer");
+		// 2차원 구조를 1차원으로 평탄화
 		list1.stream().flatMap(data -> Arrays.stream(data.split(" "))).forEach(System.out::println);
 
 		System.out.println();

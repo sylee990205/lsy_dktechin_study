@@ -21,6 +21,9 @@ public class StreamExample0 {
 		// 스트림 사용(O)
 		Stream<String> stream = list.stream();
 		stream.forEach(name -> System.out.println(name));
+		//stream = list.stream(); < 이게 없으면 error 이미 forEach로 stream이 최종 처리까지 끝나 사라졌기때문
+		// stream은 1회용
+		stream.forEach(System.out :: println);
 	}
 
 }
