@@ -36,7 +36,7 @@
 | -------- | --------------- | --- | 
 | Java 기초  | 230306 - 230310 |  [:heavy_check_mark:](/TIL/02.%20Java%20%EA%B8%B0%EC%B4%88/)  |
 | Java OOP | 230313 - 230317 | [:heavy_check_mark:](/TIL/03.%20Java%20OOP/)  |
-| Java API | 230320 - 230323<br>230327 -  | [:hourglass_flowing_sand:](/TIL/04.%20Java%20API/) |
+| Java API | 230320 - 230323<br>230327 - 230329 | [:heavy_check_mark:](/TIL/04.%20Java%20API/) |
 
 
 
@@ -46,8 +46,15 @@
 | JDBC | 230323 - 230327 | [:heavy_check_mark:](/TIL/05.%20JDBC/)
 | SQL 자율 실습 | 230324 -  | [:hourglass_flowing_sand:](/SQL%20excercise/SQL%20%EC%9E%90%EC%9C%A8%20%EC%8B%A4%EC%8A%B5.md)
 
+
+### Web Client 
+| 과목       | 수강기간      | TIL | 예제 | 실습 |
+| -------- | --------------- | --- | ---| ---|
+| Web 개요 & HTML5 | 230320 | [:heavy_check_mark:](/TIL/06.%20Web%20Client/230330_WebClient_day1.md) | [:pencil2:](/eclipse-workspace/edu/src/main/webapp/htmlexam/) | [:bulb:](/eclipse-workspace/edu/src/main/webapp/htmlexam/homework1.html)
+| CSS3 | | |
+| JavaScript | | |
+
 <!--
-- Web Client - HTML5, CSS3, JavaScript(AJAX)
 - MVC 기반의 Servlet&JSP
 ---------------- 게시판 구현 실습
 - Spring FW(DI, MVC, Rest, JdbcTemplate)
