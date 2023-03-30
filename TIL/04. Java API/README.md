@@ -1,6 +1,6 @@
 # Java API
 [메인으로](https://github.com/sylee990205/lsy_dktechin_study)
-## 230320 ~ 230323 | 230327 ~
+## 230320 ~ 230323 | 230327 ~ 230329
 <div align = "center"> 
 
 > :heavy_check_mark: 클릭 시 TIL 바로보기  
