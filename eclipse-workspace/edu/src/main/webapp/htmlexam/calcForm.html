@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>calcForm</title>
+</head>
+<body>
+<h1>연산할 두 개의 숫자를 입력하고 연산자를 선택하시오.</h1>
+<hr>
+<form method="get" action="...">
+	<input id="num1" type="number" name="number1" placeholder="연산할 숫자1" required>
+	<select id="mathSymbols" name="mathSymbols">
+		<option value="add">+</option>
+		<option value="sub">-</option>
+		<option value="mul">*</option>
+		<option value="div">/</option>
+	</select>
+	<input id="num2" type="number" name="number2" placeholder="연산할 숫자2" required>
+	<input type="submit" value="계산하기">
+</form>
+</body>
+</html>
