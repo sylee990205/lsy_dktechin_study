@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>csslab1</title>
+<style type="text/css">
+	header {
+		width: 100%;
+	}
+	#title {
+		text-align: center;
+		font-size: 5em;
+		font-weight: bold;
+		color: white;
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+		background-image: linear-gradient(121deg, rgba(182,220,250,1) 12%, rgba(142,168,236,1) 55%, rgba(225,190,242,1) 96%);
+		border-radius: 30px;
+		line-height: 300px;
+	}
+	#sec1 {
+		width: 100%;
+	}
+	.box {
+		width: 60%;
+		margin : auto;
+	}
+	
+	.box:nth-child(1){
+		margin-bottom: 50px;
+	}
+	
+	.outerBox {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: stretch;
+	}
+	
+	.weather {
+		width: 30%; 
+		border: 1px soild aqua;
+		box-shadow: 5px 5px 10px navy;
+		
+	}
+	
+	.weather img {
+		width: 100%;
+	}
+	
+	
+	img:hover {
+		opacity: 0.3;
+	}
+	
+</style>
+</head>
+<body>
+<header>
+<div id="title"><span style="color:blue">날씨</span>의 종류</div>
+</header>
+<hr>
+<section id="sec1">
+<div class="box">
+<div class="outerBox">
+	<div class="weather"> <img src="../images/sun.png"> </div>
+	<div class="weather"> <img src="../images/rain.png"> </div>
+	<div class="weather"> <img src="../images/cloud.png"> </div>
+</div>
+</div>
+
+<div class="box">
+<div class="outerBox">
+	<div class="weather"> <img src="../images/cloud_sun.png"> </div>
+	<div class="weather"> <img src="../images/snow.png"> </div>
+	<div class="weather"> <img src="../images/etc.png"> </div>
+</div>
+</div>
+</section>
+</body>
+</html>
