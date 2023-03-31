@@ -50,7 +50,7 @@
 ### Web Client 
 | 과목       | 수강기간      | TIL | 예제 | 실습 |
 | -------- | --------------- | --- | ---| ---|
-| Web 개요 & HTML5 | 230320 | [:heavy_check_mark:](/TIL/06.%20Web%20Client/230330_WebClient_day1.md) | [:pencil2:](/eclipse-workspace/edu/src/main/webapp/htmlexam/) | [:bulb:](/eclipse-workspace/edu/src/main/webapp/htmlexam/homework1.html)
+| Web 개요 & HTML5 | 230330-230331 | [:heavy_check_mark:](/TIL/06.%20Web%20Client/230330_WebClient_day1.md) | [:pencil2:](/eclipse-workspace/edu/src/main/webapp/htmlexam/) | [:bulb:](/eclipse-workspace/edu/src/main/webapp/htmlexam/homework1.html)
 | CSS3 | | |
 | JavaScript | | |
 
