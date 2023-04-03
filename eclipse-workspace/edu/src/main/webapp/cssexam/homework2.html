@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>웹실습4-이소영</title>
+<style type="text/css">
+	header {
+		width: 100%;
+		background: rgb(255,249,255);
+		background-image: linear-gradient(to right, #9796f0, #fbc7d4);
+/* 		background-image: linear-gradient(50deg, rgba(255,249,255,1) 10%, rgba(255,220,255,1) 29%, 
+						rgba(255,183,242,1) 51%, rgba(255,171,219,1) 86%); */
+						
+		text-align: center;
+		padding: 30px;
+		
+	}
+	
+	header h1 {
+		color: white;
+		text-shadow: 5px 5px 10px #e09ffb;
+	}
+	
+	header h1:hover{
+		text-shadow: 3px 3px 10px white;
+	}
+	
+	header a {
+		text-decoration: none;
+		margin: 10px 30px;
+		color: white;
+	}
+	
+	header a:hover{
+		font-weight: bold;
+		font-size: 3em;
+		transition: font-size 2s;
+	}
+	
+	section{
+		width: 100%;
+	}
+	
+	article {
+		width: 70%;
+		margin: 10px auto;
+		border: 2px dotted #ffd2ff;
+		border-radius: 30px;
+		padding: 20px;
+	}
+	
+	article h2 {
+		margin-top: 0;
+	}
+	
+	#introduce > h2 {
+		color: #e1b4ff;
+	}
+	
+	#culture > h2 {
+		color: #ffb0d3;
+	}
+	
+	#place > h2 {
+		color: #ffabff;
+	}
+	
+	#place > figure {
+		margin: 5px auto;
+		text-align: center;
+	}
+	
+	img:hover {
+		opacity: 0.5;
+	}
+	
+	aside{
+		width: 100%;
+		
+	}
+	
+	aside > div{
+		width: 50%;
+		margin: 5px auto;
+	}
+	
+	iframe {
+		display: block;
+		width: 50vw;
+		height: 50vh;
+	}
+	
+	footer {
+		background: gray;
+		width: 100%;
+		padding: 25px;
+		text-align: center;
+		color: white;
+		font-weight: bold;
+	}
+	
+	table {
+		border: 1px double #ffb0d3;
+	}
+	
+	th, td {
+		padding: 10px;
+		font-weight: bold;
+		font-size: 1.5em;
+	}
+	
+	th {
+		background: #ff92c2;
+		color: white;
+	}
+	
+	td{
+		text-align: center;
+	}
+	
+	td:nth-child(2) {
+		color: #ff92c2;
+	}
+	
+	td:nth-child(3) {
+		color: #9796f0;
+	}
+	
+
+
+
+</style>
+</head>
+<body>
+<header>
+<h1>소영이의 HTML5 학습</h1>
+<a href = "https://career.sw.or.kr/">KOSA</a>
+<a href = "https://github.com/sylee990205">소영's&nbsp;Github</a>
+<a href = "https://www.dktechin.com/service/main/index">dktechin</a>
+</header>
+
+<section>
+<article id="introduce">
+<h2>나의 소개 🙋🏻‍♀️‍</h2>
+<ul>
+	<li>이름 : 이소영</li>
+	<li>MBTI : ESFP</li>
+	<li>취미 : 다이어리꾸미기, 게임</li>
+	<li>관심 기술 : Spring</li>
+</ul>
+</article>
+<article id="culture">
+<h2>인생 작품 📺</h2>
+<table border = 1>
+	<tr><th>제목</th><th>분류</th><th>장르</th></tr>
+	<tr><td>질투의화신</td><td>드라마</td><td>로맨스</td></tr>
+	<tr><td>위대한쇼맨</td><td>영화</td><td>뮤지컬</td></tr>
+	<tr><td>해리포터 시리즈</td><td>영화시리즈</td><td>판타지</td></tr>
+	<tr><td>트와일라잇 시리즈</td><td>영화시리즈</td><td>판타지, 로맨스</td></tr>
+</table>
+</article>
+<article id="place">
+<h2>자랑하고싶은 <span style="color: #ca9cff">우리동네</span>의 아름다운 곳 🌸</h2>
+천호지는 단국대학교 천안캠퍼스 앞에 있는 호수로, 일명 <span style="color:#ff92c2;font-weight: bold;">단대호수</span>라고 불린다. <br>
+단대호수라는 명칭으로 불리는 가장 유명한 사례가 바로 버스커 버스커 1집 수록곡인 <span style="color:#ff92c2;font-weight: bold;">'꽃송이가'</span>의 가사이다. 
+<figure>
+	<img src="https://cdn.univ20.com/wp-content/uploads/2017/04/8851d08d0c56d8816a4726a9d0cbd69d-30.png">
+	<figcaption>휴강을 부르는 캠퍼스 호수 단국대학교 천안캠퍼스 천호지</figcaption>
+</figure>
+</article>
+</section>
+<aside>
+<div>
+<iframe src="https://www.youtube.com/embed/Dx_AhdUe1kw" title="YouTube video player"></iframe>
+</div>
+</aside>
+
+<footer>
+<em>이 문서는 이 소영에 의해 HTML5와 CSS3 기술을 사용하여 2023년 4월 3일에 작성하였습니다.(ver 1.0)</em>
+</footer>
+
+
+</body>
+</html>
