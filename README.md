@@ -45,7 +45,7 @@
 | 과목       | 수강기간      | TIL |
 | -------- | --------------- | --- | 
 | JDBC | 230323 - 230327 | [:heavy_check_mark:](/TIL/05.%20JDBC/)
-| SQL 자율 실습 | 230324 -  | [:hourglass_flowing_sand:](/SQL%20excercise/SQL%20%EC%9E%90%EC%9C%A8%20%EC%8B%A4%EC%8A%B5.md)
+| SQL 자율 실습 | 230324 -  | [:hourglass_flowing_sand:](/SQL%20exercise/SQL%20%EC%9E%90%EC%9C%A8%20%EC%8B%A4%EC%8A%B5.md)
 
 
 ### Web Client 
