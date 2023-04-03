@@ -5,15 +5,19 @@
     <title>Title</title>
     <style>
         p:nth-child(2) {
+        	/* p의 부모의 2번째 자식의 색을 red로 */
             color : red;
         }
         p:nth-of-type(2) {
+        	/* 두번째 p type의 색을 blue로 */
             color : blue;
         }
         section > h1 {
+        	/* section 태그의 자식 h1만 */ 
             color : green;
         }
         section h1 {
+        	/*section 태그의 모든 자손(태그 내의 다른 태그 단락 속 h1까지 전부)*/
             background-color : pink;
         }
         img {
@@ -26,6 +30,7 @@
 </head>
 <body>
 <div>
+<!-- div는 h3, p, p의 부모가 됨. 이 단락의 부모 -->
 <h3>어린 왕자</h3>
 <p>1장 </p>
 <p>2장 </p>
