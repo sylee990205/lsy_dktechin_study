@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    h1 {
+        color : green;
+    }
+</style>
+</head>
+<body>
+<script>
+    var num=window.prompt("숫자를 한 개 입력하세요."); // string
+    console.log(num);
+    document.write("<h1>"+(Number(num)+10)+"</h1>"); // 덧셈은 숫자 타입으로 형변환을 먼저 해줘야함. 다른건 괜찮음
+    document.write("<h1>"+(num-10)+"</h1>");
+    document.write("<h1>"+(num*10)+"</h1>");
+    document.write("<h1>"+(num/10)+"</h1>");
+    document.write("<h1>"+(num%100)+"</h1>");
+</script>
+</body>
+</html>
