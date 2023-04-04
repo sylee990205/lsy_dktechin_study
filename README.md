@@ -27,14 +27,14 @@
   ### 컴퓨터 기초
 
 | 과목           | 수강기간   | TIL |
-| ------------ | ------ | --- |
+| ------------ | :------: | :---: |
 | 리눅스          | 230227 | [:heavy_check_mark:](/TIL/01.%20컴퓨터%20기초/230227_Linux.md)     |
 | 네트워크         | 230228 | [:heavy_check_mark:](/TIL/01.%20%EC%BB%B4%ED%93%A8%ED%84%B0%20%EA%B8%B0%EC%B4%88/230228_network_web.md)     |
 | SQL & noSQL  | 230302 | [:heavy_check_mark:](/TIL/01.%20컴퓨터%20기초/230302_SQL&NoSQL.md)    |
 | Git & GitHub | 230303 | [:heavy_check_mark:](/TIL/01.%20컴퓨터%20기초/230303_Git&GitHub.md)
 ### JAVA
 | 과목       | 수강기간            | TIL | 
-| -------- | --------------- | --- | 
+| -------- | :---------------: | :---: | 
 | Java 기초  | 230306 - 230310 |  [:heavy_check_mark:](/TIL/02.%20Java%20%EA%B8%B0%EC%B4%88/)  |
 | Java OOP | 230313 - 230317 | [:heavy_check_mark:](/TIL/03.%20Java%20OOP/)  |
 | Java API | 230320 - 230323<br>230327 - 230329 | [:heavy_check_mark:](/TIL/04.%20Java%20API/) |
@@ -43,7 +43,7 @@
 
 ### DB와 SQL - **JDBC**
 | 과목       | 수강기간      | TIL |
-| -------- | --------------- | --- | 
+| -------- | :---------------: | :---: | 
 | JDBC | 230323 - 230327 | [:heavy_check_mark:](/TIL/05.%20JDBC/)
 | SQL 자율 실습 | 230324 -  | [:hourglass_flowing_sand:](/SQL%20exercise/SQL%20%EC%9E%90%EC%9C%A8%20%EC%8B%A4%EC%8A%B5.md)
 
