@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+function outerFunction() {
+    return function () {
+        document.write('<H1>Hello World .. !</h1>');
+    };
+}
+outerFunction( )( ); //outerFunction()을 호출하고 return한 함수를 또 호출 - 즉시 실행
+var result = outerFunction( ); // 익명함수가 되는 것 result란 이름으로 호출 가능
+result( );
+result( );
+</script>
+</body>
+</html>
