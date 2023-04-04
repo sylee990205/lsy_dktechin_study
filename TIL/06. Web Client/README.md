@@ -1,6 +1,6 @@
 # Web Client
 [메인으로](https://github.com/sylee990205/lsy_dktechin_study)
-## 230330
+## 230330 ~ 
 
 <div align = "center"> 
 
@@ -13,5 +13,6 @@
 | 230330 | WWW<br>웹표준<br>HTML5 | [:heavy_check_mark:](230330_Web%20%EA%B0%9C%EC%9A%94%20%26%20HTML5.md) | [:pencil2:](/eclipse-workspace/edu/src/main/webapp/htmlexam/) | [:bulb:](/eclipse-workspace/edu/src/main/webapp/htmlexam/homework1.html)[:bulb:](/eclipse-workspace/edu/src/main/webapp/htmlexam/visitorForm.html)[:bulb:](/eclipse-workspace/edu/src/main/webapp/htmlexam/calcForm.html)
 | 230331 | CSS<br>CSS 문법<br>CSS에서 부모, 자식, 자손관계 | [:heavy_check_mark:](/TIL/06.%20Web%20Client/230331_CSS.md) | [:pencil2:](/eclipse-workspace/edu/src/main/webapp/cssexam/)| [:bulb:](/eclipse-workspace/edu/src/main/webapp/cssexam/csslab1.html)[:bulb:](/eclipse-workspace/edu/src/main/webapp/cssexam/homework2.html)
 | 230403 | JavaScript 정의<br>JavaScript 구문 |  [:heavy_check_mark:](230403_JavaScript_day1.md)| [:pencil2:](/eclipse-workspace/edu/src/main/webapp/jsexam/day1/) | [:bulb:](/eclipse-workspace/edu/src/main/webapp/jsexam/day1/exercise/)
+| 230404 | JavaScript 구문<br>JavaScript 함수<br>JavaScript 변수타입<br>배열<br>| [:heavy_check_mark:](230404_JavaScript_day2.md) | [:pencil2:](/eclipse-workspace/edu/src/main/webapp/jsexam/day2/) | [:bulb:](/eclipse-workspace/edu/src/main/webapp/jsexam/day2/exercise/)
 
 </div>
