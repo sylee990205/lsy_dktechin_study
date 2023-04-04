@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>exercise3</title>
+</head>
+<body>
+<script src="../../util.js"></script>
+<script>
+	writeColor("자바스크립트 실습(3)","h1","blue");
+	let num = window.prompt("숫자를 입력해주세요.");
+	if(num == null || num == "")
+		write("비어있는 입력", "h3");
+	else if(isNaN(num))
+		write(num, "h3")
+	else {
+		console.log(num);
+		let sum = 0;
+		for(let i = 1; i <= num; i++){
+			sum += i;
+		}
+		
+		write("1부터 "+num+"까지의 합은 "+sum+"입니다.", "h2");
+	}
+</script>
+
+</body>
+</html>

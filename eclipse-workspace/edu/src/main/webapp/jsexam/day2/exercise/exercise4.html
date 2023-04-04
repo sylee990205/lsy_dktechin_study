@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>exercise4</title>
+</head>
+<body>
+<script src="../../util.js"></script>
+<script>
+writeColor("자바스크립트 실습(4)", "h1", "#CEAAFF");
+let sum = function(num){
+	let result = 0;
+	if(num == null || num == "")
+		return;
+	else{
+		for(let i = 1; i <= num; i++){
+			result += i;
+		}
+		return result;
+	}
+}
+let result;
+for(let i=0; i < 5; i++){
+	let random = Math.floor(Math.random() * 6);
+	console.log(random);
+	if(random == 0)
+		result = sum();
+	else{
+		result = sum(random);
+	}
+	
+	if(result == undefined)
+		write("결과값이 없어요!!","h3");
+	else
+		write("호출 결과값: "+result, "h2");
+}
+
+	
+</script>
+</body>
+</html>
