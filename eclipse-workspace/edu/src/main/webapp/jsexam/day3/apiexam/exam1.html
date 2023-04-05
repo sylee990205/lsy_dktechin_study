@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form name="fm">
+	<select id="choice" onchange="go();">
+		<option value="">---관심있는 기술을 선택해 주세요---</option>
+		<option value="https://www.w3schools.com/js/default.asp">Learn JavaScript</option>
+		<option value="https://www.w3schools.com/js/js_htmldom.asp">Learn HTML DOM</option>
+		<option value="https://www.w3schools.com/xml/ajax_intro.asp">Learn AJAX</option>
+		<option value="https://www.w3schools.com/js/js_json_intro.asp">Learn JSON</option>
+	</select>
+</form>
+<script>
+function go(){	
+	// 만약 document.getElementById를 사용하지않고 어떤 url의 절대 path를 주게되면 어떤 옵션을 선택하든 그 url로만 감
+	// 선택하는 것에 따라 페이지 이동이 이뤄지지않음
+	//location.href = document.getElementById("choice").value; 
+	location.href = document.querySelector("#choice").value; // #id 선택자로 choice 된 value 값을 읽어옴
+}
+</script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    @font-face {
+    font-family: 'RixMomsBlanketR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/RixMomsBlanketR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+	}
+	* {
+		font-family: 'RixMomsBlanketR';
+	}
+	a {		
+		text-decoration : none;
+		font-size : 2em;
+		margin : 10px;
+	}
+</style>
+</head>
+<body>
+<h1>DOM 프로그래밍</h1>
+<hr>
+<a href="http://www.daum.net/">다음으로가자</a> <!-- a태그는 기본 event handler가 정의되어있는 태그 -->
+<a href="http://www.naver.com/" >네이버로가자</a>
+<a href="http://www.google.com/">구글로가자</a>
+<hr>
+<a href="http://www.daum.net/" onclick="return go();">다음으로가자</a> <!-- a태그는 기본 event handler가 정의되어있는 태그 -->
+<a href="http://www.naver.com/" onclick="return go();">네이버로가자</a>
+<a href="http://www.google.com/" onclick="return go();">구글로가자</a>
+
+<script>
+// a 태그에 추가로 준 event handler
+// onclick이 발생하면 go함수를 호출하고 함수는 return으로 trun 나 false를 반환함. false면 a 태그의 기본 event도 동작하지않음
+	function go() {
+    	const answer = window.confirm("정말 갈겨?");
+    	if (answer)
+        	return true;
+    	else
+    		return false;    	
+	}
+</script>
+</body>
+</html>

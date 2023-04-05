@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>자바스크립트의 객체 생성과 사용(객체리터럴)</h1>
+<hr>
+
+<script>
+	const obj = {
+		name : '듀크', // name - property
+		eat : function(food) { // eat - method이자 property 
+			alert(this.name + "가 " + food + "를 먹어요!!"); 
+		} // this.을 꼭 붙여야함. 안그러면 못찾음!
+	};
+	obj.eat("사과");
+</script>
+</body>
+</html>
+
+
+
+
+
