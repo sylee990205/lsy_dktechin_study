@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>exercise10</title>
+</head>
+<body>
+<script src="../../util.js"></script>
+<script>
+	function DayInfo(name, year, month, day){
+		this.name = name;
+		this.year = year;
+		this.month = month-1;
+		this.day = day;
+	};
+	
+	DayInfo.prototype.getTotalDates = function(){
+		const now = new Date();
+		const d = new Date(this.year, this.month, this.day);
+		let day = parseInt(Math.abs(now.getTime() - d.getTime()) / (24*60*60*1000));
+		
+/* 		return this.name + "님은 태어난지 " + day + "일 되었어요."; */
+		return `${this.name} 님은 태어난지 ${this.day}일 되었어요.`; //백틱 문자열
+	};
+	
+	DayInfo.prototype.getKorDay = function(){
+		const d = new Date(this.year, this.month, this.day);
+		let day = new Array("일","월","화","수","목","금","토");
+		return this.name + "님은 " + day[d.getDay()] + "요일에 태어났어요.";
+	};
+	
+	const people1 = new DayInfo("소영", 1999, 2, 5);
+	const people2 = new DayInfo("용욱", 1995, 9, 29);
+	const people3 = new DayInfo("사람", 2023, 4, 10);
+	
+	writeColor(people1.getTotalDates(), "h3", "#CEAAFF");
+	writeColor(people1.getKorDay(),"h3", "#CEAAFF")
+	
+	writeColor(people2.getTotalDates(), "h3", "#6798FA");
+	writeColor(people2.getKorDay(),"h3", "#6798FA")
+	
+	writeColor(people3.getTotalDates(), "h3", "#FFDD96");
+	writeColor(people3.getKorDay(),"h3", "#FFDD96")
+
+	
+	
+	
+
+</script>
+</body>
+</html>

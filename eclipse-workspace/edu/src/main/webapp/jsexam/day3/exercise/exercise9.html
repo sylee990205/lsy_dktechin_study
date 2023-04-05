@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>exercise9</title>
+</head>
+<body>
+<script src="../../util.js"></script>
+<script>
+	function printObject(p){
+		if(typeof p != 'object' || Array.isArray(p))
+			return;
+		writeColor(p.msg, p.tag, p.color);
+	}
+	
+/* 	const t = new Array("h1", "h2" , "h3", "h2", "h1");
+	const c = new Array("red", "orange", "yellow", "green", "blue");
+	const m = "안녕하세요";
+	
+	for(let i = 0; i < t.length ; i++){
+		printObject({tag:t[i], color:c[i], msg:m+i});
+	} */
+	
+	const objects = new Array(
+		{ tag: "h1", color: "red", msg:"안녕하세요!"},		
+		{ tag: "h2", color: "orange", msg:"안녕하세요!!"},		
+		{ tag: "h3", color: "yellow", msg:"안녕하세요!!!"},		
+		{ tag: "h2", color: "green", msg:"안녕하세요!!!!"},		
+		{ tag: "h1", color: "blue", msg:"안녕하세요!!!!!"},		
+	)
+	
+	for(let i in objects){
+		printObject(objects[i]);
+	}
+	
+</script>
+</body>
+</html>
