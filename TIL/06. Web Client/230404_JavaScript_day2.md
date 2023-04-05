@@ -2,23 +2,27 @@
 ## 목차
 <!-- TOC -->
 
-- [230404 JavaScript day2](#230404-javascript-day2)
-  - [목차](#목차)
-  - [JavaScript 구문](#javascript-구문)
-    - [\< pre\>](#-pre)
-  - [JavaScript의 함수](#javascript의-함수)
-    - [함수 정의 방법](#함수-정의-방법)
-    - [함수의 argument 활용](#함수의-argument-활용)
-      - [함수의 호출과 인수](#함수의-호출과-인수)
-    - [가변인자](#가변인자)
-      - [arguments](#arguments)
-    - [함수의 활용](#함수의-활용)
-      - [함수()()](#함수)
-  - [JavaScript 변수 타입](#javascript-변수-타입)
-  - [JavaScript 배열](#javascript-배열)
-    - [배열 생성 방법](#배열-생성-방법)
-    - [배열의 활용](#배열의-활용)
-  - [Date](#date)
+- [JavaScript day2](#javascript-day2)
+    - [목차](#%EB%AA%A9%EC%B0%A8)
+    - [JavaScript 구문](#javascript-%EA%B5%AC%EB%AC%B8)
+        - [< pre>](#-pre)
+    - [JavaScript의 함수](#javascript%EC%9D%98-%ED%95%A8%EC%88%98)
+        - [함수 정의 방법](#%ED%95%A8%EC%88%98-%EC%A0%95%EC%9D%98-%EB%B0%A9%EB%B2%95)
+        - [함수의 argument 활용](#%ED%95%A8%EC%88%98%EC%9D%98-argument-%ED%99%9C%EC%9A%A9)
+            - [함수의 호출과 인수](#%ED%95%A8%EC%88%98%EC%9D%98-%ED%98%B8%EC%B6%9C%EA%B3%BC-%EC%9D%B8%EC%88%98)
+        - [가변인자](#%EA%B0%80%EB%B3%80%EC%9D%B8%EC%9E%90)
+            - [arguments](#arguments)
+            - [p](#p)
+        - [함수의 활용](#%ED%95%A8%EC%88%98%EC%9D%98-%ED%99%9C%EC%9A%A9)
+            - [함수](#%ED%95%A8%EC%88%98)
+        - [함수의 매개변수로 함수](#%ED%95%A8%EC%88%98%EC%9D%98-%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98%EB%A1%9C-%ED%95%A8%EC%88%98)
+    - [외부 자바스크립트 코드를 사용하려면](#%EC%99%B8%EB%B6%80-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%BD%94%EB%93%9C%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%A0%A4%EB%A9%B4)
+    - [JavaScript 변수 타입](#javascript-%EB%B3%80%EC%88%98-%ED%83%80%EC%9E%85)
+        - [자바스크립트 변수 선언 시 선택](#%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%B3%80%EC%88%98-%EC%84%A0%EC%96%B8-%EC%8B%9C-%EC%84%A0%ED%83%9D)
+    - [JavaScript 배열](#javascript-%EB%B0%B0%EC%97%B4)
+        - [배열 생성 방법](#%EB%B0%B0%EC%97%B4-%EC%83%9D%EC%84%B1-%EB%B0%A9%EB%B2%95)
+        - [배열의 활용](#%EB%B0%B0%EC%97%B4%EC%9D%98-%ED%99%9C%EC%9A%A9)
+    - [Date](#date)
 
 <!-- /TOC -->
 ---
@@ -77,6 +81,7 @@ var f2 = function (p1, p2) {
   - 타입에 상관없이 모두 return 가능
   - 타입을 체크해야하는 일이 있다면 직접해줘야함
   - return 값이 없는 함수를 호출하여 return 받겠다고하면 자동으로 그 값이 undefined가 됨
+  - undefined는 false와 동일
 
 ### 함수의 argument 활용
 #### 함수의 호출과 인수
@@ -90,11 +95,29 @@ var f2 = function (p1, p2) {
 - arguments 라는 함수를 활용하여 함수의 가변인자를 처리할 수 있음
 - arguments.length : 가변인자의 갯수(매개변수의 수)
 - 가변인자를 다룰 때는 arguments[index]
+#### ...p
+- arguments와 사용 방법은 동일하다
+- 매개변수로 ...p를 작성해야함
 
 ### 함수의 활용
 #### 함수()()
 - 어떤 함수가 함수를 return할 때 함수명()()을 사용하면 그 함수가 return하는 함수를 즉시 호출할 수 있음
 
+### 함수의 매개변수로 함수
+- 이 때는 우선 매개변수가 함수가 맞는지를 확인해야함
+  - typeof를 사용
+  - typeof 매개변수 == 'function' 
+    - 반드시 문자열로 비교해야함
+
+---
+## 외부 자바스크립트 코드를 사용하려면
+- 작성하고자 하는 스크립트 코드와 별개로 스크립트 태그를 사용해야함
+```html
+<script src="외부자바스크립트코드경로"></script>
+<script>
+//작성하려는코드
+</script>
+```
 ---
 ## JavaScript 변수 타입
 - var
@@ -109,6 +132,12 @@ var f2 = function (p1, p2) {
 - 변수 앞에 아무것도 없는 경우
   - 에러가 발생하진 않으나 전역 변수가 되어버림
 > 변수 설정 시 반드시 var, let, const 중 무언가를 역할에 맞춰 사용하자!
+### 자바스크립트 변수 선언 시 선택
+- 변수의 값이 변경되어야할때는 let을 사용하고
+- 그게 아닌 경우에는 const를 사용하는 것이 좋음
+  - 이게 성능이 더 좋음
+- 고민해보고 const를 사용하는 것이 좋을 것같다면 const를 사용하자
+- 예를 들어 배열
 
 ---
 
