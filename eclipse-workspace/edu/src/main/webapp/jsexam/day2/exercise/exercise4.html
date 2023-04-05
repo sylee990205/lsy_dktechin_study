@@ -10,7 +10,7 @@
 writeColor("자바스크립트 실습(4)", "h1", "#CEAAFF");
 let sum = function(num){
 	let result = 0;
-	if(num == null || num == "")
+	if(num == undifined || num == "") // num에 아무것도 안들어오면 undifined라서 null보단 undifined가 좋다고함
 		return;
 	else{
 		for(let i = 1; i <= num; i++){
