@@ -103,6 +103,7 @@ document.write("(3) 어디에 출력될까?"); // 웹페이지 Document 내
   - == 으로 비교 가능
 - 논리 타입
   - true: false
+  - 0, null, undefined, "" 은 모두 false로 취급
 - 객체 타입
   - Key Value 쌍의 딕셔너리 같은 것
     ```javascript
@@ -168,6 +169,14 @@ document.write("(3) 어디에 출력될까?"); // 웹페이지 Document 내
 - 반복 제어문 for, while, do-while
   - for...in 반복문 사용 가능 (for-each문)
     - 지정된 배열이나 객체 내의 요소/멤버에 대해 선두부터 마지막까지 순서대로 반복 문장 수행
+    - 자바스크립트의 foreach문은 자바의 foreach문과 다름
+    - 자바스크립트의 foreach문에 사용되는 멤버 변수는 element가 아닌 index
+    ```javascript
+    for(var i in array){
+      // sum += i  // 이렇게 하면 인덱스값만 더해짐
+      sum += array[i];
+    }
+    ```
 - 분기 제어문 break, continue
 - 예외처리 구문 지원
   - 가급적이면 try-catch-finally를 사용하지않고 예외가 일어나지않게끔 구현하는 것이 좋음
