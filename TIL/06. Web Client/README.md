@@ -14,5 +14,6 @@
 | 230331 | CSS<br>CSS 문법<br>CSS에서 부모, 자식, 자손관계 | [:heavy_check_mark:](/TIL/06.%20Web%20Client/230331_CSS.md) | [:pencil2:](/eclipse-workspace/edu/src/main/webapp/cssexam/)| [:bulb:](/eclipse-workspace/edu/src/main/webapp/cssexam/csslab1.html)[:bulb:](/eclipse-workspace/edu/src/main/webapp/cssexam/homework2.html)
 | 230403 | JavaScript 정의<br>JavaScript 구문 |  [:heavy_check_mark:](230403_JavaScript_day1.md)| [:pencil2:](/eclipse-workspace/edu/src/main/webapp/jsexam/day1/) | [:bulb:](/eclipse-workspace/edu/src/main/webapp/jsexam/day1/exercise/)
 | 230404 | JavaScript 구문<br>JavaScript 함수<br>JavaScript 변수타입<br>배열<br>| [:heavy_check_mark:](230404_JavaScript_day2.md) | [:pencil2:](/eclipse-workspace/edu/src/main/webapp/jsexam/day2/) | [:bulb:](/eclipse-workspace/edu/src/main/webapp/jsexam/day2/exercise/)
+| 230405 | JavaScript 객체 | [:heavy_check_mark:](230405_JavaScript_day3.md) | [:pencil2:](/eclipse-workspace/edu/src/main/webapp/jsexam/day3/) | [:bulb:](/eclipse-workspace/edu/src/main/webapp/jsexam/day3/exercise/)
 
 </div>
