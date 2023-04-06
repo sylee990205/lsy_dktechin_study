@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	* {
+		text-align: center;
+	}
+	h1 {
+		color: white;
+		text-shadow: 3px 3px 10px purple;
+	}
+	section {
+		width: 100%;
+	}
+	
+	article {
+		width: 100%;
+	}
+	
+	#outerBox {
+		margin: 1px auto;
+		padding: 10px;
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;
+	}
+	
+	#buttonBox {
+		width: 50%;
+		margin: 5px auto;
+		padding: 10px;
+		border: 2px solid orange;
+		border-radius: 10px;
+	}
+	
+	button {
+		
+	}
+	
+	#imgBox {
+		margin: 5px auto;
+	}
+	
+	img {
+		width: 30rem;
+	}
+	
+	
+</style>
+
+
+</head>
+<body>
+<header>
+<h1>이벤트 처리 실습</h1>
+</header>
+<section>
+<article id="outerBox">
+<div id="buttonBox">
+	<button>맑음</button>
+	<button>흐림</button>
+	<button>비</button>
+</div>
+</article>
+<article>
+<div id="imgBox"></div>
+</article>
+</section>
+<script>
+	const dom = document.getElementsByTagName("div");
+	function weather(e){
+		console.log(e.target.tagName)
+		if(e.target.tagName != "BUTTON")
+			return;
+		dom[1].innerHTML = '';
+		if (e.target.innerText == "맑음"){
+			dom[1].innerHTML += '<img src="../../../images/sun.png">';
+		}
+		else if (e.target.innerText == "흐림"){
+			dom[1].innerHTML += '<img src="../../../images/cloud.png">';
+		}
+		else if (e.target.innerText == "비"){
+			dom[1].innerHTML += '<img src="../../../images/rain.png">';
+		} 
+		
+	}
+	
+	
+	dom[0].addEventListener("click", weather);
+
+</script>
+</body>
+</html>
