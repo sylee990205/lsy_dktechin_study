@@ -21,7 +21,8 @@
 		
 	}
 	
-	window.onload = function(){
+	window.onload = function(){ // 페이지 랜더링시 라는 키워드가 있을때 window.onload를 꼭 사용해야하는것은 아니지만
+		// 안정성때문에 사용하는게 더 좋음!
 		const d = new Date();
 		outh2.innerHTML = `오늘은 ${d.getMonth() + 1}월 ${d.getDate()}일입니다.`;
 	}
