@@ -7,6 +7,7 @@
 <body>
 <h1 style="color:red;">세 가지 이벤트 모델</h1>
 <hr>
+<!-- this는 h1태그 자기 자신을 가르킴 -->
 <h1 onclick="alert(this.textContent);">인라인 이벤트 모델</h1>
 <hr>
 <h1 id="t1">고전 이벤트 모델</h1>
@@ -14,9 +15,6 @@
 <h1 id="t2">표준 이벤트 모델</h1>
 <hr>
 <script>
-	function f1(p) {		
-		alert(p.textContent);
-	}
 	const dom2 = document.querySelector('#t1');
     const dom3 = document.querySelector('#t2');
 	function f2() {
