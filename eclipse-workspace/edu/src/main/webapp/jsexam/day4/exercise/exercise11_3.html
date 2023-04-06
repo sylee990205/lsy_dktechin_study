@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>excercise11_3</title>
+</head>
+<body>
+	<h1>이벤트 모델-표준</h1>
+	<hr>
+	<button>빨강색</button>
+	<button>파랑색</button>
+	<button>노랑색</button>
+	<hr>
+	<h2></h2>	
+</body>
+<script>
+	const dom = document.getElementsByTagName("button")
+	const outh2 = document.querySelector("h2");
+	function updateColor(c){
+		if(c.target.textContent == "빨강색"){
+			outh2.style.color = "red";
+		}
+		else if(c.target.textContent == "파랑색"){
+			outh2.style.color = "blue";
+		}
+		else if(c.target.textContent == "노랑색"){
+			outh2.style.color = "yellow";
+		}
+	}
+	
+	dom[0].addEventListener("click", updateColor);
+	dom[1].addEventListener("click", updateColor);
+	dom[2].addEventListener("click", updateColor);
+	
+	window.onload = function(){
+		const d = new Date();
+
+		outh2.innerHTML = `오늘은 ${d.getMonth() + 1}월 ${d.getDate()}일입니다.`;
+	}
+
+</script>
+</body>
+</html>
+

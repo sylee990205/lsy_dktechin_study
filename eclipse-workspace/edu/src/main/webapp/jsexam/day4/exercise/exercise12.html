@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<title>exercise12</title>
+<style>
+	* {
+		font-family: 'Jua', sans-serif;
+	}
+
+	header {
+		text-align: center;
+	}
+	
+	section {
+		width: 100%;
+		
+	}
+	
+	#gugu {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	#gugu div {
+		text-align: center;
+		width: 7%;
+		padding: 10px;
+		margin: 5px auto;
+		border: 1px solid #ECC6FA;
+		border-radius: 10px;
+		background-color: #ECDCFA;
+		cursor: pointer;
+	}
+	
+	#gugu div:hover{
+		border: 1px solid #E7FFCF;
+		background-color: #E7FFE3;
+		color: #65FF85;
+	}
+	
+	#out {
+		text-align: center;
+	}
+	
+	h2 {
+		cursor: pointer;
+	}
+	
+	h2:hover {
+		color: #9AA9EB;
+	}
+</style>
+</head>
+<body>
+<header>
+	<h2 onClick="move()">구구단</h2>
+</header>
+<section>
+<article id="gugu">
+<div onClick="gugudan(1)">1단</div>
+<div onClick="gugudan(2)">2단</div>
+<div onClick="gugudan(3)">3단</div>
+<div onClick="gugudan(4)">4단</div>
+<div onClick="gugudan(5)">5단</div>
+<div onClick="gugudan(6)">6단</div>
+<div onClick="gugudan(7)">7단</div>
+<div onClick="gugudan(8)">8단</div>
+<div onClick="gugudan(9)">9단</div>
+</article>
+<article id="out">
+	<output id="result"></output>
+</article>
+</section>
+<script>
+	function move(){
+		location.href = "https://ko.wikipedia.org/wiki/구구단"
+	}
+	
+	const dom = document.getElementById("result");
+	function gugudan(num){
+		dom.innerHTML = "";
+		for(let i = 1; i <= 9; i++){
+			dom.innerHTML += `<h4>${num} * ${i} = ${num*i}</h4>`;
+		}
+		
+	}
+
+</script>
+
+
+</body>
+</html>
