@@ -136,6 +136,7 @@
 - innerHTML
   - subTag도 있다면 innerHTML
   - 만약 tag가 tag로 인식되고 HTML로 인식되려면 innerHTML을 사용
+  - innerHTML에 문자열이 있으면 true, 문자열이 없거나 null 문자열이면 false
 ---
 ## 오늘의 Tip
 ### 개발자 도구
