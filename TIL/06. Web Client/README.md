@@ -15,5 +15,7 @@
 | 230403 | JavaScript 정의<br>JavaScript 구문 |  [:heavy_check_mark:](230403_JavaScript_day1.md)| [:pencil2:](/eclipse-workspace/edu/src/main/webapp/jsexam/day1/) | [:bulb:](/eclipse-workspace/edu/src/main/webapp/jsexam/day1/exercise/)
 | 230404 | JavaScript 구문<br>JavaScript 함수<br>JavaScript 변수타입<br>배열<br>| [:heavy_check_mark:](230404_JavaScript_day2.md) | [:pencil2:](/eclipse-workspace/edu/src/main/webapp/jsexam/day2/) | [:bulb:](/eclipse-workspace/edu/src/main/webapp/jsexam/day2/exercise/)
 | 230405 | JavaScript 객체 | [:heavy_check_mark:](230405_JavaScript_day3.md) | [:pencil2:](/eclipse-workspace/edu/src/main/webapp/jsexam/day3/) | [:bulb:](/eclipse-workspace/edu/src/main/webapp/jsexam/day3/exercise/)
+| 230406 | JavaScript 이벤트모델<br>output 태그<br>clearInterval, clearTimeout<br>load 이벤트<br>자바스크립트 <-> JSON<br>이벤트 버블링, 이벤트 캡처링 | [:heavy_check_mark:](230406_JavaScript_day4.md) | [:pencil2:](/eclipse-workspace/edu/src/main/webapp/jsexam/day4/) | [:bulb:](/eclipse-workspace/edu/src/main/webapp/jsexam/day4/exercise/)
+| 
 
 </div>
