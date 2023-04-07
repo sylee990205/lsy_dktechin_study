@@ -16,6 +16,8 @@
     - [자바스크립트 <-> JSON](#%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8---json)
     - [이벤트 버블링, 이벤트 캡처링](#%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%B2%84%EB%B8%94%EB%A7%81-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EC%BA%A1%EC%B2%98%EB%A7%81)
         - [이벤트 버블링](#%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%B2%84%EB%B8%94%EB%A7%81)
+        - [이벤트 캡처링](#%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EC%BA%A1%EC%B2%98%EB%A7%81)
+        - [우선순위](#%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84)
     - [오늘의 Tip](#%EC%98%A4%EB%8A%98%EC%9D%98-tip)
         - [자바 배포판](#%EC%9E%90%EB%B0%94-%EB%B0%B0%ED%8F%AC%ED%8C%90)
 
@@ -133,6 +135,17 @@ var copy = JSON.parse(jsonStr);
   - 이벤트 버블링을 수행하지 않는 방법 e.stopPropagation();
 - 이벤트 핸들러에서 currentTarget을 수행하면 이벤트핸들러의 target은 이벤트 핸들러 수행을 위임받은 target
 - this는 currentTarget의 dom 객체를 가르키게 됨
+### 이벤트 캡처링
+- 자손에서 발생된 어떤 이벤트에 대한 처리를 가로채서 조상 태그에서 먼저 수행하는 것
+- 표준 이벤트 모델에서 이벤트 캡처링을 수행하는 방법
+```javascript
+dom.addEventListener("click", 함수명, true);
+```
+
+### 우선순위
+1. 어떤 타겟에서 이벤트가 발생했을 때의 실행 우선 순위는 먼저 캡처링, 타겟, 버블링 순
+2. 캡처링 되는 조상이 있다면 타겟에서부터 해당 조상 전까지의 이벤트는 건너뛰고 조상을 먼저 출력
+3. 타겟까지 도달한 후 버블링으로 다시 올라갈 때는 이미 출력했던 이벤트는 건너뜀
 
 ---
 ## 오늘의 Tip
