@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>exercise13</title>
 <style>
 	* {
 		text-align: center;
@@ -26,7 +26,7 @@
 		border-bottom: 1px solid black;
 	}
 	
-	#buttonBox {
+	#btnContainer {
 		width: 50%;
 		margin: 5px auto;
 		padding: 10px;
@@ -35,7 +35,11 @@
 	}
 	
 	button {
-		
+		background-color: purple;
+		color: white;
+		border-radius: 10px;
+		margin: 20px;
+		padding: 10px;
 	}
 	
 	#imgBox {
@@ -57,7 +61,7 @@
 </header>
 <section>
 <article id="outerBox">
-<div id="buttonBox">
+<div id="btnContainer">
 	<button>맑음</button>
 	<button>흐림</button>
 	<button>비</button>
@@ -75,13 +79,14 @@
 			return;
 		dom[1].innerHTML = '';
 		if (e.target.innerText == "맑음"){
-			dom[1].innerHTML += '<img src="../../../images/sun.png">';
+			dom[1].innerHTML = '<img src="/edu/images/sun.png">';
+			// /edu 부터 주면 절대path, context path에서 images를 찾아가라
 		}
 		else if (e.target.innerText == "흐림"){
-			dom[1].innerHTML += '<img src="../../../images/cloud.png">';
+			dom[1].innerHTML = '<img src="/edu/images/cloud.png">';
 		}
 		else if (e.target.innerText == "비"){
-			dom[1].innerHTML += '<img src="../../../images/rain.png">';
+			dom[1].innerHTML = '<img src="/edu/images/rain.png">';
 		} 
 		
 	}
