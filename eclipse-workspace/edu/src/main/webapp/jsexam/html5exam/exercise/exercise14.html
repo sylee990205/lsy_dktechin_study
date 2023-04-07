@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>exercise14</title>
+<style>
+	* {
+		text-align: center;
+	}
+	
+</style>
+</head>
+<body>
+	<h1>소영이의 HTML5 API 실습</h1>
+	<div id="btnContainer">
+		<button onClick="saveArt()">저장하기</button>
+		<button onClick="restoreArt()">읽어오기</button>
+		<button onClick="removeArt()">삭제하기</button>
+	</div>
+	<canvas id="canvas" width="300" height="300"></canvas>
+<script>
+	const dom = document.getElementById("canvas");
+	canvas = dom.getContext("2d");
+	
+	canvas.beginPath();
+	canvas.arc(150, 150, 100, 0, Math.PI*2, false);
+	canvas.fillStyle = "#FFE0AA"
+	canvas.fill();
+	
+	canvas.beginPath();
+	canvas.arc(80, 80, 30, 0, Math.PI*2, false);
+	canvas.fillStyle = "#FFE0AA"
+	canvas.fill();
+	
+	canvas.beginPath();
+	canvas.arc(220, 80, 30, 0, Math.PI*2, false);
+	canvas.fillStyle = "#FFE0AA"
+	canvas.fill();
+	
+	canvas.beginPath();
+	canvas.arc(120, 140, 3, 0, Math.PI*2, false);
+	canvas.fillStyle = "black"
+	canvas.fill();
+	
+	canvas.beginPath();
+	canvas.arc(180, 140, 3, 0, Math.PI*2, false);
+	canvas.fillStyle = "black"
+	canvas.fill();
+	
+	canvas.beginPath();
+	canvas.moveTo(130, 130);
+	canvas.lineTo(120, 125);
+	canvas.lineWidth = 2;
+	canvas.stroke();
+	canvas.strokeStyle = "black";
+	
+	canvas.beginPath();
+	canvas.moveTo(170, 130);
+	canvas.lineTo(180, 125);
+	canvas.lineWidth = 2;
+	canvas.stroke();
+	canvas.strokeStyle = "black";
+	
+	canvas.beginPath();
+	canvas.arc(150, 160, 2, 0, Math.PI*2, false);
+	canvas.fillStyle = "black"
+	canvas.fill();
+	
+	canvas.beginPath();
+	canvas.moveTo(150, 160);
+	canvas.quadraticCurveTo(150, 170, 140, 170);
+	canvas.stroke();
+	
+	canvas.beginPath();
+	canvas.moveTo(150, 160);
+	canvas.quadraticCurveTo(150, 170, 160, 170);
+	canvas.stroke();
+	
+	dom.onclick = function(e){
+		const x = e.clientX - dom.offsetLeft;
+		const y = e.clientY - dom.offsetTop;
+		
+		console.log(`${x}, ${y}`);
+	}
+	
+	function saveArt(){
+		if(localStorage.getItem("canvas"))
+			window.alert("이미 저장되었습니다!");
+		else{
+			localStorage.setItem("canvas", dom.toDataURL());
+		}
+	}
+	
+	function restoreArt(){
+		if(!localStorage.getItem("canvas")){
+			window.alert("읽어올 데이터가 없습니다!");
+			return;
+		}
+		const img = new Image();
+		img.src = localStorage.canvas;
+		img.onload = function() {
+		     canvas.drawImage(img, 0, 0);
+		}    
+	}
+	
+	function removeArt(){
+ 		canvas.clearRect(0, 0, 300, 300);
+	}
+	
+</script>
+</body>
+</html>
