@@ -3,9 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <title>exercise14</title>
+	<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap" rel="stylesheet">
 <style>
 	* {
 		text-align: center;
+		font-family: 'Gaegu', cursive;
+	}
+
+	btnContainer {
+		width: 100%;
+		margin: 5px auto;
+	}
+
+	button {
+		margin: 10px;
+		padding: 30px;
+		font-size: 2rem;
+		border-radius: 30px;
+		background-color: #FFE0AA;
+		border-color: #FFE09A;
+		color: #361503;
+	}
+
+	button:hover {
+		opacity: 0.8;
+	}
+
+	#link:hover {
+		cursor: pointer;
+		color: #1D9BF0;
 	}
 	
 </style>
@@ -18,76 +44,121 @@
 		<button onClick="removeArt()">삭제하기</button>
 	</div>
 	<canvas id="canvas" width="300" height="300"></canvas>
+	<H4 id="link" onclick="move()">원본보기</H4>
 <script>
 	const dom = document.getElementById("canvas");
 	canvas = dom.getContext("2d");
-	
-	canvas.beginPath();
-	canvas.arc(150, 150, 100, 0, Math.PI*2, false);
+
+	canvas.beginPath(); // 얼굴
+    canvas.moveTo(150, 80);
+  	canvas.quadraticCurveTo(55, 80, 40, 140);
+  	canvas.quadraticCurveTo(35, 160, 40, 180);
+  	canvas.quadraticCurveTo(55, 230, 150, 230);
+  	canvas.quadraticCurveTo(245, 230, 260, 180);
+	canvas.quadraticCurveTo(265, 160, 260, 140);
+	canvas.quadraticCurveTo(245, 80, 150, 80);
 	canvas.fillStyle = "#FFE0AA"
 	canvas.fill();
-	
-	canvas.beginPath();
-	canvas.arc(80, 80, 30, 0, Math.PI*2, false);
+
+	canvas.beginPath(); // 왼쪽 귀
+	canvas.arc(80, 100, 30, 0, Math.PI*2, false);
 	canvas.fillStyle = "#FFE0AA"
 	canvas.fill();
-	
-	canvas.beginPath();
-	canvas.arc(220, 80, 30, 0, Math.PI*2, false);
+
+	canvas.beginPath(); // 오른쪽 귀
+	canvas.arc(220, 100, 30, 0, Math.PI*2, false);
 	canvas.fillStyle = "#FFE0AA"
 	canvas.fill();
-	
-	canvas.beginPath();
-	canvas.arc(120, 140, 3, 0, Math.PI*2, false);
+
+	canvas.beginPath(); // 왼쪽 눈
+	canvas.arc(125, 150, 3, 0, Math.PI*2, false);
+	canvas.fillStyle = "black"
+	canvas.fill();
+
+	canvas.beginPath(); // 오른쪽 눈
+	canvas.arc(175, 150, 3, 0, Math.PI*2, false);
 	canvas.fillStyle = "black"
 	canvas.fill();
 	
-	canvas.beginPath();
-	canvas.arc(180, 140, 3, 0, Math.PI*2, false);
-	canvas.fillStyle = "black"
-	canvas.fill();
-	
-	canvas.beginPath();
-	canvas.moveTo(130, 130);
-	canvas.lineTo(120, 125);
+	canvas.beginPath(); // 왼쪽 눈썹
+	canvas.moveTo(135, 140);
+	canvas.lineTo(120, 135);
 	canvas.lineWidth = 2;
 	canvas.stroke();
 	canvas.strokeStyle = "black";
 	
-	canvas.beginPath();
-	canvas.moveTo(170, 130);
-	canvas.lineTo(180, 125);
+	canvas.beginPath(); // 오른쪽 눈썹
+	canvas.moveTo(165, 140);
+	canvas.lineTo(180, 135);
 	canvas.lineWidth = 2;
 	canvas.stroke();
 	canvas.strokeStyle = "black";
 	
-	canvas.beginPath();
-	canvas.arc(150, 160, 2, 0, Math.PI*2, false);
+	canvas.beginPath(); // 코
+	canvas.arc(150, 165, 2, 0, Math.PI*2, false);
 	canvas.fillStyle = "black"
 	canvas.fill();
 	
-	canvas.beginPath();
-	canvas.moveTo(150, 160);
+	canvas.beginPath(); // 왼쪽 입
+	canvas.moveTo(150, 165);
 	canvas.quadraticCurveTo(150, 170, 140, 170);
 	canvas.stroke();
 	
-	canvas.beginPath();
-	canvas.moveTo(150, 160);
+	canvas.beginPath(); // 오른쪽 입
+	canvas.moveTo(150, 165);
 	canvas.quadraticCurveTo(150, 170, 160, 170);
 	canvas.stroke();
-	
-	dom.onclick = function(e){
-		const x = e.clientX - dom.offsetLeft;
-		const y = e.clientY - dom.offsetTop;
-		
-		console.log(`${x}, ${y}`);
-	}
-	
+
+	var grad = canvas.createRadialGradient(90, 160, 5, 90, 160, 30);
+	grad.addColorStop(0.1, "#F3957A");
+	grad.addColorStop(0.9, "white");
+
+	canvas.beginPath(); // 왼쪽 볼
+	canvas.arc(90, 160, 20, 0, Math.PI*2, false);
+	canvas.fillStyle = grad;
+	canvas.fill();
+
+	grad = canvas.createRadialGradient(210, 160, 5, 210, 160, 30);
+	grad.addColorStop(0.1, "#F3957A");
+	grad.addColorStop(0.9, "white");
+
+	canvas.beginPath(); // 오른쪽 볼
+	canvas.arc(210, 160, 20, 0, Math.PI*2, false);
+	canvas.fillStyle = grad;
+	canvas.fill();
+
+	canvas.beginPath(); // 왼쪽 볼 막대1
+	canvas.moveTo(98, 157);
+	canvas.lineTo(94, 162);
+	canvas.strokeStyle = "#F34E32";
+	canvas.stroke();
+
+	canvas.beginPath(); // 왼쪽 볼 막대2
+	canvas.moveTo(91, 157);
+	canvas.lineTo(87, 162);
+	canvas.strokeStyle = "#F34E32";
+	canvas.stroke();
+
+	canvas.beginPath(); // 오른쪽 볼 막대1
+	canvas.moveTo(219, 157);
+	canvas.lineTo(215, 162);
+	canvas.strokeStyle = "#F34E32";
+	canvas.stroke();
+
+	canvas.beginPath(); // 오른쪽 볼 막대2
+	canvas.moveTo(212, 157);
+	canvas.lineTo(208, 162);
+	canvas.strokeStyle = "#F34E32";
+	canvas.stroke();
+
+	const link = document.querySelector("#link");
+
 	function saveArt(){
 		if(localStorage.getItem("canvas"))
 			window.alert("이미 저장되었습니다!");
 		else{
 			localStorage.setItem("canvas", dom.toDataURL());
+			link.style = "visibility: visible";
 		}
 	}
 	
@@ -100,11 +171,17 @@
 		img.src = localStorage.canvas;
 		img.onload = function() {
 		     canvas.drawImage(img, 0, 0);
-		}    
+		}
+		link.style = "visibility: visible";
 	}
 	
 	function removeArt(){
  		canvas.clearRect(0, 0, 300, 300);
+ 		link.style = "visibility: hidden";
+	}
+
+	function move(){
+		open("https://pbs.twimg.com/media/FYgCcnfUcAAp0n3?format=jpg&name=medium");
 	}
 	
 </script>
