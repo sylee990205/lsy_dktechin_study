@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	* {
+		text-align: center;
+	}
+	h1 {
+		color: white;
+		text-shadow: 5px 5px 10px #97DBF7, 4px 4px 10px #97DBF7;
+	}
+	
+	
+</style>
+</head>
+<body>
+<h1 id="title"></h1>
+<hr>
+<output id="output"></output>
+<script>
+	const xhr = new XMLHttpRequest();
+	const t = document.querySelector("#title");
+	xhr.onload = function(e){
+		if(xhr.status == 200){
+			const str = xhr.responseText;
+			const obj = JSON.parse(str);
+			const target = document.getElementById("output");
+			const weather = obj.wtext;
+			t.innerHTML = `오늘의 날씨 정보-${weather}`;
+			target.innerHTML = `<p> 발표일시: ${obj.time} </p>
+			<p> 온도: ${obj.temp} </p>`;
+			
+			const blob = obj.img;
+			const img = document.createElement('img');
+    		img.width=300;
+    		img.height=300;
+    		img.src = `/edu/${obj.img}`;
+    		document.body.appendChild(img);    
+		}
+	};
+	xhr.open('GET', '../content/weather.jsp', true);
+	xhr.send(); 
+
+</script>
+</body>
+</html>
