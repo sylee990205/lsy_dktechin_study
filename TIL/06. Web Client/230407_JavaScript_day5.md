@@ -1,6 +1,20 @@
 # 230407 JavaScript day5
 ## 목차
+<!-- TOC -->
 
+- [230407 JavaScript day5](#230407-javascript-day5)
+  - [목차](#목차)
+  - [Canvas API](#canvas-api)
+    - [HTMLCanvasObject 객체 접근](#htmlcanvasobject-객체-접근)
+    - [그리기 기능 메서드들](#그리기-기능-메서드들)
+  - [Multimedia API](#multimedia-api)
+  - [Drag\&Drop API](#dragdrop-api)
+  - [Web Storage API](#web-storage-api)
+    - [웹 스토리지란?](#웹-스토리지란)
+    - [window.localStorage와 window.sessionStorage의 주요 멤버](#windowlocalstorage와-windowsessionstorage의-주요-멤버)
+    - [Web Storage 데이터 관리](#web-storage-데이터-관리)
+
+<!-- /TOC -->
 ---
 ## Canvas API
 - 웹 페이지에 그림을 그릴 수 있도록 지원하는 HTML5 API
