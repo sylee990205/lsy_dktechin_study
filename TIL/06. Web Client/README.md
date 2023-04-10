@@ -17,5 +17,6 @@
 | 230405 | JavaScript 객체 | [:heavy_check_mark:](230405_JavaScript_day3.md) | [:pencil2:](/eclipse-workspace/edu/src/main/webapp/jsexam/day3/) | [:bulb:](/eclipse-workspace/edu/src/main/webapp/jsexam/day3/exercise/)
 | 230406 | JavaScript 이벤트모델<br>output 태그<br>clearInterval, clearTimeout<br>load 이벤트<br>자바스크립트 <-> JSON<br>이벤트 버블링, 이벤트 캡처링 | [:heavy_check_mark:](230406_JavaScript_day4.md) | [:pencil2:](/eclipse-workspace/edu/src/main/webapp/jsexam/day4/) | [:bulb:](/eclipse-workspace/edu/src/main/webapp/jsexam/day4/exercise/)
 | 230407 | JavaScript HTML5 API | [:heavy_check_mark:](230407_JavaScript_day5.md) | [:pencil2:](/eclipse-workspace/edu/src/main/webapp/jsexam/html5exam/) | [:bulb:](/eclipse-workspace/edu/src/main/webapp/jsexam/html5exam/exercise/exercise14.html) 
+| 230408 | XML<br>JSON<br>AJAX<br>MIME type<br>SOP / CORS | [:heavy_check_mark:](230408_JSON%26AJAX.md) | [:pencil2:](/eclipse-workspace/edu/src/main/webapp/jsexam/ajaxexam/) | [:bulb:](/eclipse-workspace/edu/src/main/webapp/jsexam/ajaxexam/exercise/exercise15.html)
 
 </div>
