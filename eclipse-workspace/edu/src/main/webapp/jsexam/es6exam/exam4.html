@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+
+<body>
+    <h2>ES6에서 추가된 구문&amp;API(4)</h2>
+    <hr>
+    <script src="../util.js"></script>
+    <script>
+   		const myName = "unico";
+    
+   	 	let obj = { name : myName }; 
+    	write(obj.name, "h3");
+    
+    	obj = { myName }; // {myName : myName} 과 동일    
+    	write(obj.myName, "h3");
+       
+    	hr();    	
+    	const ary = ['둘리', '또치', '도우너'];
+    	
+    	for (let i in ary)
+    		writeColor(i, "h4", "green");
+    	
+    	for (let e of ary)
+    		writeColor(e, "h4", "green");
+    	hr();
+    	const stObj = { stname : '둘리', stage : 10, hobby : '호이호이'};
+    	
+    	for (let k in stObj) {
+    		writeColor(k, "h4", "orange");
+    		writeColor(stObj[k], "h4", "red");
+    	}  
+    </script>
+</body>
+</html>
