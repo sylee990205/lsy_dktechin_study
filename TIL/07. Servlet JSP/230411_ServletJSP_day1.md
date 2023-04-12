@@ -1,8 +1,8 @@
-# 230411 ServletJSP
+# 230411 ServletJSP day1
 ## 목차
 <!-- TOC -->
 
-- [ServletJSP](#servletjsp)
+- [ServletJSP day1](#servletjsp-day1)
     - [목차](#%EB%AA%A9%EC%B0%A8)
     - [웹 프로그래밍](#%EC%9B%B9-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D)
         - [웹의 처리 구조](#%EC%9B%B9%EC%9D%98-%EC%B2%98%EB%A6%AC-%EA%B5%AC%EC%A1%B0)
@@ -168,7 +168,7 @@ public class MemberLocalServlet extends HttpServlet {
     - POST: 입력 내용을 요청 바디에 담아서 전송
   - enctype: 서버로 보내지는 데이터의 형식을 지정
     - application/x-www-form-urlencoded : 디폴트값, 서버로 전송되기전에 url-encode 된다는 뜻
-    - multipart/form-data : 파일 받으면서 설정해준 값, 이미지나 파일을 서버로 전송하는 경우 사용
+    - multipart/form-data : 이미지나 파일을 서버로 전송하는 경우 사용
     - text/plain : 인코딩하지않은 문자 그대로의 상태를 전송
 - 웹 브라우저 화면에 사용자 정보 입력 형식을 표시할 때 `<input>`, `<textarea>`, `<select>`태그 이용
   
@@ -199,6 +199,8 @@ name1=value1&name2=value2&name3=value3
 - redirect 방법과 forward 방법으로 나뉨
 - redirect : HttpServletResponse의 sendRedirect() 메서드를 사용
 - forward: RequestDispatcher의 forward() 메서드를 사용
+- forward와 redirect가 실행되었을 때 기존의 Get, post 메소드의 기능이 중지되지않는다. 메소드 내 기능이 남아서 계속 진행됨.
+  - 만약 forward와 redirect를 처리하려면 `return`을 해줘야함
 #### Forward
 ![](/TIL/image/2023-04-11-17-38-53.png)
 - 동일한 요청상에서 다른 자원에 요청을 넘겨서 대신 응답하게 함
