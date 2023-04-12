@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://webfontworld.github.io/goodchoice/Jalnan.css" rel="stylesheet">
+<title>펜션 예약 서비스</title>
+<style>
+	* {
+		font-family: 'Jalnan';
+	}
+	h1 {
+		text-align: center;
+		color: #61BAED;
+		
+	}
+	form {
+		background-color: #B6E8FA;
+		font-size: 20px;
+		padding : 7px;
+		border-radius: 10px;
+		width: 60%;
+		margin: 5px auto;
+
+	}
+	
+	form hr {
+		border : 0px;
+		border-top: 1px dotted #FFFBE0;		
+	}
+	
+	.btn {
+		background-color: #FAF4E1;
+		padding: 7px;
+		font-size: 8px;
+		border: 0;
+		border-radius: 3px;
+	}
+	
+	.btn:hover {
+		background-color: #FFF9CF;
+		cursor: pointer;
+		padding: 10px;
+		font-size: 11px;
+		transition: padding 0.3s;
+	}
+	
+</style>
+</head>
+<body>
+<h1>펜션 예약 서비스</h1>
+<hr>
+<form method="post" action="/edu/reservation">
+	<p>예약자명 : <input type="text" name="guestName"></p>
+	<p>예약암호 : <input type="password" name="password"></p>
+	<p>룸선택 : <input type="radio" name="room" value="101" required>101
+			<input type="radio" name="room" value="102">102
+			<input type="radio" name="room" value="201">201
+			<input type="radio" name="room" value="202">202</p>
+	<p>추가요청사항 : <input type="checkbox" name="option" value="바베큐">바베큐
+				<input type="checkbox" name="option" value="수영장">수영장
+				<input type="checkbox" name="option" value="낚시">낚시
+				<input type="checkbox" name="option" value="조식">조식</p>
+	<p>예약날짜 : <input type="date" name="date" placeholder="연도-월-일"></p>
+	<hr>
+	<p><input type="submit" value="보내기" class="btn">
+		<input type="reset" value="다시작성하기" class="btn">
+</form>
+</body>
+</html>
