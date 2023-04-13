@@ -54,7 +54,7 @@
    - `session.removeAttribute(“xxx”)`
    - "xxx"라는 이름으로 보관된 객체에 대한 참조값을 삭제
    - `session.invalidate()`
-   - HttpSession 객첼르 강제로 삭제
+   - HttpSession 객체를 강제로 삭제
 ```java
 1. HttpSession session = request.getSession(); 
 2. session.setAttribute(“xxx”, new Data());
