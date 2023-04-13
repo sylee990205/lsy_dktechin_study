@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	h1 {
+		text-align: center;
+	}
+	.imgBox {
+		width: 100%;
+		text-align: center;
+	}
+	img {
+		width: 18%;
+		box-shadow: 5px 5px 5px grey;
+		margin: 5px;
+	}
+	img:hover {
+		cursor: pointer;
+		border: 2px dotted blue;
+		box-shadow: none;
+		transition: .1s;
+	}
+	
+	#result {
+		display: none;
+		width: 50%;
+		border: 1px solid black;
+		border-radius: 30px;
+		margin: 5px auto;
+		padding: 3px 8px;
+	}
+	
+	#clear:hover{
+		cursor: pointer;
+		text-decoration: underline;
+	}
+</style>
+</head>
+<body>
+<h1>원하는 상품을 클릭해주세요!! 마구마구^^</h1>
+<hr>
+<div class="imgBox"></div>
+<div class="imgBox"></div>
+<div id=result>
+<h4>선택한 상품 리스트</h4>
+<hr>
+<ul id="out">
+	
+</ul>
+<h4 id="clear">상품비우기</h4>
+</div>
+<script>
+	const img = document.querySelectorAll(".imgBox");
+	
+	window.onload = function(){
+		for(let i = 1; i <= 10; i++){
+			if(i <= 5){
+				img[0].innerHTML += "<img src='/edu/images/" + i + ".jpg' id='p00" + i + "'>"
+			}
+			else if (i <= 9){
+				img[1].innerHTML += "<img src='/edu/images/" + i + ".jpg' id='p00" + i + "'>"
+			}
+			else {
+				img[1].innerHTML += "<img src='/edu/images/" + i + ".jpg' id='p0" + i + "'>"
+			}
+		}
+	}
+	const xhr = new XMLHttpRequest();
+	const output = document.querySelector("#out");
+	const result = document.querySelector("#result");
+	function selectProduct(e){
+		if(e.target.tagName !== "IMG")
+			return;
+		result.style = "display: block"
+		xhr.onload = function(){
+			if(xhr.status == 200){
+				const str = xhr.responseText;
+				const obj = JSON.parse(str);
+				output.innerHTML = "";
+				for(let i in obj){
+					if(obj[i] == 0)
+						continue;
+					output.innerHTML += `<li> ${i}상품 ${obj[i]}개</li>`;
+				}
+				
+			}
+		}
+		xhr.open("GET", "/edu/basket?id=" + e.target.id , true);
+		xhr.send(); 
+	}
+
+	function clear(){
+		xhr.onload = function(){
+			if(xhr.status == 200){
+				const str = xhr.responseText;
+				console.log(str);
+				const obj = JSON.parse(str);
+				output.innerHTML = `<li> ${obj.msg} </li>`;
+			}
+		}
+		xhr.open("GET", "/edu/basket", true);
+		xhr.send();
+	}
+	
+	const c = document.querySelector("#clear");
+	
+	img[0].addEventListener("click", selectProduct);
+	img[1].addEventListener("click", selectProduct);
+	c.addEventListener("click", clear);
+</script>
+</body>
+</html>
