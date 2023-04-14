@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	form {
+		width: 100%;
+		margin: 10px auto;
+	}
+
+	#input {
+		font-size: 1.8rem;
+	}
+	
+	#clover {
+		width: 25px;
+	}
+</style>
+</head>
+<body>
+<h1>로또 번호를 맞춰보세요!!!</h1>
+<hr>
+<form method="GET" action="/mvc/lotto2">
+	<p id="input" >1부터 6까지의 숫자를 입력하세요 : 
+	<input type="number" name="inputNum" required min="1" max="6">
+	<input id="clover" type="image" src="/edu/images/clover.png">
+	</p>
+</form>
+</body>
+</html>
