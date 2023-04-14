@@ -37,6 +37,27 @@
 ### JSP의 내장 객체
 ![](/TIL/image/2023-04-13-16-36-58.png)
 - JSP에서는 내장 객체를 사용하여 servlet 클래스의 기능을 사용할 수 있음
+```JSP
+<h2>JSP의 내장 객체들 점검</h2>
+[ request ]<br>
+getMethod() : <%=  request.getMethod()  %><br> <%-- 요청 방식이 무엇인지 추출 --%>
+getRequestURI() : <%=  request.getRequestURI()  %><br> <%-- URI가 무엇인지 추출 --%>
+getHeader("user-agent") : <%=  request.getHeader("user-agent")  %><br> <%-- user-agent client가 모바일 환경인지 체크하고 싶을 때 --%>
+<%-- 외에도 request의 getParameter 등이 있음 --%>
+[ application ]<br>
+getContextPath() : <%=  application.getContextPath()  %><br> <%-- 하나의 웹 프로젝트 == 하나의 Context --%>
+getServletContextName() : <%=  application.getServletContextName()  %><br> <%-- 프로젝트 명 --%>
+getServerInfo() : <%=  application.getServerInfo()  %><br> <%-- 서버의 정보 --%>
+getMajorVersion() : <%=  application.getMajorVersion()  %><br> <%--  --%>
+getSessionTimeout() : <%=  application.getSessionTimeout()  %><br> <%-- 클라이언트가 마지막으로 요청하고나서 어느정도 시간이 지나면 세션객체를 자동삭제하는 시간 기본 30분 --%>
+[ session ]<br> <%-- http세션 객체도 내장 객체, 세션객체의 생성 구문이 자동으로 들어감 --%>
+getId() : <%=  session.getId()  %><br> <%-- 생성된 세션 객체의 id 추출 --%>
+getCreationTime() : <%=  new Date(session.getCreationTime())  %><br> <%-- 세션객체의 생성 시간 --%>
+[ response ]<br>
+getStatus() : <%=  response.getStatus() %><br> <%-- 현재 상태 --%>
+getBufferSize() : <%=  response.getBufferSize() %><br> <%-- client가 사용하는 기본적인 내장 객체의 사이즈 8kb --%>
+getContentType() : <%=  response.getContentType() %> 
+```
 ---
 
 ## 500 error
