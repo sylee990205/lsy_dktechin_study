@@ -1,0 +1,30 @@
+<!--  파일명 : edu.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+article {
+	width : 60%;
+	padding : 20px;
+	margin : 5px auto;
+	background : radial-gradient(red, green, yellow);
+	border : 1px solid grey;
+	border-radius : 10px;
+}
+</style>
+</head>
+<body>
+<article>
+<h2>성적을 입력하시오.</h2>
+<hr>
+<form method="post" action="/mvc/grade">
+<label for="input1">이름</label> : <input type="text" id="input1" name="name"><br>
+<label for="input2">점수</label> : <input type="number" id="input2" min="0" max="100" name="score"><br><br>
+<input type="submit" value="전송">
+<input type="reset" value="재작성">
+</form>
+</article>
+</body>
+</html>
