@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import model.domain.TimeVO;
 
@@ -16,10 +17,16 @@ import model.domain.TimeVO;
 @WebServlet("/lotto2")
 public class LottoServlet2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	int[] count = new int[1];
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher rd;
+		HttpSession session = request.getSession();
+		if(session.getAttribute("count") == null) {
+			session.setAttribute("count",  new int[1]);
+		}
+		int[] count = (int[]) session.getAttribute("count");
 		count[0]++;
+		
+		
 		System.out.println(count[0]);
 		if(count[0] > 3) {
 			rd = request.getRequestDispatcher("/jspexam/impossible.jsp");
