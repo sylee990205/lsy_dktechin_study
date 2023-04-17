@@ -1,8 +1,8 @@
-# 230413 ServletJSP day4
+# 230414 ServletJSP day4
 ## 목차
 <!-- TOC -->
 
-- [230413 ServletJSP day4](#230413-servletjsp-day4)
+- [230414 ServletJSP day4](#230414-servletjsp-day4)
   - [목차](#목차)
   - [ServletContext](#servletcontext)
   - [컨테이너 API](#컨테이너-api)
@@ -14,9 +14,11 @@
       - [param](#param)
       - [pageContext](#pagecontext)
     - [el에서의 변수](#el에서의-변수)
+    - [. 연산자](#-연산자)
   - [객체 공유](#객체-공유)
   - [MVC(Model-View-Controller) 패턴](#mvcmodel-view-controller-패턴)
     - [모델](#모델)
+  - [Servlet이 GET 방식과 POST 방식이 나뉜다면](#servlet이-get-방식과-post-방식이-나뉜다면)
 
 <!-- /TOC -->
 ---
@@ -84,8 +86,13 @@ ${ param.addr } EL
 ### el에서의 변수
 - 어딘가에 보관되어있는 객체의 이름
 
+### . 연산자
+```java
+변수명.xxx
+```
+1. 변수의 참조 대상이 일반 Java 객체면 getXxx()를 호출한 것
+2. 변수의 참조 대상이 Map 객체면 get("xxx")를 호출한 것
 ---
-
 ## 객체 공유
 - 객체의 scope: 생성되어 유지되는 기간
 - page scope -> request scope -> session scope -> application scope
@@ -110,4 +117,7 @@ ${ param.addr } EL
 - 도메인 모델과 서비스 모델로 구성
   - 도메인 모델 : 데이터 저장
   - 서비스 모델 : 기능
-- 
+
+---
+## Servlet이 GET 방식과 POST 방식이 나뉜다면
+- 하나의 Servlet에 두가지를 작성하는것보단 2개의 Servlet을 작성하는 것이 좋음
