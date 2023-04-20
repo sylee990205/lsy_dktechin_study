@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- How to set properties using XML namespace -->
+<bean id="developer" class="day2.sample8.Developer"
+        					c:_0-ref="emp1"  c:_1="Development 1 Team"/>
+<bean id="engineer" class="day2.sample8.Engineer"
+        					c:emp-ref="emp2"  c:dept="Technology 1 Team"/>
+
+<bean id="emp1"  class="day2.sample8.Emp"
+                           	c:_0="Dooly" c:_1="1500000"/>
+<bean id="emp2"  class="day2.sample8.Emp"
+							c:name="Duke" c:salary="2500000"/>
+</beans>
+
+
+
+
+
+
+
+
+
+
+

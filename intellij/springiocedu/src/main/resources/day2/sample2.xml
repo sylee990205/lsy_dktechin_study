@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="foo0" class="day2.sample2.Foo" scope="prototype"  /> <!-- prototype/singleton(default) scope="prototype" -->
+<bean id="foo1" class="day2.sample2.Foo">
+	<constructor-arg value="XYZ"/>	
+</bean>
+<bean id="foo2" class="day2.sample2.Foo">
+	<constructor-arg  value="ABC"/>
+	<constructor-arg  value="100"/>
+</bean>
+<bean id="foo3" class="day2.sample2.Foo">
+	<constructor-arg index="1"  type="int"  value="50"/> <!-- index 속성과 type 속성은 반드시 사용할 필요는 없음 type 속성 생략 시 알아서 들어감 -->
+	<constructor-arg index="0"  type="java.lang.String" value="xyz"/> <!-- type에 class명을 작성할 땐 반드시 패키지명과 함께 작성한다 -->
+	<constructor-arg index="2"  type="boolean" value="true"/>
+</bean>
+<bean id="foo4" class="day2.sample2.Foo">
+	<constructor-arg ref="bar" />
+</bean>
+<bean id="bar"  class="day2.sample2.Bar" />
+
+</beans>
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="messageBean" class="day2.sample6.MessageBeanImpl"
+      c:name="Dooly"  
+      p:phone="123-4567"
+      p:outputter-ref="outputRef" /> <!-- -ref를 안붙이면 outputRef라는 문자열을 전달함 Spring Container가 property의 알파벳 순으로 호출함 -->
+      
+<bean id="outputRef" class="day2.sample6.FileOutput"
+      p:filePath="c:/Temp/data.txt"/>
+
+<!-- <bean id="messageBean" class="sample6.MessageBeanImpl">
+	<constructor-arg  value="Dooly"/>	
+	<property name="phone"  value="123-4567"/>
+	<property name="outputter" ref="outputRef"/>
+</bean>
+
+<bean id="outputRef" class="sample6.FileOutput">
+	<property name="filePath">
+		<value>data.txt</value>
+	</property>
+</bean> -->
+
+</beans>
+
+
+
+
