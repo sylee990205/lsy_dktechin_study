@@ -73,3 +73,4 @@ local.properties
 
 eclipse-workspace/Servers/
 *.class
+intellij/springedu/src/test/java/com/example/springedu/SpringeduApplicationTests.java
