@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+<bean id="myFood" class="day3.sample10.MyFoodMgr" autowire="byName"/>
+<bean id="favoriteFood" class="day3.sample10.Food" p:foodName="Bread" p:foodPrice="1500"/>
+<bean id="unFavoriteFood" class="day3.sample10.Food" p:foodName="Noodle" p:foodPrice="2500"/>
+
+</beans>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="user"  class="day3.sample9.User">
+	<property name="name" value="Dooly"/>
+	<property name="age"  value="10"/>
+	<property name="hobby" value="swimming"/>
+</bean>
+
+<bean id="myProcess0"  class="day3.sample9.UserShow" />
+<bean id="myProcess1" class="day3.sample9.UserShow" autowire="byName"/>
+<bean id="myProcess2" class="day3.sample9.UserShow" autowire="byType"/>
+<bean id="myProcess3" class="day3.sample9.UserShow" autowire="constructor"/>
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

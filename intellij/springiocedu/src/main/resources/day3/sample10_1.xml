@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 테스트1
+<bean id="myFood" class="day3.sample10.MyFoodMgr">
+	<property name="favoriteFood" ref="favoriteFood"/>
+	<property name="unFavoriteFood" ref="unFavoriteFood"/>
+</bean> -->
+
+<bean id="favoriteFood" class="day3.sample10.Food" >
+	<property name="foodName" value="Bread"/>
+	<property name="foodPrice" value="1500"/>
+</bean>
+<bean id="unFavoriteFood" class="day3.sample10.Food" >
+	<property name="foodName" value="Noodle"/>
+	<property name="foodPrice" value="2500"/>
+</bean> 
+
+<!-- 테스트2 --> 
+<bean id="myFood" class="day3.sample10.MyFoodMgr" autowire="constructor"/>
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

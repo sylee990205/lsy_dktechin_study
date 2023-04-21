@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+<context:component-scan base-package="sampleanno2"/>
+
+<bean id="emp1" class="day3.sampleanno2.Emp"
+				p:name="Dooly" p:age="25" p:score="75.4" /> 
+<bean id="emp" class="day3.sampleanno2.Emp"
+				p:name="Duke" p:age="30" p:score="90.5" />
+<bean id="dept" class="java.lang.String"  c:_0="development"/>
+<!-- <bean id="engineer" class="day3.sampleanno2.Engineer"  /> -->
+
+</beans>
+
+
+
