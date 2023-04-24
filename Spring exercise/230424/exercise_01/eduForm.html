@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	form{
+		text-align : center;
+		border : 2px solid gray;
+		border-radius : 15px;
+		margin-left : auto;
+		margin-right : auto;
+		background-image : radial-gradient(#FA9A85, #F5D6C6, #9B1B30, #77212E);
+		width : 50%;
+		padding : 20px;		
+	}
+	input{
+		margin-bottom : 10px;
+	}
+</style>
+</head>
+<body>
+	<form action="/educontroller" method="post">
+		<h2>성적을 입력하시오.</h2>
+		<hr>
+		이름 : <input type="text" size="30" name="name"><br/>
+		평균 점수 : <input type="number" name="avgScore"><br/>
+		<button type="submit">전송</button>
+		<button type="reset">재작성</button>
+	</form>
+</body>
+</html>
