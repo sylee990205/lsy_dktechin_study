@@ -1,6 +1,19 @@
 # 230421_Spring_day3
 ## 목차
+<!-- TOC -->
 
+- [230421\_Spring\_day3](#230421_spring_day3)
+  - [목차](#목차)
+  - [IoC 설정 - XML 설정](#ioc-설정---xml-설정)
+    - [autowire](#autowire)
+  - [IoC 설정 - ANNOTATION 설정](#ioc-설정---annotation-설정)
+    - [Annotation 종류](#annotation-종류)
+  - [Spring boot](#spring-boot)
+    - [장점](#장점)
+  - [오늘의 tip](#오늘의-tip)
+    - [war, jar](#war-jar)
+
+<!-- /TOC -->
 ---
 ## IoC 설정 - XML 설정
 ### autowire
@@ -76,3 +89,20 @@ public class UserShow{
 
 ---
 ## Spring boot
+- 스프링으로 애플리케이션을 만들 때 필요한 초기 설정을 간편하게 처리해주는 별도의 프레임워크
+### 장점
+- 자체적인 웹 서버 내장
+- 빠르고 간편하게 배포 가능
+- Jar 파일로 프로젝트 빌드 가능
+- 클라우드 서비스 및 도커와 같은 가상화 환경에 빠르게 배포
+
+## 오늘의 tip
+### war, jar
+- war
+  - web archive
+  - 하나의 웹 애플리케이션(웹프로젝트)을 배포할 때 생성하는 파일 포맷
+  - WAS에 war 파일로 배치(배포)
+- jar
+  - java 클래스 명
+  - java -jar xxx.jar
+- 두 가지는 초기설정과 기본룰이 다를뿐 스프링 Fw와 
