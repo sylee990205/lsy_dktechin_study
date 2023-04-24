@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+   h1 {
+   	color : pink;
+   }
+</style>
+</head>
+<body>
+<h1>[[${ #request.method }]]</h1>
+<hr>
+<a th:href='${ #request.getHeader("referer") }'>입력화면</a>
+</body>
+</html>

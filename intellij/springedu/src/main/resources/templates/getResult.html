@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+   h1 {
+   	color : lime;
+   }
+</style>
+</head>
+<body>
+<h1>[[${ #request.method }]]</h1>
+<!-- 타임리프 식을 content 영역(시작태그와 종료태그의 사이)에 사용하려면  [[]]를 붙여 사용하거나 [()]로 사용해야함-->
+<!-- [[]]는 안쪽 [] 내에 html 태그를 작성하면 그대로 나옴, [()]는 파싱해서 나옴 -->
+<hr>
+<a th:href='${ #request.getHeader("referer") }'>요청화면</a>
+</body>
+</html>
