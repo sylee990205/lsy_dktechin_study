@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter member information</title>
+    <style>
+        table, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<form action="/userSave" method="post">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="userName" value=""/></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="text" name="address" value=""/></td>
+        </tr>
+        <tr>
+            <td>Favorite Fruit</td>
+            <td>
+                <div th:each="fruit:${popularFruit}"> <!--div 태그가 반복됨. 만약 input만 반복하고 싶으면 th:block 사용 -->
+                    <input type="checkbox" name="favoriteFruit" th:value="${fruit}">[[${fruit}]]
+                </div>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="SEND"/>
+</form>
+</body>
+</html>    
