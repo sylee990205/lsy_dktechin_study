@@ -154,6 +154,13 @@ public String getAllBoards(@RequestParam(value="currentPage", required=false,
 - View Template Engine
 - 컨트롤러에서 데이터를 추출해 동적인 페이지를 만들 수 있음
 - SSR 방식
+- 일반 HTML 문서에 최상위 태그인 HTML 태그에 정해진 네임스페이스를 추가하여 사용 가능
+```html
+<!DOCTYPE HTML>
+<HTML xmlns:th="http://www.Thymeleaf.org">
+<head></head>
+<body></body>
+```
 ### 장점
 - HTML 속성으로 작성되어 기존의 HTML 구조를 건드리지 않음
 - Natural Template
@@ -164,18 +171,28 @@ public String getAllBoards(@RequestParam(value="currentPage", required=false,
 <p><span th:text="${say}">Hi</span>Thymeleaf</p>
 ```
 - 서버 없이 구동하면 웹 브라우저에 Hi Thymeleaf가 출력
-```java
-@Controller
-@RequestMapping("/basic")
-public class ThymeleafBasicController {
- @GetMapping("/hithymeleaf")
- public String hiThymeleaf(Model model) {
- model.addAttribute("say", "안녕?");
- return "basic/hithymeleaf";
- }
-```
-- Spring Boot 서버를 기동시킨 후 정해진 URL로 요청 시 Thymeleaf 템플릿이 서버상에서 처리됨
-- 안녕? Thymeleaf 출력
+  ```java
+  @Controller
+  @RequestMapping("/basic")
+  public class ThymeleafBasicController {
+  @GetMapping("/hithymeleaf")
+  public String hiThymeleaf(Model model) {
+  model.addAttribute("say", "안녕?");
+  return "basic/hithymeleaf";
+  }
+  ```
+  - Spring Boot 서버를 기동시킨 후 정해진 URL로 요청 시 Thymeleaf 템플릿이 서버상에서 처리됨
+  - 안녕? Thymeleaf 출력
+- HTML 구조를 최대한 유지한다는 예시
+  ```html
+  <!-- # JSP  -->
+  <input type="text" name="userName" value="${user.name}">
+
+  <!-- # Thymeleaf -->
+  <input type="text" name="userName" value="unico" th:value="${user.name}">
+  ```
+  - jsp에서는 전달되는 user.name이 없다면 무시됨
+  - thymeleaf에서는 user.name이 없다면 unico 출력
 
 ### 표현식
 - `${...}` - 변수 표현식
