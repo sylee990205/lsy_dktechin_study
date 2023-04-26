@@ -38,6 +38,7 @@ public class lottoController {
             if(lotto == lottoNum){
                 dto.setResult("추카추카!!");
                 dto.setImgName("win");
+                count[0] = 3; // 이미 당첨됐으면 더이상 X
             } else {
                 dto.setResult("아쉽네요 .. 다음 기회를!!");
                 dto.setImgName("fail");

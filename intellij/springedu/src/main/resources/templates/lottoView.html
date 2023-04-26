@@ -16,7 +16,8 @@
 <h1>로또 결과</h1>
 <hr>
 <h2 id="msg">[(${ lotto.result })]</h2>
-<img th:src="|/images/${ lotto.imgName }.png|">
+<!--<img th:src="|/images/${ lotto.imgName }.png|">-->
+<img th:src="@{|/images/${lotto.imgName}.png|}"/>
 <hr>
 <h2 th:if="${ lotto.imgName == 'fail'} ">
     <a th:href='${ #request.getHeader("referer") }'>재시도...</a>
