@@ -8,7 +8,9 @@
   - [Spring MVC 구현 시 사용되는 어노테이션](#spring-mvc-구현-시-사용되는-어노테이션)
     - [`@ModelAttribute`](#modelattribute)
     - [`@SessionAttributes`](#sessionattributes)
-    - [`@ResponseBody`](#responsebody)
+    - [`@RequestBody`, `@ResponseBody`](#requestbody-responsebody)
+      - [`@RequestBody`](#requestbody)
+      - [`@ResponseBody`](#responsebody)
   - [StringBuffer, StringBuilder](#stringbuffer-stringbuilder)
     - [StringBuffer](#stringbuffer)
     - [String Builder](#string-builder)
@@ -154,7 +156,24 @@ public String handle(@ModelAttribute("data1") int vo1,
 - 클래스 위에 SessionAttributes 어노테이션을 사용하여 세션 scope를 지정할 객체의 이름을 선언
 - 무조건 클래스 위에! -> 컨트롤러 메소드 수행 전에 이루어져야함
 
-### `@ResponseBody`
+### `@RequestBody`, `@ResponseBody`
+- 웹 서비스와 REST 방식이 시스템 주요 구성 요소
+- 웹 시스템간 XML, JSON 등의 형식으로 데이터를 주고 받는 경우가 증가
+- 스프링 MVC도 클라이언트에서 전송한 XML 데이터, JSON 데이터, 기타 데이터를 컨트롤러에서 DOM 객체, Java 객체로 변환해서 받을 수 있음
+- 전송도 가능
+#### `@RequestBody`
+- Spring은 클라이언트가 전달한 데이터를 적당한 형식에 맞춰 변경하여 전달함
+- `@RequestBody`는 HTTP request body를 **전달 형식 그대로** 또는 자바 객체로 변환하여 전달받는데 사용
+- GET 방식과는 연관이 없음
+- POST 요청 방식에서만 가능
+  - POST는 클라이언트가 전달하는 데이터를 요청 Body 내에 저장하여 전달하기 때문
+
+```java
+String test2(@RequestBody String param)
+PersonVO test3(@RequestBody PersonVO vo)
+Map test4(@RequestBody Map<String,String> map)
+```
+#### `@ResponseBody`
 - 자바 객체를 HTTP respnose body로 전송
 - view를 거치지 않고 컨트롤러가 직접 응답함
   - 응답 형식 설정 필요
