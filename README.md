@@ -21,6 +21,12 @@
 <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=Kubernetes&logoColor=white"> -->
 
 ---
+## :wrench:IDE
+<img src="https://img.shields.io/badge/eclipse IDE-2C2255?style=for-the-badge&logo=eclipseide&logoColor=white">
+<img src="https://img.shields.io/badge/IntelliJ IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white">
+<img src="https://img.shields.io/badge/VSCODE-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white">
+
+---
 
 ## :computer:CURRICULUM
 > :heavy_check_mark: 클릭 시 해당 주 수강 내용 및 TIL로 이동 
@@ -63,7 +69,9 @@
 ### Spring
 | 과목       | 수강기간      | TIL |
 | -------- | :---------------: | :---: | 
-| Spring IoC | 230417 - | [:hourglass_flowing_sand:](/TIL/08.%20Spring%20IoC/)
+| Spring IoC | 230417 - 230421 | [:heavy_check_mark:](/TIL/08.%20Spring/) |
+| Spring MVC | 230424 - | [:hourglass_flowing_sand:](/TIL/08.%20Spring/)
+
 <!-- | Spring MVC |
 | Spring boot | 
 <!--
