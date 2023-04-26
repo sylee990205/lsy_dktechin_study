@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Drag and Drop File Upload</title>
+	<style>
+		#databox {
+			width : 400px;
+			height : 300px;
+			border : 1px solid red;
+		}
+	</style>
+<link rel="stylesheet" href="ajax.css">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/earlyaccess/jejugothic.css">
+    <style>
+      * {
+        font-family: 'Jeju Gothic', serif;
+        font-size: 17px;
+      }
+      h1 {
+       
+        font-size: 25px;
+      }
+    </style>
+<script>
+	var databox;
+	function initiate() {
+		databox = document.getElementById('databox');
+		databox.addEventListener('dragover', function(e) {
+			e.preventDefault(); /*drag and drop을 지원하지않는 기본 eventHandler로 구현x*/
+		}, false);
+		databox.addEventListener('drop', dropped, false);
+	}
+	function dropped(e) {
+		e.preventDefault();
+		var files = e.dataTransfer.files;
+		var xhr = new XMLHttpRequest();
+		var result = "";
+		for (var f = 0; f < files.length; f++) {
+			var file = files[f];			
+			var data = new FormData();
+			data.append('uploadFile', file);
+		
+			xhr.open("POST", "/upload1", false); // true - 비동기
+			xhr.send(data);	
+			if(xhr.status == 200){
+				result = '<blockquote>File: ' + file.name + " 업로드 성공!!</blockquote>";				
+			} else {
+				result = '<blockquote>File: ' + file.name + " 업로드 실패!!</blockquote>";			
+			}	
+			databox.innerHTML += result;			
+		}		
+	}
+	window.addEventListener('load', initiate, false);
+</script>
+</head>
+<body>
+	<section id="databox">
+		<p> 업로드하려는 파일을 드래그하여 여기 드롭하세요....</p>
+	</section>
+</body>
+</html>

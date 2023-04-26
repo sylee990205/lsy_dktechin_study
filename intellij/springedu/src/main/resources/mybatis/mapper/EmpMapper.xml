@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="testdb">
+	<select id="countEmp"  resultType="int">
+		select count(*) from emp
+	</select>
+	<select id="selectEmp"  resultType="EmpVO">
+		select empno, ename, job, date_format(hiredate, '%Y년 %m월 %d일') hiredate, sal  from emp
+	</select>
+	<select id="partEmp"  resultType="EmpVO" parameterType="PageDTO"  >
+		select empno, ename, job, date_format(hiredate, '%Y년 %m월 %d일') hiredate, sal from emp order by sal limit #{startNum}, #{countNum}
+	</select> 	
+</mapper>
+
+
+
+
+
+
+
+
