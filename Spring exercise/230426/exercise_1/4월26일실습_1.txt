@@ -1,0 +1,10 @@
+[ SpringMVC 실습 4 ]
+메일제목 : 스프링실습7-XXX
+압축소스명 : StudyPathController.java
+
+요청 패스에 따라서 제시된 다른 사이트로 이동하는 StudyPathController 를 구현한다.
+
+	/study/1/thymeleaf    --->  https://abbo.tistory.com/56
+	/study/2/thymeleaf    --->  https://abbo.tistory.com/57
+            /study/3/thymeleaf    --->  https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html
+            /study/4/thymeleaf    ---> https://www.baeldung.com/dates-in-thymeleaf
