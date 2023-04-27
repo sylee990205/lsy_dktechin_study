@@ -20,4 +20,7 @@
 | 230424 | Spring MVC | 웹 애플리케이션<br>스프링MVC처리흐름<br>Spring MVC 구현에 사용되는 어노테이션<br>Thymeleaf| [:heavy_check_mark:](/TIL/08.%20Spring/230424_Spring_day4.md) |[:pencil2:](/intellij/springedu/src/main/java/com/example/springedu/) [:orange_book:](/intellij/springedu/src/main/resources/) | [:bulb:](/Spring%20exercise/230424/) 
 | 230425 | Spring MVC | Thymeleaf 문법<br>Spring MVC 구현 시 사용되는 어노테이션 | [:heavy_check_mark:](/TIL/08.%20Spring/230425_Spring_day5.md) | [:pencil2:](/intellij/springedu/src/main/java/com/example/springedu/) [:orange_book:](/intellij/springedu/src/main/resources/) | [:bulb:](/Spring%20exercise/230425/) 
 | 230426 | Spring MVC | Spring MVC 구현 시 사용되는 어노테이션<br>스프링 MVC에서 파일 업로드 | [:heavy_check_mark:](/TIL/08.%20Spring/230426_Spring_day6.md) | [:pencil2:](/intellij/springedu/src/main/java/com/example/springedu/) [:orange_book:](/intellij/springedu/src/main/resources/) | [:bulb:](/Spring%20exercise/230426/)
+| 230427 | Mybatis | Spring MVC 구현에서 사용되는 다양한 어노테이션<br>Mybatis<br>Mybatis의 주요 객체<br>Mapper 파일 생성과 활용<br>typeAliases<br>MVC model1과 model2 | [:heavy_check_mark:](/TIL/08.%20Spring/230427_Spring_day7.md) | [:pencil2:](/intellij/springedu/src/main/java/com/example/springedu/) [:orange_book:](/intellij/springedu/src/main/resources/) | [:bulb:](/Spring%20exercise/230427/) 
+
 </div>
+
