@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="resource.VisitorMapper">
+ 	<select id="selectVisitor"  resultType="VisitorDTO">
+    	select id, name, date_format(writedate, '%Y년 %m월 %d일') writedate, memo from visitor
+ 	</select>
+ 	<select id="selectVisitorOne"  resultType="VisitorDTO" parameterType="_int" >
+    	select id, name, date_format(writedate, '%Y년 %m월 %d일') writedate, memo from visitor where id = #{id}
+ 	</select>
+  	<insert id="insertVisitor"  parameterType="VisitorDTO">
+		/* insert는 insert할 type을 지정해야해서 parameterType이 무조건임 */
+  	   	insert into visitor (name, writedate, memo) values (#{name},now(), #{memo})
+	</insert>
+	<select id="searchVisitor"  parameterType="java.lang.String" resultType="VisitorDTO">
+    	select id, name, date_format(writedate, '%Y년 %m월 %d일') writedate, memo from visitor where memo like concat('%',#{key},'%')
+    </select>
+	<delete id="deleteVisitor"  parameterType="_int"  >
+    	delete from visitor where id = #{id}
+	</delete>
+	<update id="updateVisitor"  parameterType="VisitorDTO">     	
+    	update visitor set name = #{name}, memo = #{memo} where id = #{id} 
+ 	</update>
+</mapper>
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <h1>책 정보 출력</h1>
+</header>
+<hr>
+<section>
+    <button th:onclick="|location.href= '@{/bookinfo/b1}'|">모든 도서</button>
+    <button th:onclick="|location.href= '@{/bookinfo/b2}'|">가격이 높은 순으로</button>
+    <button th:onclick="|location.href= '@{/bookinfo/b3}'|">가격이 20000원보다 높은 도서</button>
+    <button th:onclick="|location.href= '@{/bookinfo/b4}'|">웹프로그래밍 도서</button>
+    <button th:onclick="|location.href= '@{/bookinfo/b5}'|">데이터베이스와 인프라 도서</button>
+    <button th:onclick="|location.href= '@{/bookinfo/b6}'|">도서명이 자바를 포함하는 도서</button>
+    <button th:onclick="|location.href= '@{/bookinfo/b7}'|">도서명이 스프링을 포함하는 도서</button>
+    <button th:onclick="|location.href= '@{/bookinfo/b8}'|">분류별 도서 가격의 평균</button>
+</section>
+<hr>
+<section>
+    <h3 th:if="${msg}" th:text="${msg}"></h3>
+
+    <table th:if="${list}">
+        <tr>
+            <th th:if="${list[0].id}">ID</th>
+            <th th:if="${list[0].title}">TITLE</th>
+            <th th:if="${list[0].price}">PRICE</th>
+            <th th:if="${list[0].kind}">KIND</th>
+        </tr>
+        <tr th:each="dto : ${list}">
+            <td th:if="${dto.id}" th:text="${dto.id}"></td>
+            <td th:if="${dto.title}" th:text="${dto.title}"></td>
+            <td th:if="${dto.price}" th:text="${dto.price}"></td>
+            <td th:if="${dto.kind}" th:text="${dto.kind}"></td>
+        </tr>
+    </table>
+</section>
+</body>
+</html>
