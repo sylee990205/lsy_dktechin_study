@@ -1,0 +1,6 @@
+[ SpringMVC 실습 7 ]
+메일제목 : 스프링실습10-XXX
+제출소스명 : BookMapperDAO.java
+
+BookMybatisDAO.java 를 BookMapperDAO.java 로 복사하여 
+매퍼 인터페이스로 변경해 본다.
