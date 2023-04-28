@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Thymeleaf의 유틸리티 객체</h1>
+<hr>
+<h2 th:text="${#dates.format(now,'yyyy-mm-dd')}"></h2>
+<div th:with="timeVal=${#dates.createToday()}">
+    <p>[[${timeVal}]]</p>
+</div>
+<ul>
+    <li>${num} = <span th:text="${num}"></span></li>
+    <li>${#numbers.formatInteger(num, 3, 'COMMA')} = <span th:text="${#numbers.formatInteger(num, 3, 'COMMA')}"></span></li>  
+    <li>${#numbers.formatCurrency(num)} = <span th:text="${#numbers.formatCurrency(num)}"></span></li>  
+    <li>${#numbers.formatDecimal(num, 3, 'COMMA', 2, 'POINT')} = <span th:text="${#numbers.formatDecimal(num, 3, 'COMMA', 2, 'POINT')}"></span></li>    
+</ul>
+</body>
+</html>

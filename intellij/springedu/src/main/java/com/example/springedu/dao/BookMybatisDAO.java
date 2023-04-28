@@ -100,4 +100,13 @@ public class BookMybatisDAO {
         return list;
     }
 
+    public boolean insert(BookDTO dto){
+        boolean result = false;
+        String statement = "lab1.insert";
+        if(session.insert(statement, dto) == 1){
+            result = true;
+        }
+        return result;
+    }
+
 }

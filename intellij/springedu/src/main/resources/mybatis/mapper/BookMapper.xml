@@ -24,4 +24,7 @@
     <select id="exam7" resultType="BookDTO">
         select kind, avg(price) price from book group by kind
     </select>
+    <insert id="insert" parameterType="BookDTO">
+        insert into book(title, price, kind) values (#{title}, #{price}, #{kind})
+    </insert>
 </mapper>

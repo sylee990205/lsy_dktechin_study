@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>식 기본 객체 (Expression Basic Objects)</h1>
+<hr>
+[[${#ctx.locale}]]<br>
+[[${#ctx.variableNames}]]<br>
+[[${#ctx.request}]]<br>
+[[${#ctx.response}]]<br>
+[[${#ctx.session}]]<br>
+[[${#ctx.servletContext}]]<br>
+[[${#locale}]]<br>
+<hr>
+[[${param.foo} ]]<br>
+[[${param.size()}]]<br>
+[[${param.isEmpty()}]]<br>
+[[${param.containsKey('foo')}]]<br>
+<hr>
+[[${session.foo} ]]<br>
+[[${session.size()}]]<br>
+[[${session.isEmpty()}]]<br>
+[[${session.containsKey('foo')}]]<br>
+<hr>
+[[${application.foo} ]]<br>
+[[${application.size()}]]<br>
+[[${application.isEmpty()}]]<br>
+[[${application.containsKey('foo')}]]<br>
+<hr>
+[[${#dates.createNow()}]]<br>
+[[${#dates.format(#dates.createNow(), 'dd/MMM/yyyy HH:mm')}]]<br>
+<!--/* [[]]<br> */-->
+</body>
+</html>
