@@ -70,8 +70,12 @@
 | 과목       | 수강기간      | TIL |
 | -------- | :---------------: | :---: | 
 | Spring IoC | 230417 - 230421 | [:heavy_check_mark:](/TIL/08.%20Spring/) |
-| Spring MVC | 230424 - | [:hourglass_flowing_sand:](/TIL/08.%20Spring/)
+| Spring MVC<br>Thymeleaf | 230424 - 230426 | [:heavy_check_mark:](/TIL/08.%20Spring/)
+| Mybatis | 230427 - 230428 | [:heavy_check_mark:](/TIL/08.%20Spring/) |
 
+### 1차 미니 프로젝트
+#### 230501 ~
+[DKTechin 교육 과정 기술 블로그 **dk-log**](https://github.com/dklog-team/dklog)
 <!-- | Spring MVC |
 | Spring boot | 
 <!--
