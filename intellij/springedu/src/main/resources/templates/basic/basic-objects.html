@@ -16,20 +16,8 @@
 <h1>편의 객체</h1>
 <ul>
     <li>Request Parameter = <span th:text="${param.paramData}"></span></li>
-   
     <li>session = <span th:text="${session.sessionData}"></span></li>
     <li>spring bean = <span th:text="${@unico.hello('Spring Boot!')}"></span></li>
 </ul>
-<hr>
- [[${#session.getAttribute('sessionData')}]]
-<hr>
-[[${#dates.createNow()}]]<br>
-[[${#dates.format(#dates.createNow(), 'YYYY/MM/dd HH:mm')}]]<br>
-[[${#dates.format(#dates.createNow(), 'yyyy년 MMM d일')}]]<br>
-[[${#dates.format(#dates.createNow(), 'hh:mm:ss')}]]<br>
-[[${#dates.format(#dates.createNow(), 'ddd dd d')}]]<br>
-[[${#calendars.dayOfWeekName(#dates.createNow())}]]<br>
-<hr>
-[[${#strings.isEmpty(param.name)}]]
 </body>
 </html>

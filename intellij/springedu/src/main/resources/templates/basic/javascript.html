@@ -4,45 +4,32 @@
     <meta charset="UTF-8">
     <title>Title</title></head>
 <body>
-<!-- 자바스크립트 인라인 사용 전 -->
+<h2>자바스크립트와 타임리프</h2>
 <script>
     var username = [[${user.username}]];
     var age = [[${user.age}]];
-
     //자바스크립트 내추럴 템플릿
     var username2 = /*[[${user.username}]]*/ "test username";
-
     //객체
     var user = [[${user}]];
+    alert("첫 번째 스크립트 태그 : 출력될까요? "+username);
 </script>
-<!-- 자바스크립트 인라인 사용 후 -->
-
+<!-- 자바스크립트 인라인 사용 -->
 <script th:inline="javascript">
-
     var username = [[${user.username}]];
     var age = [[${user.age}]];
     //자바스크립트 내추럴 템플릿
     var username2 =  /*[[${user.username}]]*/ "test username";
-
     //객체
     var user = [[${user}]];
-    
-    alert(username);
-    alert(username2);
-    alert(user);
-    alert(user.age);
-
+    alert("두 번째 스크립트 태그 : 출력될까요? "+username);
 </script>
-
+<h3>자바스크립트 코드 영역에서도 타임리프를 사용할 수 있을까요?</h3>
 <script th:inline="javascript">
-
     [# th:each = "user, stat : ${users}"]
     var user[[${stat.count}]] = [[${user}]];
     console.log(user[[${stat.count}]])
     [/]
-    
- 
-
 </script>
 </body>
 </html>

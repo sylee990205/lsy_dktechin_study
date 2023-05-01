@@ -7,10 +7,13 @@
 <body>
 <h1>Thymeleaf의 유틸리티 객체</h1>
 <hr>
-<h2 th:text="${#dates.format(now,'yyyy-mm-dd')}"></h2>
+<h2>컨트롤러에서 보내온 Date 객체로 출력</h2>
+<h3 th:text="${#dates.format(now,'yyyy-MM-dd')}"></h3>
+<h2>타입리프의 유틸리티 객체 #dates 의 createToday() 로 출력</h2>
 <div th:with="timeVal=${#dates.createToday()}">
     <p>[[${timeVal}]]</p>
 </div>
+<hr>
 <ul>
     <li>${num} = <span th:text="${num}"></span></li>
     <li>${#numbers.formatInteger(num, 3, 'COMMA')} = <span th:text="${#numbers.formatInteger(num, 3, 'COMMA')}"></span></li>  

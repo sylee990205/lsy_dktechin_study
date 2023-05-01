@@ -8,13 +8,13 @@
 <h1>부분 포함 테스트</h1>
 <hr>
 <h2>부분 포함 insert</h2>
-<div th:insert="~{basic/fragment/footer :: copy}" style="color:red"></div>
+<div th:insert="~{basic/fragment/footer :: ddotchi}" style="color:red"></div>
 
 <h2>부분 포함 replace</h2>
-<div th:replace="~{basic/fragment/footer :: copy}" style="color:blue"></div>
+<div th:replace="~{basic/fragment/footer :: ddotchi}" style="color:blue"></div>
 
 <h2>부분 포함 단순 표현식</h2>
-<div th:insert="basic/fragment/footer :: copy" style="color:magenta"></div>
+<div th:insert="basic/fragment/footer :: ddotchi" style="color:magenta"></div>
 
 <h1>파라미터 사용</h1>
 <div th:replace="~{basic/fragment/footer :: copyParam ('데이터1', '데이터2')}" style="color:green"></div>
