@@ -74,7 +74,7 @@
 | Mybatis | 230427 - 230428 | [:heavy_check_mark:](/TIL/08.%20Spring/) |
 
 ### 1차 미니 프로젝트
-#### 230501 ~
+#### 230501 ~ 230509
 [DKTechin 교육 과정 기술 블로그 **dk-log**](https://github.com/dklog-team/dklog)
 <!-- | Spring MVC |
 | Spring boot | 
