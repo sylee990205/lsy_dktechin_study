@@ -1,6 +1,6 @@
-# Spring
+# Spring 기초
 [메인으로](https://github.com/sylee990205/lsy_dktechin_study)
-## 230417 ~ 
+## 230417 ~ 230428
 
 <div align = "center"> 
 

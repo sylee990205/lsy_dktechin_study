@@ -66,7 +66,7 @@
 | Servlet JSP & JUnit | 230411 - 230417 | [:heavy_check_mark:](/TIL/07.%20Servlet%20JSP/) | 
 
 
-### Spring
+### Spring 기초
 | 과목       | 수강기간      | TIL |
 | -------- | :---------------: | :---: | 
 | Spring IoC | 230417 - 230421 | [:heavy_check_mark:](/TIL/08.%20Spring/) |
@@ -76,14 +76,32 @@
 ### 1차 미니 프로젝트
 #### 230501 ~ 230509
 [DKTechin 교육 과정 기술 블로그 **dk-log**](https://github.com/dklog-team/dklog)
+
+### Spring 심화
+| 과목       | 수강기간      | TIL |
+| -------- | :---------------: | :---: | 
+| Spring 심화 | 
 <!-- | Spring MVC |
 | Spring boot | 
 <!--
----------------- 게시판 구현 실습
 - Spring FW(DI, MVC, Rest, JdbcTemplate)
 ------------------------------ 1차 미니 프로젝트
+[ Spring 2단계 ]
+- 로그 : Logback - 설정 파일
+- Scheduling
+- Filter & Interceptor // 기술 면접 주요 질문
+- 에러 처리
+-------------------------------------------- springedu project 사용
+- AOP
+-------------------------------------------- springiocedu project 사용
 - JPA
-- Spring Boot (AOP, Security, Data JPA)
+-------------------------------------------- jpaedu 새로 생성하여 사용
+- Spring WebSocket
+- Spring Data JPA
+- Spring Security
+- Spring Rest
+- (Spring Test) < 이 단계에서 전체적으로 병행함
+-------------------------------------------- springedu2 project 사용
 - Vue.js & Node.js
 ------------------------------ 2차 미니 프로젝트
 Docker 를 활용한 컨테이너 기반 웹 애플리케이션 구현(MSA)
