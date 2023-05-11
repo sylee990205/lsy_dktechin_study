@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Log4J 테스트</h1>
+<h1 style="color:red" th:text="${ msg }"></h1>
 <hr>
-<h2>[[${ msg }]]</h2>
+<h3 th:text="${ exceptionInfo }"></h3>
 </body>
 </html>

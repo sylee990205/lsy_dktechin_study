@@ -2,28 +2,26 @@ package com.example.springedu.controller;
 import javax.servlet.http.HttpServletRequest;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-
-@Controller
 @Slf4j
-public class LogTestController1 {
-	@RequestMapping("/log1")
+@Controller
+public class LogTestController2 {
+	@RequestMapping("/log2")
 	public ModelAndView xxx(HttpServletRequest req){
-		log.error("error-로그를 테스트합니다!");
-		log.warn("warn-로그를 테스트합니다!");
-		log.info("info-로그를 테스트합니다!");
-		log.debug("debug-로그를 테스트합니다!");
-		log.trace("trace-로그를 테스트합니다!");
+		log.error(req.getRemoteHost() +"로 부터 요청이 왔어요!");
+		log.warn(req.getRemoteHost() +"로 부터 요청이 왔어요!");
+		log.info(req.getRemoteHost() +"로 부터 요청이 왔어요!");
+		log.debug(req.getRemoteHost() +"로 부터 요청이 왔어요!");
+		log.trace(req.getRemoteHost() +"로 부터 요청이 왔어요!");
 
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("logView");
 		mav.addObject("msg", "톰캣콘솔창에서 확인하세요!!");
 		return mav;
 	}
+	
 }
-
-
-
-

@@ -19,7 +19,7 @@ public class QueryStringController1 {
 		// 확장자와 파일 경로를 제외하고 html 파일 명만 view name으로 설정
 		return mav;
 	}	
-	@RequestMapping("/querystring 2")
+	@RequestMapping("/querystring2")
 	public ModelAndView proc(int number) {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("spring", number);

@@ -7,6 +7,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,11 +15,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import thymeleaf.exam.User;
 
 @Controller
+@Slf4j
 @RequestMapping("/basic")
 public class ThymeleafBasicController {
 	
 	@GetMapping("/hithymeleaf")
     public String hiThymeleaf(Model model) {
+        log.error(getClass().getPackageName() + " : error-로그를 테스트합니다!");
+        log.warn(getClass().getPackageName() + " : warn-로그를 테스트합니다!");
+        log.info(getClass().getPackageName() + " : info-로그를 테스트합니다!");
+        log.debug(getClass().getPackageName() + " : debug-로그를 테스트합니다!");
+        log.trace(getClass().getPackageName() + " : trace-로그를 테스트합니다!");
         model.addAttribute("say", "안녕?");
         return "basic/hithymeleaf";
     }
