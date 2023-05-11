@@ -11,6 +11,7 @@
 
 | 일자      | 주제 | 수강내용       | TIL | 예제 | 실습 | 
 | -------- | ----  |--------------- | :---: | :---: | :---: | 
-| 230510 | Spring 심화 |Spring Framework<br>스프링특징과구조<br>IoC, DI, DL | [:heavy_check_mark:](/TIL/08.%20Spring%20IoC/230417_Spring_day1.md) | [:pencil2:](/intellij/springiocedu/src/main/java/FirstApp.java) | :x:
+| 230510 | Spring 심화1 | 로그 : Logback - 설정 파일 | [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/230510_Spring_day9.md) | [:pencil2:](/intellij/springiocedu/src/main/java/) | :x:
+| 230511 | Spring 심화1 | Scheduling<br>Filter & Interceptor<br>에러 처리<br>Spring WebSocket | [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/230511_Spring_day10.md) | [:pencil2:](/intellij/springiocedu/src/main/java/) | :x:
 </div>
 

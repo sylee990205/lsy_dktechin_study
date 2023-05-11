@@ -74,13 +74,13 @@
 | Mybatis | 230427 - 230428 | [:heavy_check_mark:](/TIL/08.%20Spring/) |
 
 ### 1차 미니 프로젝트
-#### 230501 ~ 230509
+#### 230501 ~ 230510
 [DKTechin 교육 과정 기술 블로그 **dk-log**](https://github.com/dklog-team/dklog)
 
 ### Spring 심화
 | 과목       | 수강기간      | TIL |
 | -------- | :---------------: | :---: | 
-| Spring 심화 | 
+| Spring 심화1 | 230510 ~ | [:hourglass_flowing_sand:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/)
 <!-- | Spring MVC |
 | Spring boot | 
 <!--
@@ -91,12 +91,12 @@
 - Scheduling
 - Filter & Interceptor // 기술 면접 주요 질문
 - 에러 처리
+- Spring WebSocket
 -------------------------------------------- springedu project 사용
 - AOP
 -------------------------------------------- springiocedu project 사용
 - JPA
 -------------------------------------------- jpaedu 새로 생성하여 사용
-- Spring WebSocket
 - Spring Data JPA
 - Spring Security
 - Spring Rest
