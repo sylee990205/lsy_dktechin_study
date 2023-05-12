@@ -19,7 +19,7 @@ public class AOPLab3 {
             sw.start();
             result = pjp.proceed();
             sw.stop();
-            log.info(pjp.getTarget().getClass() + " - 수행시간(밀리초) - " + sw.getTotalTimeMillis());
+            log.info(pjp.getTarget().getClass().getName() + " - 수행시간(밀리초) - " + sw.getTotalTimeMillis());
         } catch (Throwable e) {
             throw new RuntimeException(e);
         }
