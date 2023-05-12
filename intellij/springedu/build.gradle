@@ -33,6 +33,8 @@ dependencies {
 
 	implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
 
+	//AOP
+	implementation 'org.springframework.boot:spring-boot-starter-aop:2.7.11'
 }
 
 tasks.named('test') {

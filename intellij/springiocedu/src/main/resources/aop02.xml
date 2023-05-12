@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="customer" class="aop02.CustomerService"/>
+<bean id="emp" class="aop02.EmpService"/>
+
+<!-- Advice: 횡단(공통)관심사항 -->
+<bean id="myAdvice" class="aop02.MyAspect"/>
+<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/>
+
+<!-- Advisor = Advice(횡단(공통)관심사항) + pointCut(핵심관심사항) -->
+<bean class="org.springframework.aop.aspectj.AspectJExpressionPointcutAdvisor">
+	<property name="advice" ref="myAdvice"/>
+	<property name="expression" value="execution(public * *(..))"/>
+	<!-- public 리턴값유형 메소드이름을 *로 처리 -> 모두 ok (..) -> 매개변수도 모두 ok -->
+</bean>
+
+</beans>
+<!-- AOP : aspectj검색후 pom.xml에 aspectjrt, aspectweaver추가 -->
