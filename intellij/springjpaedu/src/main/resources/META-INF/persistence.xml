@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+        version="2.2">
+	<persistence-unit name="emptest">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>jpamvcexam.model.vo.EmpVO</class>
+		<class>jpamvcexam.model.vo.EmpFreqVO</class>
+		<class>jpamvcexam.model.vo.Visitor</class>
+		<class>jpamvcexam.model.vo.Meeting</class>
+		<class>jpamvcexam.model.vo.Book</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.user" value="jdbctest" />
+			<property name="javax.persistence.jdbc.password" value="jdbctest" />
+			<property name="javax.persistence.jdbc.url" value=" jdbc:mysql://localhost:3306/edudb?characterEncoding=UTF-8&amp;serverTimezone=UTC" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.use_sql_comments" value="true" />
+		</properties>
+	</persistence-unit>
+	<persistence-unit name="entitytest">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>jpamvcexam.model.entity.EntityTest</class>
+		<class>jpamvcexam.model.entity.Member</class>
+		<class>jpamvcexam.model.entity.Team</class>
+		<class>jpamvcexam.model.entity.AAA</class>
+		<class>jpamvcexam.model.entity.BBB</class>
+		<class>jpamvcexam.model.vo.EmpVO</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.user" value="jdbctest" />
+			<property name="javax.persistence.jdbc.password" value="jdbctest" />
+			<property name="javax.persistence.jdbc.url" value=" jdbc:mysql://localhost:3306/edudb?characterEncoding=UTF-8&amp;serverTimezone=UTC" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.use_sql_comments" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<!-- value update : 존재하지않으면 새로 생성, 존재하면 변경된 값을 반영하는 처리를 함-->
+			<!-- value를 create로 하면 기존 table을 삭제하고 새로 만들게 됨, update 가 좋다-->
+		</properties>
+	</persistence-unit>
+</persistence>
