@@ -112,4 +112,33 @@ TRACE < DEBUG < INFO < WARN < ERROR
   - FileAppender 에서는 encoder를 사용하여 layout 설정
 #### file
 - 기록할 파일명과 경로를 설정
+- rollingPolicy class
+  - ch.qos.logback.core.rolling.TimeBaseRollingPolicy - 일자별
+  - ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP - 일자별 + 크기별
+- fileNamePattern
+  - 파일 쓰기가 종료된 log  파일명의 패턴 지정
+- maxFileSize
+  - 한 파일당 최대파일 용량 지정
+  - log 내용의 크기도  IO 성능에 영향을 미침
+    - 너무 크지 않은 사이즈로 지정하는 것이 좋음
+- maxHistory
+  - 최대 파일 생성 갯수
 #### pattern
+- %logger{length} : Logger name 을 축약할 수 있다. {length}는 최대 자리 수  
+- %-5level : 로그 레벨, -5 는 출력의 고정폭 값(5 글자)  
+- %msg : - 로그 메시지 (=%message)  
+- ${PID:-} : 프로세스 아이디  
+- %d : 로그 기록시간  
+- %p : 로깅 레벨  
+- %F : 로깅이 발생한 프로그램 파일명  
+- %M : 로깅일 발생한 메소드의 명  
+- %l : 로깅이 발생한 호출지의 정보  
+- %L : 로깅이 발생한 호출지의 라인 수  
+- %thread : 현재 Thread 명  
+- %t : 로깅이 발생한 Thread 명  
+- %c : 로깅이 발생한 카테고리  
+- %C : 로깅이 발생한 클래스 명  
+- %m : 로그 메시지  
+- %n : 줄바꿈(new line)  
+- %% : %를 출력  
+- %r : 애플리케이션 시작 이후부터 로깅이 발생한 시점까지의 시간(ms)  
