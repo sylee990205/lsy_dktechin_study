@@ -83,7 +83,8 @@ KOSA MSA 기반 Full-stack 개발자 양성 과정을 수강하며 배운 내용
 | -------- | :---------------: | :---: | 
 | Spring 심화1 | 230510 - 230511 | [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/)
 | Spring AOP | 230512 | [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/)
-| JPA | 230513 - | [:hourglass_flowing_sand:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/)
+| JPA | 230515 - 230516 | [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/)
+| Spring Data JPA | 230517 | [:hourglass_flowing_sand:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/)
 <!-- 
 [ Spring 2단계 ]
 - 로그 : Logback - 설정 파일
