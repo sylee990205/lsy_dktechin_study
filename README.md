@@ -1,10 +1,11 @@
-# lsy_dktechin_study
+# lsy_kosa_study
 <div align="center">
+<!-- 
+[![dk 로고](./TIL/image/2023-03-21-12-28-07.png)](https://dktechin.com/service/main/index) -->
 
-[![dk 로고](./TIL/image/2023-03-21-12-28-07.png)](https://dktechin.com/service/main/index)
+<!-- 디케이테크인 채용확정형 교육 MSA 기반 Full-stack 개발자 양성 과정을 수강하며 배운 내용을 정리합니다. -->
 
-디케이테크인 채용확정형 교육 MSA 기반 Full-stack 개발자 양성 과정을 수강하며 배운 내용을 정리합니다.
-
+KOSA MSA 기반 Full-stack 개발자 양성 과정을 수강하며 배운 내용을 정리합니다.
 
 ---
 
@@ -75,7 +76,7 @@
 
 ### 1차 미니 프로젝트
 #### 230501 ~ 230509
-[DKTechin 교육 과정 기술 블로그 **dk-log**](https://github.com/dklog-team/dklog)
+[dktechin 교육 과정 기술 블로그 **dk-log**](https://github.com/dklog-team/dklog)
 
 ### Spring 심화
 | 과목       | 수강기간      | TIL |
