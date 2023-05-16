@@ -10,6 +10,7 @@
 		<class>jpamvcexam.model.vo.Visitor</class>
 		<class>jpamvcexam.model.vo.Meeting</class>
 		<class>jpamvcexam.model.vo.Book</class>
+		<class>jpamvcexam.model.vo.Reply</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
 			<property name="javax.persistence.jdbc.user" value="jdbctest" />
@@ -29,6 +30,9 @@
 		<class>jpamvcexam.model.entity.AAA</class>
 		<class>jpamvcexam.model.entity.BBB</class>
 		<class>jpamvcexam.model.vo.EmpVO</class>
+		<class>jpamvcexam.model.vo.Student</class>
+		<class>jpamvcexam.model.entity.Emp</class>
+		<class>jpamvcexam.model.entity.Dept</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
 			<property name="javax.persistence.jdbc.user" value="jdbctest" />
