@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="kr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<th:block th:if="${ msg }">
+    <h1 th:text="${msg}"></h1>
+</th:block>
+<th:block th:if="${newsList}">
+    <h1>뉴스 게시판</h1>
+    <table>
+        <tr>
+            <td>번호</td>
+            <td>제목</td>
+            <td>작성자</td>
+            <td>작성일</td>
+            <td>조회수</td>
+        </tr>
+        <tr th:each="n : ${newsList}">
+            <td class="newsId" th:text="${n.id}"></td>
+            <td class="newsTitle" th:text="${n.title}" th:onclick="|showNews(${n.id})|"></td>
+            <td class="newsWriter" th:text="${n.writer}"></td>
+            <td class="newsWriteDate" th:text="${n.getWritedate}"></td>
+            <td class="newsCount" th:text="${n.cnt}"></td>
+        </tr>
+    </table>
+    <form action="/search" method="get">
+        <input type="text" name="keyword" placeholder="내용 검색">
+        <input type="submit" value="뉴스검색">
+    </form>
+</th:block>
+<button id="writeBtn">뉴스 작성</button>
+<div id="insertForm" style="display: none">
+    <form method="post" action="/insert">
+        <input type="text" name="writer" placeholder="작성자">
+        <input type="text" name="title" placeholder="제목">
+        <textarea name="content" placeholder="내용"></textarea>
+        <input type="submit" value="저장">
+        <input type="reset" value="재작성">
+        <button id="writeCancelBtn">취소</button>
+    </form>
+</div>
+<div id="updateForm" style="display: none">
+    <h3>뉴스 내용</h3>
+    <form method="post" action="/update">
+        <input id="updateId" type="hidden" name="id">
+        <input type="text" id="updateWriter" name="writer"placeholder="작성자">
+        <input type="text" id="updateTitle" name="title" placeholder="제목">
+        <textarea id="updateContent" name="content" placeholder="내용"></textarea>
+        <button id="closeBtn">확인</button>
+        <input type="submit" value="수정">
+        <button id="deleteBtn">삭제</button>
+    </form>
+</div>
+<script>
+    const insertForm = document.getElementById('insertForm');
+    const updateForm = document.getElementById('updateForm');
+    document.getElementById('writeBtn').addEventListener('click', () => {
+        insertForm.style.display = 'block';
+        updateForm.style.display = 'none';
+    });
+
+    document.getElementById('writeCancelBtn').addEventListener('click', (e) => {
+        e.preventDefault();
+        insertForm.style.display = 'none';
+    });
+    function showNews(id) {
+        insertForm.style.display = 'none';
+        if (document.getElementById('updateId').value == id) {
+            return;
+        }
+        let xhr = new XMLHttpRequest();
+        xhr.onload = function () {
+            if (xhr.status == 200) {
+                let newsDom = JSON.parse(xhr.responseText);
+                document.getElementById('updateId').value = newsDom.id;
+                document.getElementById('updateWriter').value = newsDom.writer;
+                document.getElementById('updateTitle').value = newsDom.title;
+                document.getElementById('updateContent').value = newsDom.content
+                document.getElementById('updateForm').style.display = 'block';
+            }
+        }
+        xhr.open('GET', '/listone?id=' + id, true);
+        xhr.send();
+    }
+
+    document.getElementById('closeBtn').addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('updateForm').style.display = 'none';
+    });
+
+    document.getElementById('deleteBtn').addEventListener('click', (e) => {
+        e.preventDefault();
+        let id = document.getElementById('updateId').value;
+        location.href = '/delete?id=' + id;
+    });
+</script>
+</body>
+</html>
