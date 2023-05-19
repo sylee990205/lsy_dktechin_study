@@ -3,28 +3,42 @@ package com.example.springnews.controller;
 import com.example.springnews.model.News;
 import com.example.springnews.repository.NewsRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.transaction.Transactional;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
 public class NewsController {
     private final NewsRepository repository;
-
     @GetMapping("/newsmain")
-    public String newsList(Model model) {
-        List<News> newsList = repository.findAll();
-        model.addAttribute("newsList", newsList);
+    public String newsListPage(Model model, @RequestParam(defaultValue = "1") int page){
+        PageRequest pageRequest = PageRequest.of(page-1, 5, Sort.by("id").descending());
+        Page<News> pageObj = repository.findAll(pageRequest);
+        List<News> list = pageObj.toList();
+        int pageBlock = (page-1) / 5;
+        int endPageBlock;
+        if(pageObj.getTotalPages() <= 5){
+            endPageBlock = 0;
+        } else {
+            endPageBlock = (pageObj.getTotalPages()-1) / 5;
+        }
+        model.addAttribute("currentPage", page);
+        model.addAttribute("pageBlock", pageBlock);
+        model.addAttribute("endPageBlock", endPageBlock);
+        model.addAttribute("totalPage", pageObj.getTotalPages());
+        model.addAttribute("newsList", list);
         return "news";
     }
-
     @GetMapping(value = "listone", produces = "application/json; charset=utf-8")
     @Transactional
     @ResponseBody
@@ -39,7 +53,6 @@ public class NewsController {
     public String delete(Model model, int id) {
         try {
             repository.deleteById(id);
-            /*return newsList(model);*/
             return "redirect:/newsmain";
         } catch (Exception e) {
             model.addAttribute("msg", "삭제 중 오류가 발생했습니다.");
@@ -47,7 +60,7 @@ public class NewsController {
         return "news";
     }
 
-    @GetMapping("search")
+    @GetMapping("/search")
     public String searchNewsByKeword(Model model, String keyword) {
         List<News> newsList = repository.findByContentContains(keyword);
         model.addAttribute("newsList", newsList);

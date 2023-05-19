@@ -3,60 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
     <style>
+        @font-face {
+            font-family: 'SUITE-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
         * {
-            text-align: center;
+            font-family: SUITE-Regular;
         }
     </style>
 </head>
-<body>
+<body class="text-center">
 <th:block th:if="${ msg }">
     <h1 th:text="${msg}"></h1>
 </th:block>
 <th:block th:if="${newsList}">
-    <h1>뉴스 게시판</h1>
-    <table>
-        <tr>
-            <td>번호</td>
-            <td>제목</td>
-            <td>작성자</td>
-            <td>작성일</td>
-            <td>조회수</td>
-        </tr>
-        <tr th:each="n : ${newsList}">
-            <td class="newsId" th:text="${n.id}"></td>
-            <td class="newsTitle" th:text="${n.title}" th:onclick="|showNews(${n.id})|"></td>
-            <td class="newsWriter" th:text="${n.writer}"></td>
-            <td class="newsWriteDate" th:text="${n.getWritedate}"></td>
-            <td class="newsCount" th:text="${n.cnt}"></td>
-        </tr>
-    </table>
-    <form action="/search" method="get">
-        <input type="text" name="keyword" placeholder="내용 검색">
-        <input type="submit" value="뉴스검색">
-    </form>
+    <h1 id="pageTitle" th:onclick="|location.href='@{/newsmain}'|" class="hover:cursor-pointer text-3xl my-2">뉴스 게시판</h1>
+    <div class="w-4/5 flex justify-end mx-auto">
+        <form id="searchFrom" action="/search" method="get" class="flex justify-items-center">
+            <input type="search" name="keyword" placeholder="내용 검색" class="input input-bordered w-full max-w-xs focus:outline-none">
+            <button type="submit" value="뉴스검색" class="btn btn-ghost">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+            </button>
+        </form>
+    </div>
+    <div class="overflow-x-auto">
+        <table class="table w-4/5 mb-2 mx-auto">
+            <tr id="tableTitle">
+                <td class="newsId w-1/12">번호</td>
+                <td class="newsTitle w-4/12">제목</td>
+                <td class="newsWriter w-2/12">작성자</td>
+                <td class="newsWriteDate w-2/12">작성일</td>
+                <td class="newsCount w-1/12">조회수</td>
+            </tr>
+            <tr id="tableContent" th:each="n : ${newsList}" class="hover hover:bg-purple-300">
+                <td class="newsId w-1/12" th:text="${n.id}"></td>
+                <td class="newsTitle hover:cursor-pointer w-4/12" th:text="${n.title}" th:onclick="|showNews(${n.id})|"></td>
+                <td class="newsWriter hover:cursor-pointer w-2/12" th:id="${n.id}" th:text="${n.writer}" th:onclick="|location.href='@{/writer(writer=${n.writer})}'|"></td>
+                <td class="newsWriteDate w-2/12" th:text="${n.getWritedate}"></td>
+                <td class="newsCount w-1/12" th:text="${n.cnt}"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="btn-group" th:if="${totalPage} and ${totalPage} > 0">
+        <button class="btn btn-sm btn-ghost bg-purple-300 hover:bg-purple-400" th:onclick="|location.href='@{/newsmain?page=1}'|">first</button>
+        <button class="btn btn-sm btn-ghost bg-purple-300 hover:bg-purple-400" th:onclick="|beforePage(${pageBlock})|"><</button>
+        <button class="btn btn-sm btn-ghost bg-purple-300 hover:bg-purple-400" th:text="${pageBlock}*5+1" th:onclick="|move(${pageBlock}, 1)|"></button>
+        <button class="btn btn-sm btn-ghost bg-purple-300 hover:bg-purple-400" th:if="${pageBlock} != ${endPageBlock} or ${totalPage}%5 >= 2" th:text="${pageBlock}*5+2" th:onclick="|move(${pageBlock}, 2)|">2</button>
+        <button class="btn btn-sm btn-ghost bg-purple-300 hover:bg-purple-400" th:if="${pageBlock} != ${endPageBlock} or ${totalPage}%5 >= 3" th:text="${pageBlock}*5+3" th:onclick="|move(${pageBlock}, 3)|">3</button>
+        <button class="btn btn-sm btn-ghost bg-purple-300 hover:bg-purple-400" th:if="${pageBlock} != ${endPageBlock} or ${totalPage}%5 >= 4" th:text="${pageBlock}*5+4" th:onclick="|move(${pageBlock}, 4)|">4</button>
+        <button class="btn btn-sm btn-ghost bg-purple-300 hover:bg-purple-400" th:if="${pageBlock} != ${endPageBlock} or ${totalPage}%5 == 0" th:text="${pageBlock}*5+5" th:onclick="|move(${pageBlock}, 5)|">5</button>
+        <button class="btn btn-sm btn-ghost bg-purple-300 hover:bg-purple-400" th:onclick="|afterPage(${pageBlock}, ${endPageBlock})|">></button>
+        <button class="btn btn-sm btn-ghost bg-purple-300 hover:bg-purple-400" th:onclick="|lastpage(${totalPage})|">last</button>
+    </div>
 </th:block>
-<button id="writeBtn">뉴스 작성</button>
-<div id="insertForm" style="display: none">
-    <form method="post" action="/insert">
-        <input type="text" name="writer" placeholder="작성자">
-        <input type="text" name="title" placeholder="제목">
-        <textarea name="content" placeholder="내용"></textarea>
-        <input type="submit" value="저장">
-        <input type="reset" value="재작성">
-        <button id="writeCancelBtn">취소</button>
+<div class="my-2">
+    <button id="writeBtn" class="btn btn-sm btn-outline border-purple-400 text-purple-400 hover:bg-purple-400 hover:border-none">뉴스 작성</button>
+</div>
+<div class="inputForm" id="insertForm" style="display: none">
+    <form method="post" action="/insert" class="p-1">
+        <input type="text" name="writer" placeholder="작성자" class="input input-bordered w-80 my-1 focus:outline-none"><br>
+        <input type="text" name="title" placeholder="제목" class="input input-bordered w-80 my-1 focus:outline-none"><br>
+        <textarea name="content" placeholder="내용" class="textarea textarea-bordered resize-none my-1 focus:outline-none w-80 h-40"></textarea><br>
+        <button type="submit" class="btn btn-sm btn-ghost bg-purple-300 hover:bg-purple-400">작성</button>
+        <button type="reset" class="btn btn-sm btn-ghost bg-purple-300 hover:bg-purple-400">재작성</button>
+        <button id="writeCancelBtn" class="btn btn-sm btn-ghost bg-purple-300 hover:bg-purple-400">취소</button>
     </form>
 </div>
-<div id="updateForm" style="display: none">
+<div class="inputForm" id="updateForm" style="display: none">
     <h3>뉴스 내용</h3>
-    <form method="post" action="/update">
+    <form method="post" action="/update" class="p-1">
         <input id="updateId" type="hidden" name="id">
-        <input type="text" id="updateWriter" name="writer"placeholder="작성자">
-        <input type="text" id="updateTitle" name="title" placeholder="제목">
-        <textarea id="updateContent" name="content" placeholder="내용"></textarea>
-        <button id="closeBtn">확인</button>
-        <input type="submit" value="수정">
-        <button id="deleteBtn">삭제</button>
+        <input type="text" id="updateWriter" name="writer"placeholder="작성자" class="input input-bordered w-80 my-1 focus:outline-none"><br>
+        <input type="text" id="updateTitle" name="title" placeholder="제목" class="input input-bordered w-80 my-1 focus:outline-none"><br>
+        <textarea id="updateContent" name="content" placeholder="내용" class="textarea textarea-bordered resize-none my-1 focus:outline-none w-80 h-40"></textarea><br>
+        <button id="closeBtn" class="btn btn-sm btn-ghost bg-purple-300 hover:bg-purple-400">확인</button>
+        <button type="submit" class="btn btn-sm btn-ghost bg-purple-300 hover:bg-purple-400">수정</button>
+        <button id="deleteBtn" class="btn btn-sm btn-ghost bg-purple-300 hover:bg-purple-400">삭제</button>
     </form>
 </div>
 <script>
@@ -94,6 +123,8 @@
     document.getElementById('closeBtn').addEventListener('click', (e) => {
         e.preventDefault();
         document.getElementById('updateForm').style.display = 'none';
+        document.getElementById('updateId').value = 0;
+        location.reload();
     });
 
     document.getElementById('deleteBtn').addEventListener('click', (e) => {
@@ -101,6 +132,31 @@
         let id = document.getElementById('updateId').value;
         location.href = '/delete?id=' + id;
     });
+
+    function beforePage(pageBlock){
+        if(pageBlock == 0){
+            return;
+        }
+        let page = (pageBlock - 1) * 5 + 4;
+        location.href = '/newsmain?page=' + page;
+    }
+
+    function afterPage(pageBlock, endPageBlock){
+        if (pageBlock == endPageBlock){
+            return;
+        }
+        let page = (pageBlock + 1) * 5 + 1;
+        location.href = '/newsmain?page=' + page;
+    }
+
+    function move(pageBlock, pageNum){
+        let page = pageBlock * 5 + pageNum;
+        location.href = '/newsmain?page=' + page;
+    }
+
+    function lastpage(totalPage){
+        location.href = '/newsmain?page=' + totalPage;
+    }
 </script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 package com.example.springnews.repository;
 
 import com.example.springnews.model.News;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
