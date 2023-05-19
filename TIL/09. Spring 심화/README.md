@@ -17,5 +17,6 @@
 | 230515 | JPA | JPA 개념<BR>JPA 프로그래밍<BR>JPQL 구문<BR>JPA 기본키 매핑 | [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/230515_Spring_day12.md) | [:pencil2:](/intellij/springjpaedu/src/main/) | [:bulb:](/Spring%20exercise/230515/)
 | 230516 | JPA | JPA 연관 관계<br>Persistence.xml | [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/230516_Spring_day13.md) | [:pencil2:](/intellij/springjpaedu/src/main/) | [:bulb:](/Spring%20exercise/230516/)
 | 230517 | Spring Data JPA | Spring Data<br>Spring Data JPA<br>JpaRepository 주요 메소드<br>Spring Test |  [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/230517_Spring_day14.md) | [:pencil2:](/intellij/springedu2/src/main/java/springjpa/exam/) | [:bulb:](/intellij/springnews/)
+| 230518 | 실습 | 게시판 만들기 실습 | :x: | :x: | [:bulb:](/intellij/springnews/)
 </div>
 
