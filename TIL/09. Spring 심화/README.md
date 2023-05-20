@@ -18,5 +18,7 @@
 | 230516 | JPA | JPA 연관 관계<br>Persistence.xml | [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/230516_Spring_day13.md) | [:pencil2:](/intellij/springjpaedu/src/main/) | [:bulb:](/Spring%20exercise/230516/)
 | 230517 | Spring Data JPA | Spring Data<br>Spring Data JPA<br>JpaRepository 주요 메소드<br>Spring Test |  [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/230517_Spring_day14.md) | [:pencil2:](/intellij/springedu2/src/main/java/springjpa/exam/) | [:bulb:](/intellij/springnews/)
 | 230518 | 실습 | 게시판 만들기 실습 | :x: | :x: | [:bulb:](/intellij/springnews/)
+| 230519 | REST API | | [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/230519_Spring_day15.md) |[:pencil2:](/intellij/springedu2/src/main/java/springrest/) | [:bulb:](/Spring%20exercise/230519/)
+| 230520 | REST API | | [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/230520_Spring_day16.md) | [:pencil2:](/intellij/springedu2/src/main/java/springrest/) | [:bulb:](/Spring%20exercise/230520/)
 </div>
 
