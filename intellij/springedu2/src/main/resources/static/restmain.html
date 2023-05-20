@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>3조의 REST API 실습</h1>
+<hr>
+<button id="listBtn">둘리와 친구들 보기</button>
+<div id="outputBtn"></div>
+<div id="outputActor"></div>
+<script>
+    function printBtn() {
+        let xhr = new XMLHttpRequest();
+        xhr.onload = function () {
+            if (xhr.status == 200) {
+                let obj = JSON.parse(xhr.responseText);
+                let list = obj._embedded.comicActorModelList;
+                let output = document.getElementById('outputBtn');
+                output.innerHTML = '<hr>';
+                for (let i = 0; i < list.length; i++) {
+                    output.innerHTML += `<button onclick="printActor('${list[i]._links.detail.href}')">${list[i].name}</button>`;
+                }
+            }
+        }
+        xhr.open('GET', '/all', true);
+        xhr.send();
+    }
+
+    function printActor(url) {
+        let xhr = new XMLHttpRequest();
+        xhr.onload = function () {
+            if (xhr.status == 200) {
+                let obj = JSON.parse(xhr.responseText);
+                let output = document.getElementById('outputActor');
+                output.innerHTML = '<hr>';
+                output.innerHTML = `<h3>${obj.name}</h3>
+                                    <h4>${obj.addr}</h4>
+                                    <img src='/images/${obj.image}'>`;
+            }
+        };
+        xhr.open('GET', url, true);
+        xhr.send();
+    }
+
+    document.getElementById('listBtn').addEventListener('click', printBtn);
+</script>
+</body>
+</html>
