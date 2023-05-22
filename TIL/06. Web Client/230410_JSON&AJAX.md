@@ -180,10 +180,13 @@ send([요청 파라미터])
 ![](/TIL/image/2023-04-10-16-08-37.png)
 ### SOP
 - Same Origin Policy
-- 브라우저에서 보안상의 이슈로 `동일 사이트 자원만 접근`해야한다는 제약
-- Origin : 현재 페이지를 내려준 Server
+- **브라우저**에서 보안상의 이슈로 `동일 사이트 자원만 접근`해야한다는 제약
+  - 브라우저가 처리함
+- Origin : 현재 페이지를 내려준 Server 
+  - Server 주소 + 포트번호
 - AJAX는 이 제약에 영향을 받음
   - `Origin 서버가 아니면` AJAX로 요청한 컨텐츠를 수신할 수 없음
+- Content를 보호하기 위한 정책
 
 ### CORS
 - Cross Origin Resource Sharing
@@ -193,4 +196,8 @@ send([요청 파라미터])
 - HTTP Header에 CORS와 관련된 항목을 추가
 ```javascipt
 response.addHeader("Access-Control-Allow-Origin","*");
+```
++스프링에서는 이렇게 사용 가능
+```java
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 ```
