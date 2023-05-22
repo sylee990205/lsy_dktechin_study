@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>ECMAScript6</title>
+</head>
+
+<body>
+	<script>
+		let fruitSet = new Set();
+
+		console.log(fruitSet);
+		fruitSet = new Set(["Apple", "Melon"]);
+
+		console.log(fruitSet);
+		fruitSet = new Set();
+
+		fruitSet.add("Apple");
+		fruitSet.add("Melon");
+
+		console.log(fruitSet);
+		console.log(fruitSet.has("Apple"));
+
+		console.log(fruitSet.has("Melon"));
+		fruitSet.delete("Apple")
+
+		console.log(fruitSet.has("Apple"));
+		console.log(fruitSet);
+		fruitSet = new Set(["Apple", "Melon", "Apple"]);
+
+		var keyIter = fruitSet.keys();
+
+		for (var key of keyIter) {
+			console.log(key);
+		}
+
+/* 		var valueIter = fruitSet.values();
+
+		for (var value of valueIter) {
+			console.log(value);
+		} */
+
+		var entriyIter = fruitSet.entries();
+
+		for (var entry of entriyIter) {
+			console.log(entry); // 배열로 변경되어 [value, value] 형태로 출력 
+		}
+		for (var fruit of fruitSet) {
+			console.log(fruit);
+		}
+
+		fruitSet.forEach(function (value1, value2, map) {
+			console.log(value1 + " : " + value2);
+		});
+	</script>
+</body>
+
+</html>

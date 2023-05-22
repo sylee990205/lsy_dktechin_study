@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ECMAScript6</title>
+</head>
+<body>
+	<script>
+		let coffee = {
+			name : "Americano",
+			price : 3000
+		};
+		
+		let {name: coffeeName, caffeine: coffeeCaffeine = 500} = coffee;
+		
+		console.log(coffeeName);
+		
+		console.log(coffeeCaffeine);
+	</script>
+</body>
+</html>

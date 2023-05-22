@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ECMAScript6</title>
+</head>
+<body>
+	<script>
+		let coffee = {
+			name : "Americano",
+			price : 3000
+		};
+		
+		let {name: coffeeName, price: coffeePrice} = coffee;
+		// 객체가 가지는 멤버 변수를 할당하겠다. 구조 분해 할당
+		console.log(coffeeName);
+		
+		console.log(coffeePrice);
+	</script>
+</body>
+</html>

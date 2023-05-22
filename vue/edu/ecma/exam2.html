@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ECMAScript6</title>
+</head>
+<body>
+	<script>
+		const calc = {
+			firstNumber: 100,
+			secondNumber:20,
+			print: function() {
+				console.log(this); // 객체 자기 자신
+				
+				function add() {
+					console.log(this); // window 객체
+					// 메서드 내 또 다른 함수를 생성한다고 했을 때 this를 쓰면 자기 자신을 참조할 수 없다는 것을 알아야함
+					// 사용하려면 함수 호출 시 전달해야함
+					return this.firstNumber + this.secondNumber;
+				}
+				
+				console.log(this.firstNumber + "+" + this.secondNumber + "=" + add());
+			}
+		}
+		
+		calc.print();
+	</script>
+</body>
+</html>

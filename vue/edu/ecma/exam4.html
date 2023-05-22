@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ECMAScript6</title>
+</head>
+<body>
+	<script>
+		const calc = {
+			firstNumber: 100,
+			secondNumber:20,
+			print: function() {
+				const add = () => { //화살표 함수를 사용하면 this 가능
+					console.log(this); 
+					return this.firstNumber + this.secondNumber;
+				}
+				
+				console.log(this.firstNumber + "+" + this.secondNumber + "=" + add());
+			}
+		}
+		
+		calc.print();
+	</script>
+</body>
+</html>

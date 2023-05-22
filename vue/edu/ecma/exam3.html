@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ECMAScript6</title>
+</head>
+<body>
+	<script>
+		const calc = {
+			firstNumber: 100,
+			secondNumber:20,
+			print: function() {
+				let self = this;
+				function add() {
+					console.log(self);
+					
+					return self.firstNumber + self.secondNumber;
+				}
+				
+				console.log(this.firstNumber + "+" + this.secondNumber + "=" + add());
+			}
+		}
+		
+		calc.print();
+	</script>
+</body>
+</html>

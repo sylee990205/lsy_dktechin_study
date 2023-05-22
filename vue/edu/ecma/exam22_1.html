@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ECMAScript6</title>
+</head>
+<body>
+	<script>
+		function sum(num1, num2) {
+			return new Promise(function(resolve, reject) {
+				setTimeout(function() {
+					var result = num1 + num2;
+					console.log(num1 + " + " + num2 + " = ");
+					resolve(result);
+				}, 2000);
+			});
+		}
+		
+		function minus(num1, num2) {
+			return new Promise(function(resolve, reject) {
+				setTimeout(function() {
+					var result = num1 - num2;
+					console.log(num1 + " - " + num2 + " = ");
+					resolve(result);
+				}, 1500);
+			});
+		}
+		
+		function multiply(num1, num2) {
+			return new Promise(function(resolve, reject) {
+				setTimeout(function() {
+					var result = num1 * num2;
+					console.log(num1 + " * " + num2 + " = ");
+					resolve(result);
+				}, 1000);
+			});
+		}
+		
+		function divide(num1, num2) {
+			return new Promise(function(resolve, reject) {
+				setTimeout(function() {
+					var result = num1 / num2;
+					console.log(num1 + " / " + num2 + " = ");
+					resolve(result);
+				}, 1000);
+			});
+		}
+		
+		async function processAsync() {
+			const res1 =  sum(100, 200);
+			console.log(res1);
+			const res2 =  minus(100, 200);
+			console.log(res2);
+			const res3 =  multiply(100, 200);
+			console.log(res3);
+			const res4 =  divide(100, 200);
+			console.log(res4);
+		}
+	
+		processAsync();
+		
+		console.log("Executed!!!");
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ECMAScript6</title>
+</head>
+<body>
+	<script>
+		const coffee = {
+			name : "Americano",
+			price : 3000
+		};
+		
+		console.log(coffee);
+		console.log(coffee.name);
+		console.log(coffee.price);
+		
+		const coffee2 = {
+			"name" : "Americano",
+			"price" : 3000
+		};
+		
+		console.log(coffee2);
+		console.log(coffee2.name);
+		console.log(coffee2.price);
+		
+		const coffee3 = {
+			'name' : 'Americano',
+			'price' : 3000
+		};
+		
+		console.log(coffee3);
+		console.log(coffee3.name);
+		console.log(coffee3.price);
+		
+		const key1 = "name";
+		const key2 = "price";
+		
+		const coffee4 = {
+			key1 : 'Americano',
+			key2 : 3000
+		};
+		
+		console.log(coffee4);
+		console.log(coffee4.name);
+		console.log(coffee4.price);
+		console.log(coffee4.key1);
+		console.log(coffee4.key2);
+		
+		const coffee5 = {
+			[key1] : 'Americano', //[]로 전역으로 정의한 변수 사용 가능
+			[key2] : 3000
+		};
+		
+		console.log(coffee5);
+		console.log(coffee5.name);
+		console.log(coffee5.price);
+		console.log(coffee5.key1);
+		console.log(coffee5.key2);
+	</script>
+</body>
+</html>
