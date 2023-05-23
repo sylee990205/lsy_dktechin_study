@@ -1,5 +1,26 @@
 # 230519_Spring_day15
 ## 목차
+<!-- TOC -->
+
+- [230519\_Spring\_day15](#230519_spring_day15)
+  - [목차](#목차)
+  - [REST](#rest)
+    - [적용](#적용)
+    - [REST가 필요한 이유](#rest가-필요한-이유)
+    - [REST 특징](#rest-특징)
+    - [application/hal+json](#applicationhaljson)
+  - [REST API](#rest-api)
+    - [특징](#특징)
+    - [설계 기본 규칙](#설계-기본-규칙)
+    - [API 디자인 가이드](#api-디자인-가이드)
+    - [URI 설계 시 주의할 점](#uri-설계-시-주의할-점)
+    - [리소스 간 관계 표현 방법](#리소스-간-관계-표현-방법)
+    - [Collection과 Document](#collection과-document)
+  - [HTTP 응답 상태코드](#http-응답-상태코드)
+  - [Spring Rest API 구현 관련 애노테이션](#spring-rest-api-구현-관련-애노테이션)
+  - [`@ResponseBody` 와 `ResponseEntity`](#responsebody-와-responseentity)
+
+<!-- /TOC -->
 ---
 ## REST
 "REpresentational State Transfer"의 약어
@@ -29,7 +50,7 @@ REST -> 자원의 이름으로 구분하여 해당 자원의 상태를 주고 �
 - 애플리케이션 분리 및 통합
 - Web을 기반으로 하는 C&S 환경의 다양한 프로그램 개발
 - 다양한 클라이언트의 등장
-![](2023-05-19-09-18-11.png)
+![](/TIL/image/2023-05-19-09-18-11.png)
 ### REST 특징
 - 1~4번은 웹 기반이기에 가질 수 밖에 없는 특징
 1. Server-Client(서버-클라이언트 구조)
@@ -108,19 +129,77 @@ http://restapi.example.com/animals/mammals/whales
 ```
 2. URI 마지막 문자로 `/`를 포함하지않음
 3. `-`은 URI 가독성을 높이는데 사용
+   - 어쩔 수 없이 긴 URI 경로를 사용하게 될 때 하이픈을 사용
 4. `_`은 URI에 사용하지 않음
 5. URI 경로에는 소문자
-6. 파일 확장자가 URI에 포함시키지않음
+6. 파일 확장자는 URI에 포함시키지않음
+   - 대신 Accept 헤더 사용
 ### 리소스 간 관계 표현 방법
+REST 리소스 간에는 연관 관계가 있을 수 있음
+```
+/리소스명/리소스ID/관계가 있는 다른 리소스명
+```
 ### Collection과 Document
-
+- Document
+  - 문서 한 개 또는 한 개의 객체
+- Collection
+  - 문서들의 집합, 객체들의 집합
+- 두개 모두 리소스라고 표현할 수 있음
+```
+http:// restapi.example.com/sports/soccer
+```
+- sports라는 collection에 soccer라는 document
 ---
 
 ## HTTP 응답 상태코드
 [HTTP 응답 상태코드를 정리한 DOCS](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/http/HttpStatus.html)
+| 상태코드 | 설명 |
+| ---- | ---- |
+| 200 | 정상 수행 |
+| 201 | 리소스 생성 요청, 해당 리소스 생성 성공(POST)
+| 400 | 클라이언트의 요청 부적절
+| 401 | 클라이언트가 인증되지 않은 상태에서 보호된 리소스 요청
+| 403 | 인증 상태오 관계 없이 응답하고 싶지 않은 리소스를 요청하면 사용하는 응답코드<br>403보다는 400 혹은 404 사용 권고<br>403은 리소스가 존재한다는 뜻
+| 405 | 클라이언트가 요청한 리소스에서 사용 불가능한 Method를 이용
+| 301 | 클라이언트가 요청한 리소스에 대한 URI 변경
+| 500 | 서버에 문제가 있을 경우 |
 
 ---
 ## Spring Rest API 구현 관련 애노테이션
-
+- `@RestController`
+  - Spring4부터 지원하는 어노테이션
+  - View를 갖지 않는 REST Data를 반환
+- `@ResponseBody`
+  - 따로 설명
+- `@GetMapping`
+  - `@PathVariable`을 이용한 GET
+    1. 매개변수와 이름 동일
+    ```java
+    @GetMapping(value = "/variable1/{variable}")
+    public String getVariable1(@PathVariable String variable)
+    ```
+    2. 매개변수와 이름 다름
+    ```java
+    @GetMapping(value = "/variable2/{variable}")
+    public String getVariable2(@PathVariable("variable") String var)
+    ```
+  - `@RequestParam`을 이용한 GET
+    ```java
+    @GetMapping(value = "/request1")
+    public String getRequestParam1(
+            @RequestParam String name,
+            @RequestParam String email,
+            @RequestParam String organization)
+    ```
+  - Map 객체 활용
+    ```java
+    @GetMapping(value = "/request2")
+    public String getRequestParam2(@RequestParam Map<String, String> param
+    ```
+- `@PostMapping`
+  - RequestBody를 이용한 POST
+  - 
+- `@PutMapping`
+- `@DeleteMapping`
 ---
 ## `@ResponseBody` 와 `ResponseEntity`
