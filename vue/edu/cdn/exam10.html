@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Vue.js sample</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		<h2>number 타입 사용</h2>
+		<input v-model="myNumber1" type="number"> <!--input type을 number로 사용하면 myNumber1이 숫자로 인식-->
+		<p>10을 더해서 표시「{{ 10 + myNumber1 }}」</p>
+		<p>100을 더해서 표시「{{ 100 + myNumber1 }}」</p>
+		<p>1000을 더해서 표시「{{ 1000 + myNumber1 }}」</p>
+		<hr>
+		<h2>입력을 수식으로 변경</h2>
+<!--		<input v-model="myNumber2"> 이 때는 문자열로 인식-->
+		<input v-model.number="myNumber2"> <!-- input type을 지정하지않고 모델에 filter를 설정해도 가능 -->
+		<p>10을 더해서 표시「{{ 10 + myNumber2 }}」</p>
+		<p>100을 더해서 표시「{{ 100 + myNumber2 }}」</p>
+		<p>1000을 더해서 표시「{{ 1000 + myNumber2 }}」</p>
+		<hr>
+		<h2>앞뒤의 공백을 자동으로 제거(트림)</h2>
+		<input v-model.trim="myText1"> <!--trim filter-->
+		<pre>앞뒤 공백을 제거「{{ myText1 }}」</pre>
+		<hr>
+		<h2>앞뒤의 공백을 자동으로 제거(트림) 안함</h2>
+		<input v-model="myText2">
+		<pre>앞뒤 공백을 제거「{{ myText2 }}」</pre>
+	</div>
+	<script>
+		const { createApp } = Vue
+		createApp({
+			data() {
+				return {
+					myNumber1: 0,
+					myNumber2: 0,
+					myText1: '      ',
+					myText2: '      ',
+				}
+			}
+		}).mount('#app')
+	</script>
+</body>
+
+</html>
