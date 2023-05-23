@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>exercise3</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+<h1>간단한 계산기</h1>
+<div id="app">
+    <input v-model.number="number1">
+    <input v-model.number="number2"><br>
+    <div>
+        <button @click="sum">덧셈계산</button>
+        <button @click="sub">뺄셈계산</button>
+        <button @click="mul">곱셈계산</button>
+        <button @click="div">나눗셈계산</button><br>
+    </div>
+    <p>결과는 {{ result }} 입니다.</p>
+</div>
+<script>
+    const {createApp} = Vue;
+    createApp({
+        data() {
+            return {
+                number1: '',
+                number2: '',
+                result: ''
+            }
+        },
+        methods : {
+            sum: function () {
+                this.result = this.number1 + this.number2;
+            },
+            sub: function () {
+                this.result = this.number1 - this.number2;
+            },
+            mul: function () {
+                this.result = this.number1 * this.number2;
+            },
+            div: function () {
+                this.result = this.number1 / this.number2;
+            }
+        }
+    }).mount('#app')
+</script>
+</body>
+</html>

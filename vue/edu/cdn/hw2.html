@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exercise2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+<h1>입력폼 활용</h1>
+<div id="app">
+  <label>이름 : <input v-model="myName"></label><br>
+  <label>좋아하는 색은 :<br>
+    <label><input type="radio" value="red" v-model="myColor"> 빨강</label><br>
+    <label><input type="radio" value="green" v-model="myColor"> 녹색</label><br>
+    <label><input type="radio" value="blue" v-model="myColor"> 파랑색</label><br>
+    <label><input type="radio" value="yellow" v-model="myColor"> 노란색</label><br>
+    <label><input type="radio" value="gray" v-model="myColor"> 회색</label><br>
+  </label>
+  <h4 v-bind:style="{color: myColor}">내 이름은 {{myName}} 이고 좋아하는 색은 {{myColor}} 입니다.</h4>
+</div>
+<script>
+  const { createApp } = Vue
+  createApp({
+    data() {
+      return {
+        myName: '',
+        myColor: ''
+      }
+    }
+  }).mount('#app')
+</script>
+</body>
+</html>

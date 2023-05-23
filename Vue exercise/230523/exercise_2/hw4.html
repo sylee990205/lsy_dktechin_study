@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exercise3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <style>
+    * {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<h1>숫자 버튼 만들기와 클릭 이벤트 처리</h1>
+<div id="app">
+  <button v-for="n in 10" @click="showImg(n)">{{ n }}</button>
+  <hr>
+  <img v-bind:src="myImage">
+</div>
+<script>
+  const { createApp } = Vue
+  createApp ({
+    data() {
+      return {
+        myImage : ''
+      }
+    },
+    methods: {
+      showImg: function (n){
+        this.myImage = `images/${n}.jpg`;
+      }
+    }
+  }).mount('#app')
+</script>
+</body>
+</html>
