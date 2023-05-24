@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ECMAScript6</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+  <h1> AJAX 기술로 REST API 요청(CORS)</h1>
+  <hr>
+  <div id="app">
+    <button @click="getAll">GET(ALL)</button>
+    <button @click="getOne()">GET(One)</button>
+    <button @click="postData()">POST</button>
+    <button @click="deleteData()">DELETE</button>
+    <hr>
+    <div v-html="result"></div>
+  </div>
+
+  <script>
+    const { createApp } = Vue
+    createApp({
+      data() {
+        return {
+          result: ''
+        }
+      },
+      methods: {
+        getAll: function () {
+          axios.get("http://localhost:8088/boards")
+            .then(response => {
+              console.log(response);
+              return response.data;
+            }).
+            then(boards => {
+              console.log(boards);
+              let str = "";
+              for (let elem of boards) {
+                console.log(elem);
+                str += `<h3>${elem.boardNo}. ${elem.title}  ${elem.content}</h3>`;
+              }
+              this.result = str;
+            })
+            .catch(err => console.error(err));
+        },
+        getOne: function () {
+          axios.get("http://localhost:8088/boards/1")
+            .then(response => {
+              console.log(response);
+              return response.data;
+            }).
+            then(board => {
+              console.log(board);
+              this.result = `<h3>${board.boardNo}. ${board.title}  ${board.content}</h3>`;
+            })
+            .catch(err => console.error(err));
+        },
+        postData: function () {
+          let payload = {
+            boardNo: 5,
+            title: '꽃잎 한 장처럼',
+            content: '수도생활 50년, 좋은 삶과 관계를 위한 통찰',
+            writer: '이해인',
+            regDate: '2020-05-25T09:00'
+          };
+          axios.post("http://localhost:8088/boards", payload)
+            .then(response => {
+              console.log(response);
+              return response.data;
+            }).
+            then(msg => {
+              console.log(msg);
+              this.result = `<h3>${msg}</h3>`;
+            })
+            .catch(err => console.error(err));
+        },
+        deleteData: function () {
+          axios.delete("http://localhost:8088/boards/5")
+            .then(response => {
+              console.log(response);
+              return response.data;
+            }).
+            then(msg => {
+              console.log(msg);
+              this.result = `<h3>${msg}</h3>`;
+            })
+            .catch(err => console.error(err));
+        }
+      }
+    }).mount('#app')    
+  </script>
+</body>
+
+</html>

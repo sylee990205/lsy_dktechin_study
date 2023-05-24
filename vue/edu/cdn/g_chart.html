@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js sample</title>
+		<link rel="stylesheet" href="style.css" >
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	</head>
+
+   <body>
+		<h1>Google Charts로 원그래프를 그리는 예제</h1>
+		<h2>선호하는 점심 메뉴 투표</h2>
+		<div id="chart_div" style="height: 400px;"></div>
+		<script>
+			// 그래프에 사용할 데이터
+			 var orgdata = [
+				['도시락', 3], ['갈비탕', 4], [ '오므라이스', 5],
+				['짬뽕', 1], ['비빔밥', 3], [ '메밀소바', 1]
+			 ];
+	
+			google.charts.load('current', {packages: ['corechart']});
+			google.charts.setOnLoadCallback(drawBasic);
+	
+			// 그래프를 그리는 함수
+			function drawBasic() {
+				let data = new google.visualization.DataTable();
+				data.addColumn('string', '종류');
+				data.addColumn('number', '갯수');
+				data.addRows(orgdata);
+				var options = {title: '선호하는 점심',"is3D": true};
+				var chart = new google.visualization.PieChart(
+					document.getElementById('chart_div'));
+				chart.draw(data, options);
+			}
+		</script>
+	</body>
+</html>

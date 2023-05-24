@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Vue.js sample</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+	<h2>컴포넌트를 만들어서 표시</h2>
+	<div id="app">
+		<my-comp-tag1></my-comp-tag1>
+		<my-comp-tag2></my-comp-tag2>
+		<my-comp-tag3></my-comp-tag3>
+		<hr>
+		<my-comp-tag1></my-comp-tag1>
+	</div>
+	<script>
+		const { createApp } = Vue;
+
+		const MyComponent1 = {
+			// 하나의 컴포넌트 안에는 스크립트, 그 스크립트를 적용하는 템플릿, 화면에 보여줄 때 적용하는 스타일 3가지만 갖춰야함
+			// 스크립트와 템플릿은 반드시 있어야함(둘 중 하나는)
+			template: '<p class="my-comp">안녕? 둘리~~</p>'
+		}
+		const MyComponent2 = {
+			template: '<p class="my-comp">안녕? 도우너~~</p>'
+		}
+		const MyComponent3 = {
+			template: '<p class="my-comp">안녕? 또치~~</p>'
+		}
+		createApp({
+			components: {
+				// components를 적용하는 tag를 만들어서 사용
+				'my-comp-tag1': MyComponent1,
+				'my-comp-tag2': MyComponent2,
+				'my-comp-tag3': MyComponent3,
+			}
+		}).mount('#app');
+	</script>
+	<style>
+		.my-comp {
+			width: 300px;
+			background-color: #ffffe0;
+			border: solid;
+			border-color: darkorange;
+			border-radius: 8px;
+			padding: 8px;
+		}
+	</style>
+</body>
+
+</html>
