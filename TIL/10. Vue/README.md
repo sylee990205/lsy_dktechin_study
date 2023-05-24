@@ -11,8 +11,9 @@
 
 | 일자      | 주제 | 수강내용       | TIL | 예제 | 실습 | 
 | -------- | ----  |--------------- | :---: | :---: | :---: | 
-| 230522 | ECMAScript 6 |  | [:heavy_check_mark:](/TIL/10.%20Vue/230522_Vue_day1.md)| [:pencil2:](/vue/edu/ecma/) | :x:
-| 230523 | Vue | | [:heavy_check_mark:](/TIL/10.%20Vue/230523_Vue_day2.md)| [:pencil2:](/vue/edu/cdn/) | [:bulb:](/Vue%20exercise/230523/)
+| 230522 | ECMAScript 6 | 웹 렌더링 방식 (SSR, CSR, SSG)<br>JS - 모듈 | [:heavy_check_mark:](/TIL/10.%20Vue/230522_Vue_day1.md)| [:pencil2:](/vue/edu/ecma/) | :x:
+| 230523 | CDN 방식의 Vue | Vue<br>Vue 문법 | [:heavy_check_mark:](/TIL/10.%20Vue/230523_Vue_day2.md)| [:pencil2:](/vue/edu/cdn/) | [:bulb:](/Vue%20exercise/230523/)
+| 230524 | CDN 방식의 Vue | splice<br>지시자<br>watch<br>components | [:heavy_check_mark:](/TIL/10.%20Vue/230524_Vue_day3.md)| [:pencil2:](/vue/edu/cdn/) | [:bulb:](/Vue%20exercise/230524/)
 
 </div>
 
