@@ -1,4 +1,5 @@
 const BaseCard = {
+    // BaseCard라는 객체
     props:{
         title: String,
         content: {
