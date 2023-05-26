@@ -4,12 +4,12 @@
         <div class="card-body">
             <h5 class="card-title">{{ name }}</h5>
             <p class="card-text">{{ food }}</p>
-            <button class="btn btn-primary" @click="handleClick">OK</button>
+            <button class="btn btn-primary" @click="handleClick({index})">OK</button>
         </div>
     </div>
 </template>
 <script setup>
-    import { defineProps } from 'vue'; 
+import {defineProps, defineEmits} from 'vue';
     const p = defineProps( {
         name : String,
         food : {
@@ -17,10 +17,15 @@
             default: "떡볶이"            
         },
         srcUrl: String,
-        teamNum : Number   
+        teamNum : Number,
+        index : Number
     });
+    const emit = defineEmits(['delete-member'])
+
+
     function handleClick() {
-        alert(`${p.teamNum}팀 입니다~~~!!`);
+     /*   alert(`${p.teamNum}팀 입니다~~~!!`);*/
+      emit('delete-member', p.index);
     }
 </script>
 
