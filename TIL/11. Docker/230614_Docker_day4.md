@@ -1,8 +1,8 @@
-# 230614 Docker Day 3
+# 230614 Docker Day 4
 ## 목차
 <!-- TOC -->
 
-- [Docker Day 3](#docker-day-3)
+- [Docker Day 4](#docker-day-4)
     - [목차](#%EB%AA%A9%EC%B0%A8)
     - [도커 명령](#%EB%8F%84%EC%BB%A4-%EB%AA%85%EB%A0%B9)
         - [구성](#%EA%B5%AC%EC%84%B1)
@@ -133,7 +133,7 @@ version | 도커 엔진 및 명령행 도구의 버전 출력
  - 도커 생성 및 실행 기능, 필요시 이미지 다운로드 기능도 수행
  - docker pull + docker create + docker start  
 ### 도커 컨테이너의 생명주기
-![](2023-06-14-09-41-47.png)
+![](/TIL/image/2023-06-14-09-41-47.png)
 - 동작 중인 컨테이너는 삭제 불가능
 - 컨테이너 정지 후 삭제
   ```
@@ -187,8 +187,6 @@ docker cp 컨테이너이름:컨테이너경로 호스트경로
 ```
 # 이미지 조회
 docker image ls
-
-# 이미지 삭제
 docker image rm 이미지명 [이미지명...]
 ```
 ---

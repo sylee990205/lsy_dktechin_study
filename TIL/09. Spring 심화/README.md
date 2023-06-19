@@ -1,6 +1,6 @@
 # Spring 심화
 [메인으로](https://github.com/sylee990205/lsy_dktechin_study)
-## 230510 ~ 230520
+## 230510 ~ 230520, 230530
 
 <div align = "center"> 
 
@@ -19,6 +19,7 @@
 | 230517 | Spring Data JPA | Spring Data<br>Spring Data JPA<br>JpaRepository 주요 메소드<br>Spring Test |  [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/230517_Spring_day14.md) | [:pencil2:](/intellij/springedu2/src/main/java/springjpa/exam/) | [:bulb:](/intellij/springnews/)
 | 230518 | 실습 | 게시판 만들기 실습 | :x: | :x: | [:bulb:](/intellij/springnews/)
 | 230519 | REST API | REST<br>REST API<br>HTTP 응답 상태코드<br>Spring REST API 구현 관련 애노테이션 | [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/230519_Spring_day15.md) |[:pencil2:](/intellij/springedu2/src/main/java/springrest/) | [:bulb:](/Spring%20exercise/230519/)
-| 230520 | REST API | | [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/230520_Spring_day16.md) | [:pencil2:](/intellij/springedu2/src/main/java/springrest/) | [:bulb:](/Spring%20exercise/230520/)
+| 230520 | REST API | HATEOAS | [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/230520_Spring_day16.md) | [:pencil2:](/intellij/springedu2/src/main/java/springrest/) | [:bulb:](/Spring%20exercise/230520/)
+| 230530 | Spring SECURITY | Spring security<br>Login Form 인증 절차<br>Cookie / Session / Token 인증 방식<br>JWT JSON Web Token | [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/230530_Spring_day17.md) | :x: | :x: |
 </div>
 

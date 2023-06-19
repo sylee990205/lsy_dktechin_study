@@ -10,7 +10,9 @@
 </template>
 <script setup>
 import {defineProps, defineEmits} from 'vue';
-    const p = defineProps( {
+import {useWeatherStore} from "@/stores/weather";
+
+const p = defineProps( {
         name : String,
         food : {
             type: String,
@@ -21,10 +23,11 @@ import {defineProps, defineEmits} from 'vue';
         index : Number
     });
     const emit = defineEmits(['delete-member'])
-
+const weatherStore = useWeatherStore();
+weatherStore.getWeather();
 
     function handleClick() {
-     /*   alert(`${p.teamNum}팀 입니다~~~!!`);*/
+      alert(`${p.teamNum}팀 입니다~~~!! 오늘의 날씨는 ${weatherStore.today} 입니다.`);
       emit('delete-member', p.index);
     }
 </script>

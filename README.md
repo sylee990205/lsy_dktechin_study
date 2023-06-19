@@ -15,16 +15,16 @@ KOSA MSA 기반 Full-stack 개발자 양성 과정을 수강하며 배운 내용
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
 <img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">
-<!--
 <img src="https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white">
 <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">
 <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white">
-<img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=Kubernetes&logoColor=white"> -->
+<img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=Kubernetes&logoColor=white">
 
 ---
 ## :wrench:IDE
 <img src="https://img.shields.io/badge/eclipse IDE-2C2255?style=for-the-badge&logo=eclipseide&logoColor=white">
 <img src="https://img.shields.io/badge/IntelliJ IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white">
+<img src="https://img.shields.io/badge/WebStorm-000000?style=for-the-badge&logo=webstorm&logoColor=white">
 <img src="https://img.shields.io/badge/VSCODE-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white">
 
 ---
@@ -86,12 +86,25 @@ KOSA MSA 기반 Full-stack 개발자 양성 과정을 수강하며 배운 내용
 | JPA | 230515 - 230516 | [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/)
 | Spring Data JPA | 230517 | [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/)
 | Spring REST | 230519 - 230520 | [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/)
+| Spring SECURITY | 230530 | [:heavy_check_mark:](/TIL/09.%20Spring%20%EC%8B%AC%ED%99%94/230530_Spring_day17.md)
 
 ### Vue
 | 과목       | 수강기간      | TIL |
 | -------- | :---------------: | :---: | 
 | ES6 | 230522 | [:heavy_check_mark:](/TIL/10.%20Vue/)
-| Vue | 230523 ~ | [:hourglass_flowing_sand:](/TIL/10.%20Vue/)
+| Vue | 230523 ~ 230529 | [:heavy_check_mark:](/TIL/10.%20Vue/)
+
+### 2차 미니 프로젝트
+#### 230531 ~ 230608
+[:wrench: dk-log의 관리자 API](https://github.com/dklog-team/dklog-admin)<br>
+[:art: dk-log의 관리자 UI](https://github.com/dklog-team/dklog-admin-ui)
+
+### Docker
+| 과목       | 수강기간      | TIL |
+| -------- | :---------------: | :---: | 
+| Docker | 230609 ~ 230615 | [:heavy_check_mark:](/TIL/11.%20Docker/)
+| Kubernetes | 230616 | [:hourglass_flowing_sand:](/TIL/11.%20Docker/230616_Docker_day6.md)
+| Github Action을 이용한 CI/CD | 230616 | [:hourglass_flowing_sand:](/TIL/11.%20Docker/230616_Docker_day6.md)
 
 <!-- 
 [ Spring 2단계 ]

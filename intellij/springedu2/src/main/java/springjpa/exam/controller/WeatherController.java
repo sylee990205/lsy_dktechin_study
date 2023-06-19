@@ -2,12 +2,14 @@ package springjpa.exam.controller;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import springjpa.exam.domain.WeatherDTO;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.w3c.dom.Document;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class WeatherController {	
 	@RequestMapping(value="/weather", produces="application/json; charset=utf-8")
 	public WeatherDTO xxx(){
